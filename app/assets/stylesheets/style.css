@@ -1,0 +1,391 @@
+@charset "UTF-8";
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* line 5, ../sass/style.scss */
+body {
+  position: relative;
+  font-family: PingFangTC-regular, Heiti TC, Meiryo, "微軟正黑體", Microsoft JhengHei, "標楷體", DFKai-sb !important;
+  background: #000066;
+  color: white;
+  width: 100vw;
+  height: 6.7vw;
+  overflow-x: hidden;
+}
+
+/* line 15, ../sass/style.scss */
+.bar {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  z-index: 1;
+}
+/* line 24, ../sass/style.scss */
+.bar .burger {
+  display: inline-block;
+  height: 34px;
+  margin-top: 22px;
+  margin-left: 28px;
+  cursor: pointer;
+  vertical-align: top;
+}
+/* line 32, ../sass/style.scss */
+.bar .burger img {
+  height: 100%;
+}
+/* line 37, ../sass/style.scss */
+.bar .logo {
+  position: relative;
+  display: inline-block;
+  height: 64px;
+  margin-top: 14px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+/* line 45, ../sass/style.scss */
+.bar .logo img {
+  height: 100%;
+}
+/* line 50, ../sass/style.scss */
+.bar .proposal {
+  position: absolute;
+  right: 50px;
+  line-height: 70px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* line 59, ../sass/style.scss */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vw;
+  font-size: 0;
+  z-index: 2;
+  transform: translate(0, -50vw);
+  background: white;
+  color: black;
+  display: none;
+}
+/* line 72, ../sass/style.scss */
+.menu .circle {
+  position: absolute;
+  border: 2px black solid;
+  border-radius: 50%;
+  font-size: 16px;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0.995);
+  width: 100vw;
+  height: 100vw;
+  margin-top: 50vh;
+  margin-left: -1px;
+}
+/* line 84, ../sass/style.scss */
+.menu .circle .text {
+  position: absolute;
+  font-size: 1.5vw;
+  line-height: 100vw;
+  text-indent: 2vw;
+  cursor: pointer;
+  padding-right: 2vw;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+/* line 96, ../sass/style.scss */
+.menu .circle .text:hover {
+  color: black;
+}
+/* line 102, ../sass/style.scss */
+.menu .circle div {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  margin-left: -1px;
+  border-radius: 50%;
+  border: 2px black solid;
+}
+/* line 112, ../sass/style.scss */
+.menu .circle div .text {
+  line-height: 80vw;
+  margin-top: -2px;
+}
+/* line 117, ../sass/style.scss */
+.menu .circle div div {
+  width: 76%;
+  height: 76%;
+  left: 12%;
+  top: 12%;
+}
+/* line 123, ../sass/style.scss */
+.menu .circle div div .text {
+  line-height: 60.8vw;
+  margin-top: -4px;
+  text-indent: 1.5vw;
+}
+/* line 129, ../sass/style.scss */
+.menu .circle div div div {
+  width: 71%;
+  height: 71%;
+  left: 14.5%;
+  top: 14.5%;
+}
+/* line 134, ../sass/style.scss */
+.menu .circle div div div div {
+  width: 65%;
+  height: 65%;
+  left: 17.5%;
+  top: 17.5%;
+}
+/* line 139, ../sass/style.scss */
+.menu .circle div div div div div {
+  width: 58%;
+  height: 58%;
+  left: 21%;
+  top: 21%;
+}
+/* line 144, ../sass/style.scss */
+.menu .circle div div div div div div {
+  width: 44%;
+  height: 44%;
+  left: 28%;
+  top: 28%;
+  line-height: 7.2vw;
+  text-align: center;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* line 163, ../sass/style.scss */
+.LandingPage {
+  position: relative;
+  width: 100vw;
+  height: 660.5vw;
+  overflow: hidden;
+}
+
+/* line 170, ../sass/style.scss */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 177, ../sass/style.scss */
+.walk {
+  position: absolute;
+  width: 4vw;
+  left: 230px;
+  top: 8200px;
+  cursor: pointer;
+  display: none;
+}
+/* line 190, ../sass/style.scss */
+.walk img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+/* line 196, ../sass/style.scss */
+.walk .one, .walk .two, .walk .three, .walk .four {
+  display: none;
+}
+
+/* line 201, ../sass/style.scss */
+.house {
+  position: absolute;
+  width: 65vw;
+  left: 51vw;
+  top: 390vw;
+  z-index: 2;
+}
+
+/* line 209, ../sass/style.scss */
+.people {
+  position: absolute;
+  width: 50vw;
+  left: 28vw;
+  top: 248vw;
+  z-index: 2;
+}
+
+/* line 217, ../sass/style.scss */
+.redPerson {
+  position: absolute;
+  width: 5vw;
+  left: 37vw;
+  top: 140vw;
+  z-index: 2;
+}
+
+/* line 231, ../sass/style.scss */
+.spirit {
+  position: relative;
+  padding: 0 5%;
+  padding-top: 110px;
+  padding-bottom: 80px;
+  width: 90%;
+  text-align: center;
+}
+/* line 239, ../sass/style.scss */
+.spirit .topic {
+  position: relative;
+  width: 100%;
+  font-size: 28px;
+  margin-bottom: 70px;
+}
+/* line 246, ../sass/style.scss */
+.spirit .each {
+  display: inline-block;
+  margin: 0 60px;
+  width: 230px;
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: 70px;
+}
+/* line 254, ../sass/style.scss */
+.spirit .each img {
+  margin-bottom: 50px;
+}
+
+/* line 260, ../sass/style.scss */
+.step {
+  position: relative;
+  padding: 0 12%;
+  margin-bottom: 150px;
+}
+/* line 266, ../sass/style.scss */
+.step .each .content {
+  position: relative;
+  display: inline-block;
+  border-right: 1px white solid;
+  width: 65%;
+  padding-bottom: 50px;
+}
+/* line 273, ../sass/style.scss */
+.step .each .content .text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: 150%;
+  width: 50%;
+  right: 12%;
+  font-size: 15px;
+}
+/* line 282, ../sass/style.scss */
+.step .each .time {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 5%;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* line 399, ../sass/style.scss */
+.QandA {
+  position: relative;
+  padding-top: 120px;
+}
+/* line 403, ../sass/style.scss */
+.QandA .Q {
+  position: relative;
+  font-size: 19px;
+  width: 86%;
+  left: 7%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+/* line 411, ../sass/style.scss */
+.QandA .Q .topic {
+  border: 2px white solid;
+  width: 97%;
+  padding: 15px 0;
+  padding-left: 3%;
+}
+/* line 418, ../sass/style.scss */
+.QandA .Q .arrow {
+  position: absolute;
+  right: 30px;
+}
+/* line 423, ../sass/style.scss */
+.QandA .Q .A {
+  width: 94%;
+  margin-top: 15px;
+  padding: 15px 3%;
+  border: 2px white solid;
+  height: 0;
+  font-size: 17px;
+  line-height: 22px;
+  overflow: hidden;
+  animation-name: QandA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  display: none;
+  cursor: auto;
+}
+
+@keyframes QandA {
+  from {
+    padding: 0 3%;
+    height: 0;
+  }
+  to {
+    padding: 15px 3%;
+    height: 120px;
+  }
+}
+/* line 470, ../sass/style.scss */
+.actionPartner {
+  position: relative;
+  width: 90%;
+  padding: 0 5%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+/* line 478, ../sass/style.scss */
+.actionPartner .individual {
+  position: relative;
+  display: inline-block;
+  width: 235px;
+  height: 220px;
+  margin: 20px;
+  vertical-align: top;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  font-size: 190px;
+  line-height: 190px;
+  border: 2px black solid;
+}
+/* line 495, ../sass/style.scss */
+.actionPartner .individual .name {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 7px 0;
+  top: 0;
+  background: white;
+  border-bottom: 2px black solid;
+}
+/* line 506, ../sass/style.scss */
+.actionPartner .individual img {
+  max-width: 100%;
+}
+/* line 511, ../sass/style.scss */
+.actionPartner .individual .readMore {
+  position: absolute;
+  right: -52px;
+  bottom: -52px;
+  width: 100px;
+  height: 100px;
+  font-size: 13px;
+  line-height: 18px;
+  transform: rotate(-45deg);
+  color: black;
+  text-decoration: none;
+  background: white;
+  border: 2px black solid;
+}
