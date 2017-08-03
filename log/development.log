@@ -1744,3 +1744,54 @@ Processing by HomepageController#index as HTML
 Completed 200 OK in 696ms (Views: 677.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-08-03 19:00:34 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (748.2ms)
+Completed 500 Internal Server Error in 804ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_omniauth_authorize_path' for #<#<Class:0x007feea6bf1020>:0x007feea2da1068>
+Did you mean?  user_facebook_omniauth_authorize_path):
+     5: 	<a class="logo" href="index.html">
+     6:     <%= image_tag("logo.png") %>
+     7: 	</a>
+     8: 	<span class="proposal"><%= link_to "我要提案", user_omniauth_authorize_path(:facebook) %></span>
+     9: </div>
+    10: 
+    11: <div class="menu">
+  
+app/views/homepage/index.html.erb:8:in `_app_views_homepage_index_html_erb__1695155383349160000_70331488243440'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.5ms)
+Started GET "/" for ::1 at 2017-08-03 19:01:28 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 291ms (Views: 288.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook.facebook" for ::1 at 2017-08-03 19:01:33 +0800
+Processing by Users::OmniauthCallbacksController#passthru as 
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 404 Not Found in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-03 19:03:43 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 112ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:03:45 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:03:45 +0800
