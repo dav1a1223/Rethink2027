@@ -1,8 +1,45 @@
-<%= simple_form_for(proposal) do |f| %>
+<%= simple_form_for(@proposal) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  <%= f.input :title %>
+    <h3>part1: 個人資料區</h3>
+    <%= f.simple_fields_for :members, @proposal.members[0] || @proposal.members.build do |m| %>
+      <ul>
+        <li>主要提案者
+          <ul>
+            <li><%= m.input :name, label: "姓名" %></li>
+            <li><%= m.input :birthday, label: "生日", as: :date %></li>
+            <li><%= m.input :email, label: "信箱" %></li>
+            <li><%= m.input :phone, label: "聯絡電話" %></li>
+          </ul>
+        </li>
+      </ul>
+    <% end %>
+    <%= f.simple_fields_for :members, @proposal.members[1] || @proposal.members.build do |m| %>
+      <ul>
+        <li>團隊成員2
+          <ul>
+            <li><%= m.input :name, label: "姓名" %></li>
+            <li><%= m.input :birthday, label: "生日", as: :date %></li>
+            <li><%= m.input :email, label: "信箱" %></li>
+            <li><%= m.input :phone, label: "聯絡電話" %></li>
+          </ul>
+        </li>
+      </ul>
+    <% end %>
+    <%= f.simple_fields_for :members, @proposal.members[2] || @proposal.members.build do |m| %>
+      <ul>
+        <li>團隊成員3
+          <ul>
+            <li><%= m.input :name, label: "姓名" %></li>
+            <li><%= m.input :birthday, label: "生日", as: :date %></li>
+            <li><%= m.input :email, label: "信箱" %></li>
+            <li><%= m.input :phone, label: "聯絡電話" %></li>
+          </ul>
+        </li>
+      </ul>
+    <% end %>
+    <%= f.input :title %>
   </div>
 
   <div class="form-actions">

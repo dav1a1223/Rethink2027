@@ -26,7 +26,7 @@ class ProposalsController < ApplicationController
   # POST /proposals.json
   def create
     @proposal = Proposal.new(proposal_params)
-
+    @proposal.user = current_user
     respond_to do |format|
       if @proposal.save
         format.html { redirect_to @proposal, notice: 'Proposal was successfully created.' }
@@ -70,6 +70,6 @@ class ProposalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def proposal_params
-      params.fetch(:proposal, {}).permit(:title)
+      params.fetch(:proposal, {}).permit(:title, :user_id, :members_attributes => [:id, :name, :birthday, :phone, :email])
     end
 end

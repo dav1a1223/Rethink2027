@@ -6,7 +6,11 @@
     <%= image_tag("logo.png") %>
 	</a>
 	<span class="proposal">
-    <%= link_to "我要提案", new_proposal_path %>
+    <% unless current_user.proposal %>
+      <%= link_to "我要提案", new_proposal_path %>
+    <% else %>
+      <%= link_to "我要提案", edit_proposal_path(current_user.proposal) %>
+    <% end %>
   </span>
   <span>
     <% unless user_signed_in? %>
