@@ -1795,3 +1795,1057 @@ Completed 200 OK in 112ms (Views: 110.6ms | ActiveRecord: 0.0ms)
 
 Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:03:45 +0800
 Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:03:45 +0800
+Started GET "/" for ::1 at 2017-08-03 19:04:50 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 106ms (Views: 104.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:04:54 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:04:55 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:05:44 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:05:44 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:08:30 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:08:30 +0800
+Started GET "/users/auth/facebook/callback?code=AQA-TDNeoak2fZ7ww-kVeh5RTegn6J1ZZdoLzyhwN3mkzh0Z4dVE0joWbIUjD3C4LO3b7HPraFH3IYqSDn5hdwgR5TXObCGuq6ceo2vnEwu-5PKXh-1TZtmKzN3nDYvhU5JYAr_95GsimM7rg0AvDcMuCWFQWi0NPYQ3Q6Nt5k604ndbrHMqxmODDuiRc5GAs84yfzl4J9APk3oqibGoFqirt9RsGEexerZHj25Yeh8KiS1vy3Hr0lLMBa84G2E5R8K94sNG0_vhzzxRLJJBTt8cjeKEpk2u-3tjcrEcdddS4weNOhlAvlibAPeqo-vI0qON9iCmGuDKLP72eGbX68EG&state=9708ee031ace4c818ce40f889ec090aaee0994cfb0e6330d" for ::1 at 2017-08-03 19:08:36 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQA-TDNeoak2fZ7ww-kVeh5RTegn6J1ZZdoLzyhwN3mkzh0Z4dVE0joWbIUjD3C4LO3b7HPraFH3IYqSDn5hdwgR5TXObCGuq6ceo2vnEwu-5PKXh-1TZtmKzN3nDYvhU5JYAr_95GsimM7rg0AvDcMuCWFQWi0NPYQ3Q6Nt5k604ndbrHMqxmODDuiRc5GAs84yfzl4J9APk3oqibGoFqirt9RsGEexerZHj25Yeh8KiS1vy3Hr0lLMBa84G2E5R8K94sNG0_vhzzxRLJJBTt8cjeKEpk2u-3tjcrEcdddS4weNOhlAvlibAPeqo-vI0qON9iCmGuDKLP72eGbX68EG", "state"=>"9708ee031ace4c818ce40f889ec090aaee0994cfb0e6330d"}
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 25.0ms)
+
+
+  
+NoMethodError (undefined method `name=' for #<User:0x007feeab9a9a88>):
+  
+app/models/user.rb:13:in `block in from_omniauth'
+app/models/user.rb:9:in `from_omniauth'
+app/controllers/users/omniauth_callbacks_controller.rb:3:in `facebook'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.1ms)
+Started GET "/users/auth/facebook/callback?code=AQAFsg8pw2f_e4E8MI5WKOhGjsuzAilK_dKlBGoX17IBzt3kTWWC-UVCqamo8G6RUDYZB-2AOtSg36Ihw6QQ5EWeiVbpPbT2piuJQd7SSOV949HJQwQ6KqsfxL8c1-T7WIfS6xbq_F7QVcoYpNz-FYj1dkUy79s3oPXs3ORmHk-M5oKsy7uFnDYAUgu3mcyGAaf20cYsehrZ_Ac_owjzOYYWulM6eT02cERUVA4AVDGa37EiHLo615frgOut7TXqCE91ZG9ITsBv44EBGDxfwUjxXLArTMjiHTLUsqsVkcJiQz8DLtoyMP-kTQQ5TBWgiED8rIG2lTnCA_Nu8671vgMA&state=9708ee031ace4c818ce40f889ec090aaee0994cfb0e6330d" for ::1 at 2017-08-03 19:09:16 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAFsg8pw2f_e4E8MI5WKOhGjsuzAilK_dKlBGoX17IBzt3kTWWC-UVCqamo8G6RUDYZB-2AOtSg36Ihw6QQ5EWeiVbpPbT2piuJQd7SSOV949HJQwQ6KqsfxL8c1-T7WIfS6xbq_F7QVcoYpNz-FYj1dkUy79s3oPXs3ORmHk-M5oKsy7uFnDYAUgu3mcyGAaf20cYsehrZ_Ac_owjzOYYWulM6eT02cERUVA4AVDGa37EiHLo615frgOut7TXqCE91ZG9ITsBv44EBGDxfwUjxXLArTMjiHTLUsqsVkcJiQz8DLtoyMP-kTQQ5TBWgiED8rIG2lTnCA_Nu8671vgMA", "state"=>"9708ee031ace4c818ce40f889ec090aaee0994cfb0e6330d"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-08-03 19:09:22 +0800
+Completed 500 Internal Server Error in 74989ms (ActiveRecord: 4.2ms)
+
+
+  
+SystemExit (exit):
+  
+app/models/user.rb:10:in `block in from_omniauth'
+app/models/user.rb:9:in `from_omniauth'
+app/controllers/users/omniauth_callbacks_controller.rb:3:in `facebook'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.4ms)
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 110ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:16:29 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.0ms)
+Started GET "/" for ::1 at 2017-08-03 19:16:43 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddOmniauthInfoToUsers (20170803111108)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "facebook" character varying[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "remote_avatar_url" character varying[0m
+  [1m[35mSQL (8.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170803111108"]]
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-08-03 19:18:24 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (656.0ms)
+Completed 200 OK in 1159ms (Views: 1136.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:18:30 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:18:30 +0800
+Started GET "/users/auth/facebook/callback?code=AQBnWxQUeaV5Lq4NvzwSCWa0_k5veExH6fMAx5Ws5Qa_kDI2qjnwBnJsKXfwXToXgr6Jt7MEQwggD-XrcNMd5iArPZctM6f4Y8lIgq-XPYpzS26ceuyNcXF3MI76ix1g1JC1VXMeOB-ZLipDPFcZsJJW4AbMBGCGCCJ-r6DXLeUfGz1cjYtOitNFlEU2sp-cbBQW72ioOMX9D5WJsnnyo8Pho6GrwbtuLR3ZZxJiJRjxY_wKdE1US28_mGhJ0PGM9iJ5st4b1TrRiY8rnXE9CRXV4jkvwN3O6YbCSKRVMEojd_G0KJkS89U0_OA6prmaAp-7ZZzau6579MYLSxAqNPn0&state=1220b42c9858f1b0cf7c6133be015344e3047ec05de2f087" for ::1 at 2017-08-03 19:18:30 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBnWxQUeaV5Lq4NvzwSCWa0_k5veExH6fMAx5Ws5Qa_kDI2qjnwBnJsKXfwXToXgr6Jt7MEQwggD-XrcNMd5iArPZctM6f4Y8lIgq-XPYpzS26ceuyNcXF3MI76ix1g1JC1VXMeOB-ZLipDPFcZsJJW4AbMBGCGCCJ-r6DXLeUfGz1cjYtOitNFlEU2sp-cbBQW72ioOMX9D5WJsnnyo8Pho6GrwbtuLR3ZZxJiJRjxY_wKdE1US28_mGhJ0PGM9iJ5st4b1TrRiY8rnXE9CRXV4jkvwN3O6YbCSKRVMEojd_G0KJkS89U0_OA6prmaAp-7ZZzau6579MYLSxAqNPn0", "state"=>"1220b42c9858f1b0cf7c6133be015344e3047ec05de2f087"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 23806ms (ActiveRecord: 9.1ms)
+
+
+  
+NoMethodError (undefined method `skip_confirmation!' for #<User:0x007fc2ccc7a448>):
+  
+app/models/user.rb:18:in `block in from_omniauth'
+app/models/user.rb:9:in `from_omniauth'
+app/controllers/users/omniauth_callbacks_controller.rb:3:in `facebook'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.3ms)
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:19:31 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-03 19:19:32 +0800
+Started GET "/users/auth/facebook/callback?code=AQCdinnHVgUxZ0N41du2uq4eVGTAvYH6HdyYDTA2WLzXiJmRnzRLkzUm7pp6Hgwp93xzfrJgUXKz5HhX6sm7uj3s5f4VB-Vo8p5A6VwCda2VhZAj45zfr9XYqi3JVS3MV6VZOypsA3qA78uRDDKjDEI8YCO6Q4rZmowegtr0tAzPCfFTdfCocwEVPAsyj3ytWvv8IVfXBUcnWXz66GBHZbhX5Vcinlwc5AB5g0TfUlUJ7sjSkpkCimWKio-ow47Hbk7uh-L1LnFyVStYhfyi18PYaBCiv-_faEH-X8sd6OzULJf2qCUXkSDIiHXyZndtN9xpn4ikF9FWxdR8IXeWcM8V&state=f343f0752a29967f3851d1487b4bd186e3ac269a99de3768" for ::1 at 2017-08-03 19:19:32 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCdinnHVgUxZ0N41du2uq4eVGTAvYH6HdyYDTA2WLzXiJmRnzRLkzUm7pp6Hgwp93xzfrJgUXKz5HhX6sm7uj3s5f4VB-Vo8p5A6VwCda2VhZAj45zfr9XYqi3JVS3MV6VZOypsA3qA78uRDDKjDEI8YCO6Q4rZmowegtr0tAzPCfFTdfCocwEVPAsyj3ytWvv8IVfXBUcnWXz66GBHZbhX5Vcinlwc5AB5g0TfUlUJ7sjSkpkCimWKio-ow47Hbk7uh-L1LnFyVStYhfyi18PYaBCiv-_faEH-X8sd6OzULJf2qCUXkSDIiHXyZndtN9xpn4ikF9FWxdR8IXeWcM8V", "state"=>"f343f0752a29967f3851d1487b4bd186e3ac269a99de3768"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dav1a1223@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "provider", "uid", "name", "facebook", "remote_avatar_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "dav1a1223@gmail.com"], ["encrypted_password", "$2a$11$w3sBqUWNa04hBeymNnmQC.W7XI1DchSpGjUId7OfDs9i20GWxw0Fy"], ["created_at", 2017-08-03 11:19:32 UTC], ["updated_at", 2017-08-03 11:19:32 UTC], ["provider", "facebook"], ["uid", "1438007136286466"], ["name", "賴冠廷"], ["facebook", "https://www.facebook.com/app_scoped_user_id/1438007136286466/"], ["remote_avatar_url", "https://graph.facebook.com/v2.6/1438007136286466/picture?type=small"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-08-03 11:19:32 UTC], ["last_sign_in_at", 2017-08-03 11:19:32 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2017-08-03 11:19:32 UTC], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 224ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-03 19:19:32 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 99ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-08-03 19:25:03 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 139ms (Views: 136.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-03 19:25:24 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (600.0ms)
+Completed 200 OK in 996ms (Views: 973.8ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-03 19:26:30 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (652.4ms)
+Completed 200 OK in 1104ms (Views: 1071.9ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-03 19:27:52 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 210ms (Views: 207.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-03 22:47:19 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 159ms (Views: 153.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:21:01 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 215ms (Views: 200.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:21:25 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (18.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (519.2ms)
+Completed 200 OK in 852ms (Views: 811.9ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:21:53 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (30013.9ms)
+Completed 500 Internal Server Error in 30022ms (ActiveRecord: 0.5ms)
+
+
+  
+SystemExit (exit):
+  
+app/views/homepage/index.html.erb:9:in `_app_views_homepage_index_html_erb__3877645902383975562_70169019205460'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.5ms)
+Started GET "/" for ::1 at 2017-08-04 18:22:31 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:42:11 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 136ms (Views: 132.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/info" for ::1 at 2017-08-04 18:55:28 +0800
+Processing by Rails::InfoController#index as HTML
+  Parameters: {"internal"=>true}
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-08-04 18:55:28 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (21.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 62ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:56:25 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 607ms (Views: 604.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:56:41 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 116ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-04 18:56:45 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (15.0ms)
+  Rendered proposals/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 168ms (Views: 86.1ms | ActiveRecord: 21.4ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-04 18:56:51 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sdyDyt4LO78tARTZp1ujAccRLisAQQLSylZvb582FIX99UqHf9tVjDMhh3z6Y0Z3QyhCWP/IZgPn1Iju6qMbwA==", "commit"=>"Create Proposal"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO "proposals" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-08-04 10:56:51 UTC], ["updated_at", 2017-08-04 10:56:51 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/1
+Completed 302 Found in 23ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/proposals/1" for ::1 at 2017-08-04 18:56:51 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 70ms (Views: 62.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-04 18:56:53 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (12.6ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 118ms (Views: 96.5ms | ActiveRecord: 12.6ms)
+
+
+Started DELETE "/proposals/1" for ::1 at 2017-08-04 18:56:58 +0800
+Processing by ProposalsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MC5ZyvcpqzdrYle2yU9jx5fOykrhHZnIKLP7RCF5FNEsPt3A1bmuKvb4dJFT8dGXlWyBxfuy3HXLObCzEdPRKg==", "id"=>"1"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "proposals" WHERE "proposals"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals
+Completed 302 Found in 15ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-04 18:56:58 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 80ms (Views: 77.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/proposals/1" for ::1 at 2017-08-04 18:57:05 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProposal Load (5.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 42ms (ActiveRecord: 40.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Proposal with 'id'=1):
+  
+app/controllers/proposals_controller.rb:68:in `set_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+Started GET "/" for ::1 at 2017-08-04 18:57:08 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 175ms (Views: 165.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:57:47 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 144ms (Views: 141.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 18:57:55 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 93ms (Views: 90.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 19:02:50 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 113ms (Views: 110.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 19:03:28 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (1037.2ms)
+Completed 200 OK in 1258ms (Views: 1236.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2017-08-04 19:03:39 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (13.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (224.2ms)
+Started GET "/" for ::1 at 2017-08-04 19:04:18 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (65.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (87.3ms)
+Completed 200 OK in 204ms (Views: 136.1ms | ActiveRecord: 65.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 19:04:22 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 88ms (Views: 85.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-04 19:04:26 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lspume7u2rPKO+rdu/jIyOnNUdJFrMxvg06/4jSRZu2K2uqTzH7frlehyfohRnqY628aXV8DidJgxPQVBDujFg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 19:04:26 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 177ms (Views: 175.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 19:04:48 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 101ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-04 19:07:28 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 127ms (Views: 123.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-04 19:07:33 +0800
+Processing by ProposalsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-04 19:07:33 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 103ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-04 19:08:14 +0800
+Processing by ProposalsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-04 19:08:14 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (2.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 138ms (Views: 135.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-04 19:09:02 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-04 19:09:03 +0800
+Started GET "/users/auth/facebook/callback?code=AQC0rxQnIBOjxeVau6QPTDXvGlI-yfbcoRsVWMEk7PNZE1iDi7-K1zFhDi2QEHh4nguQetJs7ShhWLico_6hALKPuah79CxNv15a6GOF8kRpaiosR9nAZVZlOY2oJ7cQ1N5FNmNcmxs-YYc-VrkUFzHAM9aho_kHHZSWnac3YTcdEM6Alkevi8Cmzqj9sXO-p6Ez1WNd6wd9cA2kcKqRSwQYB3WvNddlUh_1M7oWkCZ1JayGxTOkdcjnc50FunAUihBXWKkqgWGLGXCVHP0hS7MjZvfOhf-XQNm1duhTdrcsIETJJs5Y8JM6tTu4u07XjfM8JmxYMXenQFv14ETz9xLI&state=9872a613719972550977061d4142d1707dfdc1c0c0602258" for ::1 at 2017-08-04 19:09:03 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQC0rxQnIBOjxeVau6QPTDXvGlI-yfbcoRsVWMEk7PNZE1iDi7-K1zFhDi2QEHh4nguQetJs7ShhWLico_6hALKPuah79CxNv15a6GOF8kRpaiosR9nAZVZlOY2oJ7cQ1N5FNmNcmxs-YYc-VrkUFzHAM9aho_kHHZSWnac3YTcdEM6Alkevi8Cmzqj9sXO-p6Ez1WNd6wd9cA2kcKqRSwQYB3WvNddlUh_1M7oWkCZ1JayGxTOkdcjnc50FunAUihBXWKkqgWGLGXCVHP0hS7MjZvfOhf-XQNm1duhTdrcsIETJJs5Y8JM6tTu4u07XjfM8JmxYMXenQFv14ETz9xLI", "state"=>"9872a613719972550977061d4142d1707dfdc1c0c0602258"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-08-04 11:09:04 UTC], ["sign_in_count", 2], ["updated_at", 2017-08-04 11:09:04 UTC], ["id", 1]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/new
+Completed 302 Found in 16ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-04 19:09:04 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (3.1ms)
+  Rendered proposals/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 95ms (Views: 76.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-04 19:09:07 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (27.7ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 165ms (Views: 128.2ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-04 23:15:55 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (7.2ms)
+  Rendered proposals/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 173ms (Views: 143.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-08-05 12:36:50 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (20.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 81ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:36:52 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (474.9ms)
+Completed 200 OK in 795ms (Views: 784.1ms | ActiveRecord: 8.7ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-05 12:36:57 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"toaLnfkotl5CU8eRw7NTTxKcWhUGNfttnR5fAtOl8B232urNnTGqHkQL2acj6N+0ozuenNNHdigafrh77izOzg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:36:57 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 167ms (Views: 164.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:37:01 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:37:01 +0800
+Started GET "/users/auth/facebook/callback?code=AQC8n1MUl_j25lhff6IvUWzencIw0L9V2JXHfD4ri8lzMSJg559yWBnlE9xZkl42uOEDZOXxepL8F1LihXkOG6s5mAOc4XdwGMw_dkGs-EEfZ6vBNY1XnUH-CJVAQt5hwanDUjjx41O81seU_ightFxrVuZ4inOUkN2UMAcwjba3gY46jQ7FtZ862aniw0K-iPpyJ_Bkf5zO0GvFN6RIMI1Bsu8FQ4c04p_kyTDNgsqyx3jHgG2Ut8clp_xsik5EJupXgChieC-5IhwjnA6zI4SeDGGEHkblKi8YlPIgG-PsF5igTc-DXy9Zz03bGGLyZzBpOyXOiWYY__UkorjKHTTL&state=053305ee61aa409c59c57290c7dad09289367f89b301b8c1" for ::1 at 2017-08-05 12:37:02 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQC8n1MUl_j25lhff6IvUWzencIw0L9V2JXHfD4ri8lzMSJg559yWBnlE9xZkl42uOEDZOXxepL8F1LihXkOG6s5mAOc4XdwGMw_dkGs-EEfZ6vBNY1XnUH-CJVAQt5hwanDUjjx41O81seU_ightFxrVuZ4inOUkN2UMAcwjba3gY46jQ7FtZ862aniw0K-iPpyJ_Bkf5zO0GvFN6RIMI1Bsu8FQ4c04p_kyTDNgsqyx3jHgG2Ut8clp_xsik5EJupXgChieC-5IhwjnA6zI4SeDGGEHkblKi8YlPIgG-PsF5igTc-DXy9Zz03bGGLyZzBpOyXOiWYY__UkorjKHTTL", "state"=>"053305ee61aa409c59c57290c7dad09289367f89b301b8c1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-08-05 04:37:02 UTC], ["last_sign_in_at", 2017-08-04 11:09:04 UTC], ["sign_in_count", 3], ["updated_at", 2017-08-05 04:37:02 UTC], ["id", 1]]
+  [1m[35m (103.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 105.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:37:02 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 112ms (Views: 109.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-05 12:37:29 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dN9Mkmq28O+gYKSSTziehOzO4Rx94mHq5ZTyzJonu2YnoMCpw/2Y68WFJrDsq4A7CXFUobgHhFWoMxXwMWKBVg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:37:29 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 156ms (Views: 154.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:37:34 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:37:34 +0800
+Started GET "/users/auth/facebook/callback?code=AQApd9yj8wsaYccQ28Kp53KV_Q4j83zQgNe-HwqYEp1oPFoB0O-aEXQzdwMF6uAhreDmO0tGP__lsLkLZLiry6pu5qZLPqsqOAFTGedvqvQbcpgsG2wJb6a7RjM45rBtLxjeVA9rPGLg1grWeFzRvv3U6tvOzxpg-u8aJy0wq6RjP-_hz8iME1OOJtmNklYN03nfAphTeiBl6Kp0YgvM7nVOJIdchUYgMEwFP6G1o2g88VkcHdk0wMZ06jDRh3JBK_P1OhNgyLveEU6qrKft4BR1PkvuuyAlq9ifjZXvSdbNZImbG5Iq0gf_MYkUttKGle8lz2emPGQULcCqlWBrj1Hc&state=3571550ebd3c10e2564bcf0ab4476471e0ac3358fd5d3b06" for ::1 at 2017-08-05 12:37:34 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQApd9yj8wsaYccQ28Kp53KV_Q4j83zQgNe-HwqYEp1oPFoB0O-aEXQzdwMF6uAhreDmO0tGP__lsLkLZLiry6pu5qZLPqsqOAFTGedvqvQbcpgsG2wJb6a7RjM45rBtLxjeVA9rPGLg1grWeFzRvv3U6tvOzxpg-u8aJy0wq6RjP-_hz8iME1OOJtmNklYN03nfAphTeiBl6Kp0YgvM7nVOJIdchUYgMEwFP6G1o2g88VkcHdk0wMZ06jDRh3JBK_P1OhNgyLveEU6qrKft4BR1PkvuuyAlq9ifjZXvSdbNZImbG5Iq0gf_MYkUttKGle8lz2emPGQULcCqlWBrj1Hc", "state"=>"3571550ebd3c10e2564bcf0ab4476471e0ac3358fd5d3b06"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-08-05 12:38:26 +0800
+Completed 500 Internal Server Error in 58790ms (ActiveRecord: 0.4ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:4:in `facebook'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.8ms)
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 339ms (Views: 336.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:38:39 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:38:39 +0800
+Started GET "/" for ::1 at 2017-08-05 12:43:50 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 123ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-05 12:43:53 +0800
+Processing by ProposalsController#new as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-05 12:43:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 106ms (Views: 83.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:44:49 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:44:53 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-05 12:44:53 +0800
+Started GET "/users/auth/facebook/callback?code=AQDuL0VOePj4Cao3CrTufzDeE4aM-ZWZb3bCvpDlbYD-ymUN6wESqypREt1IIAC7EFs_gpVeDCdYz5pvllPFg7rKcQVEBfRXgvv5HUgrljW0cIkqFDBT2c9FAxqKbK2dsosOHlsOwJ9VmN8UtvyNe6at0QSzp508dqd6Jb5yJOQXx5U7ajYeNbUBlp7ii2Jsuh7MTAN3L0WsiwJpodOpqis4AwO-HoVrdS0x1wwIXRqkIDK3kn_yoDLA1Tfi5pzZEiM4klZkc8jcQV38Ta7X40ItYw71w1AiDBRb9FgHVPBNBHhzg9NtVBnDUtfdlXGo03ZKceHXPJzUo2vhVzgnj99u&state=b1e27c399a1ebf8bb57f418c57273b6b957492d91e942296" for ::1 at 2017-08-05 12:44:54 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDuL0VOePj4Cao3CrTufzDeE4aM-ZWZb3bCvpDlbYD-ymUN6wESqypREt1IIAC7EFs_gpVeDCdYz5pvllPFg7rKcQVEBfRXgvv5HUgrljW0cIkqFDBT2c9FAxqKbK2dsosOHlsOwJ9VmN8UtvyNe6at0QSzp508dqd6Jb5yJOQXx5U7ajYeNbUBlp7ii2Jsuh7MTAN3L0WsiwJpodOpqis4AwO-HoVrdS0x1wwIXRqkIDK3kn_yoDLA1Tfi5pzZEiM4klZkc8jcQV38Ta7X40ItYw71w1AiDBRb9FgHVPBNBHhzg9NtVBnDUtfdlXGo03ZKceHXPJzUo2vhVzgnj99u", "state"=>"b1e27c399a1ebf8bb57f418c57273b6b957492d91e942296"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-08-05 04:44:54 UTC], ["last_sign_in_at", 2017-08-05 04:37:02 UTC], ["sign_in_count", 4], ["updated_at", 2017-08-05 04:44:54 UTC], ["id", 1]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:44:54 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 83ms (Views: 80.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-05 12:44:58 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (2.1ms)
+  Rendered proposals/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 148ms (Views: 104.5ms | ActiveRecord: 28.5ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-05 12:45:01 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bzr1muuMA4HaZZBn2DEQhgJ19AS/P28TixLB2FKIpfCWzp4/g5tZFr24dPtmxOGy82Cb579k+tYDLhmdYeJqsw==", "commit"=>"Create Proposal"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "proposals" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-08-05 04:45:01 UTC], ["updated_at", 2017-08-05 04:45:01 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/2
+Completed 302 Found in 11ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/proposals/2" for ::1 at 2017-08-05 12:45:01 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProposal Load (1.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 104ms (Views: 88.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-05 12:45:05 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (3.6ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 90ms (Views: 80.5ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/proposals/2" for ::1 at 2017-08-05 12:45:09 +0800
+Processing by ProposalsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A2UPMZIk+ac8pw+I9JoC2vJ3KoWcqtl9v3XWD5e1RwXxUXiFEzhy4sOYsfgCk4S83roRM5ixGvDffCpPPwTzGA==", "id"=>"2"}
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "proposals" WHERE "proposals"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-05 12:45:09 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:45:24 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 113ms (Views: 110.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-05 12:45:26 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (2.1ms)
+  Rendered proposals/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 174ms (Views: 164.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-05 12:52:21 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 119ms (Views: 114.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-05 12:52:26 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 113ms (Views: 110.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-05 12:52:28 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (419.9ms)
+  Rendered proposals/new.html.erb within layouts/application (422.5ms)
+Completed 500 Internal Server Error in 471ms (ActiveRecord: 16.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `attributes' for #<#<Class:0x007fafcbce7b10>:0x007fafd0ee0ef8>):
+    2:   <%%= f.error_notification %>
+    3: 
+    4:   <div class="form-inputs">
+    5:   <%- attributes.each do |attribute| -%>
+    6:     <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> %>
+    7:   <%- end -%>
+    8:   </div>
+  
+app/views/proposals/_form.html.erb:5:in `_app_views_proposals__form_html_erb__447632381738757141_70196550538300'
+app/views/proposals/new.html.erb:3:in `_app_views_proposals_new_html_erb__1777758915168624020_70196550636460'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (120.2ms)
+Started GET "/proposals/new" for ::1 at 2017-08-05 12:53:43 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (317.2ms)
+  Rendered proposals/new.html.erb within layouts/application (319.9ms)
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fafcbce7b10>:0x007fafcad802a8>):
+    2:   <%%= f.error_notification %>
+    3: 
+    4:   <div class="form-inputs">
+    5:   <%= f.input :title %>
+    6:   </div>
+    7: 
+    8:   <div class="form-actions">
+  
+app/views/proposals/_form.html.erb:5:in `_app_views_proposals__form_html_erb__447632381738757141_70196528632080'
+app/views/proposals/new.html.erb:3:in `_app_views_proposals_new_html_erb__1777758915168624020_70196499583180'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (199.3ms)
+Started GET "/proposals/new" for ::1 at 2017-08-05 12:53:59 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (231.4ms)
+  Rendered proposals/new.html.erb within layouts/application (232.9ms)
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fafcbce7b10>:0x007fafcba18128>):
+    2:   <%%= f.error_notification %>
+    3: 
+    4:   <div class="form-inputs">
+    5:   <%= f.input :title %>
+    6:   </div>
+    7: 
+    8:   <div class="form-actions">
+  
+app/views/proposals/_form.html.erb:5:in `_app_views_proposals__form_html_erb__447632381738757141_70196585584160'
+app/views/proposals/new.html.erb:3:in `_app_views_proposals_new_html_erb__1777758915168624020_70196506183040'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.7ms)
+Started GET "/proposals/new" for ::1 at 2017-08-05 12:54:32 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (83.8ms)
+  Rendered proposals/new.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 828ms (Views: 771.4ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-05 12:54:41 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ll1K/S4sqW50cLomJD4Yas8szOwMGzTD8EXooQwyDGNkaT1JrzAiK4tPBFbSN54M4+H3WggA906QTBThpIO4fg==", "proposal"=>{"title"=>"測試"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/proposals_controller.rb:28:in `create'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.0ms)
+Started POST "/proposals" for ::1 at 2017-08-05 12:55:13 +0800
+  
+SyntaxError (/Users/davidlai/Desktop/Rethink2027/app/controllers/proposals_controller.rb:73: syntax error, unexpected '}', expecting =>
+      params.fetch(:proposal, {:title})
+                                      ^):
+  
+app/controllers/proposals_controller.rb:73: syntax error, unexpected '}', expecting =>
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.2ms)
+Started POST "/proposals" for ::1 at 2017-08-05 12:56:17 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ll1K/S4sqW50cLomJD4Yas8szOwMGzTD8EXooQwyDGNkaT1JrzAiK4tPBFbSN54M4+H3WggA906QTBThpIO4fg==", "proposal"=>{"title"=>"測試"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/proposals_controller.rb:28:in `create'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+Started POST "/proposals" for ::1 at 2017-08-05 13:00:10 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ll1K/S4sqW50cLomJD4Yas8szOwMGzTD8EXooQwyDGNkaT1JrzAiK4tPBFbSN54M4+H3WggA906QTBThpIO4fg==", "proposal"=>{"title"=>"測試"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO "proposals" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "測試"], ["created_at", 2017-08-05 05:00:10 UTC], ["updated_at", 2017-08-05 05:00:10 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/3
+Completed 302 Found in 57ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/proposals/3" for ::1 at 2017-08-05 13:00:10 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 124ms (Views: 89.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-05 13:00:15 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (3.0ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 111ms (Views: 101.8ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]

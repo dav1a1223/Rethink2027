@@ -5,7 +5,16 @@
 	<a class="logo" href="index.html">
     <%= image_tag("logo.png") %>
 	</a>
-	<span class="proposal"><%= link_to "我要提案", user_facebook_omniauth_authorize_path %></span>
+	<span class="proposal">
+    <%= link_to "我要提案", new_proposal_path %>
+  </span>
+  <span>
+    <% unless user_signed_in? %>
+      <%= link_to "登入", user_facebook_omniauth_authorize_path %>
+    <% else %>
+      <%= link_to "登出", destroy_user_session_path, method: :delete %>
+    <% end %>
+  </span>
 </div>
 
 <div class="menu">

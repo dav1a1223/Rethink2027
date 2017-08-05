@@ -14,7 +14,7 @@ class User < ApplicationRecord
       user.facebook = auth.info.urls.Facebook
       user.password = Devise.friendly_token[0,20]
       user.remote_avatar_url   = auth.info.image
-      user.skip_confirmation!  # 如果 devise 有使用 confirmable，記得 skip！
+      # user.skip_confirmation!  # 如果 devise 有使用 confirmable，記得 skip！
     end
   end
 
