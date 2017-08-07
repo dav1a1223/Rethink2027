@@ -5016,3 +5016,1575 @@ Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 0.0ms)
 
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateNewsTable (20170807080221)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (51.8ms)[0m  [1m[35mCREATE TABLE "news" ("id" serial primary key, "title" character varying, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170807080221"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateAdminUsers (20170807080754)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_email" ON "admin_users"  ("email")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_reset_password_token" ON "admin_users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170807080754"]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20170807080804)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" serial primary key, "namespace" character varying, "body" text, "resource_type" character varying, "resource_id" integer, "author_type" character varying, "author_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170807080804"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/admin" for ::1 at 2017-08-07 16:10:30 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2017-08-07 16:10:30 +0800
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (54.9ms)
+Completed 200 OK in 20174ms (Views: 20146.7ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-08-07 16:11:15 +0800
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yv88enM09BtXZ6uDgoU0kbC3Ivs/oWQob2SiwbNh1SSlEBy+ozyxOGv5npAu33rtmoEE6W9m3YiKJMXkhesgpw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (14.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 20ms (ActiveRecord: 14.9ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yv88enM09BtXZ6uDgoU0kbC3Ivs/oWQob2SiwbNh1SSlEBy+ozyxOGv5npAu33rtmoEE6W9m3YiKJMXkhesgpw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (30.0ms)
+Completed 200 OK in 385ms (Views: 214.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-08-07 16:11:23 +0800
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4XPCmhpBg/ujCZg0Bv45TpNtjfT2F3Sw1zue9HRKvhQmnOJeyknG2J+XrSeqpHcyuVur5qbQzRAye/nRQsBLlw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 1.3ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4XPCmhpBg/ujCZg0Bv45TpNtjfT2F3Sw1zue9HRKvhQmnOJeyknG2J+XrSeqpHcyuVur5qbQzRAye/nRQsBLlw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/shared/_links.erb (2.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (36.7ms)
+Completed 200 OK in 369ms (Views: 211.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-08-07 16:11:36 +0800
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SI0DzPZn5jpaIiUyS0GFjnO0NO49GJhukomPBD9ey4ePYiMIJm+jGWa8ECHnG8vyWYIS/G3fIc53yeghCdQ+BA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (2.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 2.9ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SI0DzPZn5jpaIiUyS0GFjnO0NO49GJhukomPBD9ey4ePYiMIJm+jGWa8ECHnG8vyWYIS/G3fIc53yeghCdQ+BA==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (25.0ms)
+Completed 200 OK in 387ms (Views: 230.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-08-07 16:13:24 +0800
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XGJRqCFROffQuetYQrNPQI9Hsgxtzgv+HHGhK+T+Uq6bjXFs8Vl81Own3kvu6QE8pXGUHj0Jsl75McYO0nSnLQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (3.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 3.9ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XGJRqCFROffQuetYQrNPQI9Hsgxtzgv+HHGhK+T+Uq6bjXFs8Vl81Own3kvu6QE8pXGUHj0Jsl75McYO0nSnLQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/shared/_links.erb (1.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (26.5ms)
+Completed 200 OK in 306ms (Views: 152.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-08-07 16:13:50 +0800
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8QtVSvYp1fF93RczhWbw99a7zt072ZOI2m6b70sBWL425HWOJiGQ0kFDIiApPL6L/I3oz2seKig/LvzKfYutPQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 1.9ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8QtVSvYp1fF93RczhWbw99a7zt072ZOI2m6b70sBWL425HWOJiGQ0kFDIiApPL6L/I3oz2seKig/LvzKfYutPQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (23.3ms)
+Completed 200 OK in 306ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdminUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$zpswXqwRZG3WZCYTr/.la.Fm6zl6ri0DcyE/he4s6Ta19xnts5AD2"], ["created_at", 2017-08-07 08:15:43 UTC], ["updated_at", 2017-08-07 08:15:43 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/admin/login" for ::1 at 2017-08-07 16:15:56 +0800
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6DCcSCmrFmsAPzO3pFy771q6p7fD1gLg0et+CyaaF48T+K18K7pepCeyd1yyzyTl1zMjI/I4atmB8rdGhCd3Q==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "admin_users"."id" = $7[0m  [["current_sign_in_at", 2017-08-07 08:15:56 UTC], ["last_sign_in_at", 2017-08-07 08:15:56 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", 2017-08-07 08:15:56 UTC], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 191ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for ::1 at 2017-08-07 16:15:56 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (6.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/page/index.html.arb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/page/index.html.arb (147.0ms)
+Completed 200 OK in 163ms (Views: 151.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2017-08-07 16:15:59 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (254.8ms)
+Completed 200 OK in 276ms (Views: 264.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2017-08-07 16:16:01 +0800
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/page/index.html.arb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/page/index.html.arb (144.9ms)
+Completed 200 OK in 155ms (Views: 151.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/comments" for ::1 at 2017-08-07 16:16:03 +0800
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1[0m  [["namespace", "admin"]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (201.6ms)
+Completed 200 OK in 224ms (Views: 202.1ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/admin/admin_users" for ::1 at 2017-08-07 16:16:04 +0800
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (211.2ms)
+Completed 200 OK in 228ms (Views: 221.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/" for ::1 at 2017-08-07 17:24:43 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/page/index.html.arb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/page/index.html.arb (1086.9ms)
+Completed 200 OK in 1131ms (Views: 1099.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/admin/news" for ::1 at 2017-08-07 17:24:47 +0800
+Processing by Admin::NewsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "news" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (246.8ms)
+Completed 200 OK in 271ms (Views: 257.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:24:49 +0800
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (19.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (490.8ms)
+Completed 200 OK in 509ms (Views: 465.2ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/admin/users" for ::1 at 2017-08-07 17:24:59 +0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (364.0ms)
+Completed 200 OK in 388ms (Views: 378.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:25:04 +0800
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (10.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (289.6ms)
+Completed 200 OK in 302ms (Views: 274.3ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/admin/users/1" for ::1 at 2017-08-07 17:25:09 +0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = $1 AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = $2[0m  [["resource_type", "User"], ["namespace", "admin"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = $1 AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = $2 LIMIT $3 OFFSET $4) subquery_for_count[0m  [["resource_type", "User"], ["namespace", "admin"], ["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/show.html.arb (225.6ms)
+Completed 200 OK in 242ms (Views: 232.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/proposals/5" for ::1 at 2017-08-07 17:25:16 +0800
+Processing by Admin::ProposalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/show.html.arb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = $1 AND "active_admin_comments"."resource_id" = 5 AND "active_admin_comments"."namespace" = $2[0m  [["resource_type", "Proposal"], ["namespace", "admin"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = $1 AND "active_admin_comments"."resource_id" = 5 AND "active_admin_comments"."namespace" = $2 LIMIT $3 OFFSET $4) subquery_for_count[0m  [["resource_type", "Proposal"], ["namespace", "admin"], ["LIMIT", 25], ["OFFSET", 0]]
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/show.html.arb (175.3ms)
+Completed 200 OK in 191ms (Views: 184.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/proposals/5/edit" for ::1 at 2017-08-07 17:25:20 +0800
+Processing by Admin::ProposalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/edit.html.arb (195.4ms)
+Completed 200 OK in 211ms (Views: 193.8ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/admin/news" for ::1 at 2017-08-07 17:29:47 +0800
+Processing by Admin::NewsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "news" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (174.2ms)
+Completed 200 OK in 190ms (Views: 185.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:32:50 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[36mProposal Load (1.2ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals" ORDER BY "proposals"."id" desc[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (1140.0ms)
+Completed 500 Internal Server Error in 1202ms (ActiveRecord: 9.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `submit' for #<Proposal::ActiveRecord_Relation:0x007fac9a6d4a90>):
+    1: insert_tag renderer_for(:index)
+  
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:124:in `method_missing'
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:94:in `method_missing'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `public_send'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `scope_chain'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:60:in `get_scope_count'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:38:in `block (3 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `span'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:37:in `block (2 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `a'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:35:in `block in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `li'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:32:in `build_scope'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:25:in `block in build'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `each'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `scopes_renderer'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:88:in `build_scopes'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:65:in `block in build_table_tools'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:63:in `build_table_tools'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:27:in `block in main_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:36:in `wrap_with_batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:26:in `main_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:91:in `block (2 levels) in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:90:in `block in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:89:in `build_main_content_wrapper'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:75:in `block in build_page_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:74:in `build_page_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:52:in `block (2 levels) in build_page'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:48:in `block in build_page'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:47:in `build_page'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:10:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:2:in `block in ___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb__1121800152540625551_70189669896500'
+arbre (1.1.1) lib/arbre/context.rb:45:in `instance_eval'
+arbre (1.1.1) lib/arbre/context.rb:45:in `initialize'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `new'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb__1121800152540625551_70189669896500'
+actionview (5.0.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/responders/flash_responder.rb:107:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+inherited_resources (1.7.2) lib/inherited_resources/actions.rb:7:in `index'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/resource_controller/streaming.rb:12:in `index'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameSubmit (20170807093412)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.1ms)[0m  [1m[35mALTER TABLE "proposals" RENAME COLUMN "submit" TO "is_submit"[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170807093412"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:35:21 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals" ORDER BY "proposals"."id" desc[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (1090.1ms)
+Completed 500 Internal Server Error in 1146ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `submit' for #<Proposal::ActiveRecord_Relation:0x007fe4f8b02770>):
+    1: insert_tag renderer_for(:index)
+  
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:124:in `method_missing'
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:94:in `method_missing'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `public_send'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `scope_chain'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:60:in `get_scope_count'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:38:in `block (3 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `span'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:37:in `block (2 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `a'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:35:in `block in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `li'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:32:in `build_scope'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:25:in `block in build'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `each'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `scopes_renderer'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:88:in `build_scopes'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:65:in `block in build_table_tools'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:63:in `build_table_tools'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:27:in `block in main_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:36:in `wrap_with_batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:26:in `main_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:91:in `block (2 levels) in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:90:in `block in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:89:in `build_main_content_wrapper'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:75:in `block in build_page_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:74:in `build_page_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:52:in `block (2 levels) in build_page'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:48:in `block in build_page'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:47:in `build_page'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:10:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:2:in `block in ___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb__4536861976599461450_70310677224260'
+arbre (1.1.1) lib/arbre/context.rb:45:in `instance_eval'
+arbre (1.1.1) lib/arbre/context.rb:45:in `initialize'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `new'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb__4536861976599461450_70310677224260'
+actionview (5.0.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/responders/flash_responder.rb:107:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+inherited_resources (1.7.2) lib/inherited_resources/actions.rb:7:in `index'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/resource_controller/streaming.rb:12:in `index'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.5ms)
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:37:11 +0800
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals" ORDER BY "proposals"."id" desc[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (180.5ms)
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 5.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `submit?' for #<Proposal::ActiveRecord_Relation:0x007fe4fc08b220>):
+    1: insert_tag renderer_for(:index)
+  
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:124:in `method_missing'
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:94:in `method_missing'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `public_send'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `scope_chain'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:60:in `get_scope_count'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:38:in `block (3 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `span'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:37:in `block (2 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `a'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:35:in `block in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `li'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:32:in `build_scope'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:25:in `block in build'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `each'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `scopes_renderer'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:88:in `build_scopes'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:65:in `block in build_table_tools'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:63:in `build_table_tools'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:27:in `block in main_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:36:in `wrap_with_batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:26:in `main_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:91:in `block (2 levels) in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:90:in `block in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:89:in `build_main_content_wrapper'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:75:in `block in build_page_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:74:in `build_page_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:52:in `block (2 levels) in build_page'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:48:in `block in build_page'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:47:in `build_page'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:10:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:2:in `block in ___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb__4536861976599461450_70310719511100'
+arbre (1.1.1) lib/arbre/context.rb:45:in `instance_eval'
+arbre (1.1.1) lib/arbre/context.rb:45:in `initialize'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `new'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb__4536861976599461450_70310719511100'
+actionview (5.0.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/responders/flash_responder.rb:107:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+inherited_resources (1.7.2) lib/inherited_resources/actions.rb:7:in `index'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/resource_controller/streaming.rb:12:in `index'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.7ms)
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:38:02 +0800
+  
+RuntimeError (A string/symbol is required as the second argument if your label is a proc.):
+  
+app/admin/proposals.rb:14:in `block in <top (required)>'
+app/admin/proposals.rb:1:in `<top (required)>'
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.4ms)
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:38:19 +0800
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (100061.8ms)
+Completed 500 Internal Server Error in 100112ms (ActiveRecord: 11.2ms)
+
+
+  
+SystemExit (exit):
+  
+app/admin/proposals.rb:14:in `block (2 levels) in <top (required)>'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.6ms)
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:40:21 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals" ORDER BY "proposals"."id" desc[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (1003.7ms)
+Completed 500 Internal Server Error in 1059ms (ActiveRecord: 8.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `submit?' for #<Proposal::ActiveRecord_Relation:0x007fe30f435ce8>):
+    1: insert_tag renderer_for(:index)
+  
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:124:in `method_missing'
+activerecord (5.0.2) lib/active_record/relation/delegation.rb:94:in `method_missing'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `public_send'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/scope_chain.rb:15:in `scope_chain'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:60:in `get_scope_count'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:38:in `block (3 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `span'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:37:in `block (2 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `a'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:35:in `block in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `li'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:32:in `build_scope'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:25:in `block in build'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `each'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `scopes_renderer'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:88:in `build_scopes'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:65:in `block in build_table_tools'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:63:in `build_table_tools'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:27:in `block in main_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:36:in `wrap_with_batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:26:in `main_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:91:in `block (2 levels) in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:90:in `block in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:89:in `build_main_content_wrapper'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:75:in `block in build_page_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:74:in `build_page_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:52:in `block (2 levels) in build_page'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:48:in `block in build_page'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:47:in `build_page'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:10:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:2:in `block in ___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb___3612199584826853858_70306603159420'
+arbre (1.1.1) lib/arbre/context.rb:45:in `instance_eval'
+arbre (1.1.1) lib/arbre/context.rb:45:in `initialize'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `new'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb___3612199584826853858_70306603159420'
+actionview (5.0.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/responders/flash_responder.rb:107:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+inherited_resources (1.7.2) lib/inherited_resources/actions.rb:7:in `index'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/resource_controller/streaming.rb:12:in `index'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.3ms)
+Started PUT "/__web_console/repl_sessions/90a7f9ed4498429cf2e295a1556efbda" for ::1 at 2017-08-07 17:40:32 +0800
+Started PUT "/__web_console/repl_sessions/90a7f9ed4498429cf2e295a1556efbda" for ::1 at 2017-08-07 17:40:34 +0800
+Started PUT "/__web_console/repl_sessions/90a7f9ed4498429cf2e295a1556efbda" for ::1 at 2017-08-07 17:40:35 +0800
+Started PUT "/__web_console/repl_sessions/90a7f9ed4498429cf2e295a1556efbda" for ::1 at 2017-08-07 17:41:00 +0800
+Started PUT "/__web_console/repl_sessions/90a7f9ed4498429cf2e295a1556efbda" for ::1 at 2017-08-07 17:41:01 +0800
+Started PUT "/__web_console/repl_sessions/90a7f9ed4498429cf2e295a1556efbda" for ::1 at 2017-08-07 17:41:02 +0800
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:45:06 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals" WHERE (submit = 't')[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (1043.8ms)
+Completed 500 Internal Server Error in 1102ms (ActiveRecord: 11.7ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "submit" does not exist
+LINE 1: SELECT COUNT(*) FROM "proposals" WHERE (submit = 't')
+                                                ^
+HINT:  Perhaps you meant to reference the column "proposals.is_submit".
+: SELECT COUNT(*) FROM "proposals" WHERE (submit = 't')):
+    1: insert_tag renderer_for(:index)
+  
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `async_exec'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `block in exec_no_cache'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:589:in `block in log'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:598:in `exec_no_cache'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:585:in `execute_and_clear'
+activerecord (5.0.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:103:in `exec_query'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:373:in `select'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/database_statements.rb:41:in `select_all'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:93:in `block in select_all'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:108:in `cache_sql'
+activerecord (5.0.2) lib/active_record/connection_adapters/abstract/query_cache.rb:93:in `select_all'
+activerecord (5.0.2) lib/active_record/relation/calculations.rb:248:in `execute_simple_calculation'
+activerecord (5.0.2) lib/active_record/relation/calculations.rb:207:in `perform_calculation'
+activerecord (5.0.2) lib/active_record/relation/calculations.rb:121:in `calculate'
+activerecord (5.0.2) lib/active_record/relation/calculations.rb:40:in `count'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/helpers/collection.rb:11:in `collection_size'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:60:in `get_scope_count'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:38:in `block (3 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `span'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:37:in `block (2 levels) in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `a'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:35:in `block in build_scope'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `li'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:32:in `build_scope'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:25:in `block in build'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `each'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/components/scopes.rb:24:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `scopes_renderer'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:88:in `build_scopes'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:65:in `block in build_table_tools'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:63:in `build_table_tools'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:27:in `block in main_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:36:in `wrap_with_batch_action_form'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/index.rb:26:in `main_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:91:in `block (2 levels) in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:90:in `block in build_main_content_wrapper'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:89:in `build_main_content_wrapper'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:75:in `block in build_page_content'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:74:in `build_page_content'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:52:in `block (2 levels) in build_page'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:31:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:14:in `div'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:48:in `block in build_page'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:49:in `with_current_arbre_element'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:47:in `build_page'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/views/pages/base.rb:10:in `build'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:30:in `block in build_tag'
+arbre (1.1.1) lib/arbre/context.rb:92:in `with_current_arbre_element'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:26:in `build_tag'
+arbre (1.1.1) lib/arbre/element/builder_methods.rb:39:in `insert_tag'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:2:in `block in ___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb___170635136722094130_70176481358380'
+arbre (1.1.1) lib/arbre/context.rb:45:in `instance_eval'
+arbre (1.1.1) lib/arbre/context.rb:45:in `initialize'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `new'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb:1:in `___sers_davidlai__rbenv_versions_______lib_ruby_gems_______bundler_gems_activeadmin_____cddb_e_d_app_views_active_admin_resource_index_html_arb___170635136722094130_70176481358380'
+actionview (5.0.2) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.2) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.2) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.2) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/responders/flash_responder.rb:107:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+inherited_resources (1.7.2) lib/inherited_resources/actions.rb:7:in `index'
+/Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/lib/active_admin/resource_controller/streaming.rb:12:in `index'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (112.8ms)
+Started GET "/admin/proposals" for ::1 at 2017-08-07 17:45:19 +0800
+Processing by Admin::ProposalsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals" WHERE (is_submit = 't')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals" WHERE (publish = 't')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "proposals" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-5084cddb6e2d/app/views/active_admin/resource/index.html.arb (425.4ms)
+Completed 200 OK in 458ms (Views: 409.9ms | ActiveRecord: 29.8ms)
+
+

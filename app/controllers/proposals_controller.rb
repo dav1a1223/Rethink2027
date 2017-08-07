@@ -58,7 +58,7 @@ class ProposalsController < ApplicationController
       redirect_to :back
     else
       @proposal = Proposal.find(params[:id])
-      @proposal.submit = true
+      @proposal.is_submit = true
       @proposal.save!
       redirect_to @proposal
     end
