@@ -3778,3 +3778,470 @@ Processing by ProposalsController#edit as HTML
 Completed 200 OK in 475ms (Views: 465.3ms | ActiveRecord: 4.2ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveTitleFromProposals (20170806060309)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.3ms)[0m  [1m[35mALTER TABLE "proposals" DROP "title"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "proposals" ADD "action_name" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170806060309"]]
+  [1m[35m (167.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ReviseProposalAttr (20170806061214)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.1ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_target"[0m
+  [1m[35m (17.3ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_target"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ReviseProposalAttr (20170806061214)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_target"[0m
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_target"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ReviseProposalAttr (20170806061214)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_target"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_procedure"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "proposals" DROP "motivation"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ReviseProposalAttr (20170806061214)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_target"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "proposals" DROP "action_procedure"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "proposals" DROP "motivation"[0m
+  [1m[35m (5.8ms)[0m  [1m[35mALTER TABLE "proposals" ADD "how_can_we" text[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "proposals" ADD "excitement" text[0m
+  [1m[35mSQL (7.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170806061214"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (19.3ms)[0m  [1m[31mDELETE FROM "proposals"[0m
+Started GET "/" for ::1 at 2017-08-06 14:43:59 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.9ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (2264.3ms)
+Completed 200 OK in 2722ms (Views: 2693.2ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-06 14:44:07 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (132.9ms)
+  Rendered proposals/new.html.erb within layouts/application (136.1ms)
+Completed 200 OK in 253ms (Views: 200.2ms | ActiveRecord: 22.4ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-06 14:44:55 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ynLQ/3DPO1UV2a+mxZB1WiJQ+H+KdVgq/ZJjE1GVvu5bhrtaGNhhwnIESzp7ZYRu00WXnIouze91rrtWYv9xrQ==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"qqq", "phone"=>"www"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"www", "phone"=>"qqq"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"", "phone"=>""}}, "description"=>"老人", "action_name"=>"照顧老人", "action_intro"=>"照顧他們", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀法產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: description, action_name, action_intro, action_location, how_can_we, excitement
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (46.0ms)
+  Rendered proposals/new.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 214ms (Views: 193.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-06 14:46:34 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zf0TXqJiajRJSMaGgt0cQDL7YOozn9zBGPqUWEWiD7CXyWTqI37hcbZ3ePZ01JomHjZbXDeEH0x482gY7RO7rQ==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"qqq", "phone"=>"www"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"www", "phone"=>"qqq"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"", "phone"=>""}}, "description"=>"老人問題", "action_name"=>"照顧老人", "action_intro"=>"照顧他們", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀法產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (11.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (56.7ms)
+  Rendered proposals/new.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 281ms (Views: 157.5ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-06 14:46:39 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (10.2ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 135ms (Views: 120.4ms | ActiveRecord: 10.2ms)
+
+
+  [1m[36mProposal Load (1.2ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals"[0m
+Started GET "/" for ::1 at 2017-08-06 14:47:20 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered homepage/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 126ms (Views: 122.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-06 14:47:22 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (92.6ms)
+  Rendered proposals/new.html.erb within layouts/application (95.4ms)
+Completed 200 OK in 383ms (Views: 370.2ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-06 14:48:27 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2lWT3FbiwSNbJP5ye9KeKvNgLghVouYf4CrVEm/mO4RLofh5PvWbtDz5Gu7FJ28eAnVB61X5c9poFg1XXIz0xw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"aaa", "phone"=>"aaa"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"bbb", "phone"=>"bbb"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"", "phone"=>""}}, "description"=>"老人問題", "action_name"=>"照顧老人", "action_intro"=>"照顧", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀髮產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (66.9ms)
+  Rendered proposals/new.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 324ms (Views: 308.2ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-06 14:49:27 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HodZGUbemSNICdgZj8p2iKSJA7vXlIjah62cxiyGYz7ssy6tx8ISZrc2Zml5w/DuiEQ4DdOPS1fnpGCGhDfXIw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"aaa", "phone"=>"aaa"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"bbb", "phone"=>"bbb"}, "2"=>{"name"=>"333", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"ccc", "phone"=>"ccc"}}, "description"=>"老人問題", "action_name"=>"照顧老人", "action_intro"=>"照顧", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀髮產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (56.3ms)
+  Rendered proposals/new.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 182ms (Views: 165.3ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-06 14:54:36 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mVxFYBJ8YfE3OT5o1zCLfVe250ppjT7Jc95shQJ4RAVraDLUk2DqtMgGgBghOQ0be3vc/G2W/UQT15DFqsnwGA==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"aaa", "phone"=>"aaa"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"bbb", "phone"=>"bbb"}, "2"=>{"name"=>"333", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"ccc", "phone"=>"ccc"}}, "description"=>"老人問題", "action_name"=>"照顧老人", "action_intro"=>"照顧", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀髮產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (131.4ms)
+  Rendered proposals/new.html.erb within layouts/application (135.8ms)
+Completed 200 OK in 923ms (Views: 771.8ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-06 14:55:34 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D45Sjlf1FLZnWJJTijZxW9DI26wR8i1u5MMLOYg/4uv9uiU61umf85hnLCN8P/c9/AXgGhXp7uOEyvd5II5W9g==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"aaa", "phone"=>"aaa"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"bbb", "phone"=>"bbb"}, "2"=>{"name"=>"333", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"ccc", "phone"=>"ccc"}}, "description"=>"老人問題", "action_name"=>"照顧老人", "action_intro"=>"照顧", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀髮產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "members"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (44.0ms)
+  Rendered proposals/new.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 62130ms (Views: 159.5ms | ActiveRecord: 19.8ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+Started POST "/proposals" for ::1 at 2017-08-06 14:56:56 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/pilfYkNdKHuU5xRdN0DIiBGG5+Qge812txLkOnaO0tzhUhdzi+l3iG8AGz2vJqpEwj2HpZxDG3Yo1u6xbc8A==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"aaa", "phone"=>"aaa"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"bbb", "phone"=>"bbb"}, "2"=>{"name"=>"333", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"ccc", "phone"=>"ccc"}}, "description"=>"老人問題", "action_name"=>"照顧老人", "action_intro"=>"照顧", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀髮產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (66.0ms)
+  Rendered proposals/new.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 203730ms (Views: 225.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-06 15:00:23 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8g2uX1Cpd7w2YoRpuSwtW/5ec8N5yQRRwrimj8pfgs4AOdnr0bX8+cldOhlPJas90pNIdX3Sx9yisVrPYu420w==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"aaa", "phone"=>"aaa"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"bbb", "phone"=>"bbb"}, "2"=>{"name"=>"333", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"ccc", "phone"=>"ccc"}}, "description"=>"老人問題", "action_name"=>"照顧老人", "action_intro"=>"照顧", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀髮產業"}, "commit"=>"Create Proposal"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.2ms)[0m  [1m[32mINSERT INTO "proposals" ("description", "action_intro", "action_location", "created_at", "updated_at", "user_id", "action_name", "how_can_we", "excitement") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["description", "老人問題"], ["action_intro", "照顧"], ["action_location", "台北市"], ["created_at", 2017-08-06 07:00:27 UTC], ["updated_at", 2017-08-06 07:00:27 UTC], ["user_id", 1], ["action_name", "照顧老人"], ["how_can_we", "我們如何照顧"], ["excitement", "銀髮產業"]]
+  [1m[35mSQL (18.0ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "111"], ["birthday", 2017-08-06 00:00:00 UTC], ["email", "aaa"], ["phone", "aaa"], ["created_at", 2017-08-06 07:00:27 UTC], ["updated_at", 2017-08-06 07:00:27 UTC], ["proposal_id", 5]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "222"], ["birthday", 2017-08-06 00:00:00 UTC], ["email", "bbb"], ["phone", "bbb"], ["created_at", 2017-08-06 07:00:27 UTC], ["updated_at", 2017-08-06 07:00:27 UTC], ["proposal_id", 5]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "333"], ["birthday", 2017-08-06 00:00:00 UTC], ["email", "ccc"], ["phone", "ccc"], ["created_at", 2017-08-06 07:00:27 UTC], ["updated_at", 2017-08-06 07:00:27 UTC], ["proposal_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/5
+Completed 302 Found in 4221ms (ActiveRecord: 35.0ms)
+
+
+Started GET "/proposals/5" for ::1 at 2017-08-06 15:00:27 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 127ms (Views: 117.0ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals"[0m
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+Started GET "/proposals" for ::1 at 2017-08-06 17:53:37 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 353ms (Views: 336.9ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageToProposals (20170806122551)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mALTER TABLE "proposals" ADD "image" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170806122551"]]
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/proposals/5/edit" for ::1 at 2017-08-06 20:47:02 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 5]]
+  Rendered proposals/_form.html.erb (184.8ms)
+  Rendered proposals/edit.html.erb within layouts/application (188.1ms)
+Completed 200 OK in 927ms (Views: 843.4ms | ActiveRecord: 13.3ms)
+
+
+Started PATCH "/proposals/5" for ::1 at 2017-08-06 20:47:20 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htkpXYFci8hgIBx8ox3OxrpSUDClN0udij4CdH0AIoqrmS2zSL/KrCTgKZnhT+q7ORSP+0TLCIDbPNAChCQCZA==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"111", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"aaa", "phone"=>"aaa", "id"=>"13"}, "1"=>{"name"=>"222", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"bbb", "phone"=>"bbb", "id"=>"14"}, "2"=>{"name"=>"333", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"6", "email"=>"ccc", "phone"=>"ccc", "id"=>"15"}}, "description"=>"老人問題", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fb4eb4dfcb8 @tempfile=#<Tempfile:/var/folders/9t/syxn77t51vnbj9ntx09wpzlr0000gn/T/RackMultipart20170806-96836-1vafqr7.jpg>, @original_filename="螢幕快照 2017-02-16 下午11.49.07.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"proposal[image]\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2017-02-16 \xE4\xB8\x8B\xE5\x8D\x8811.49.07.jpg\"\r\nContent-Type: image/jpeg\r\n">, "action_name"=>"照顧老人", "action_intro"=>"照顧", "action_location"=>"台北市", "how_can_we"=>"我們如何照顧", "excitement"=>"銀髮產業"}, "commit"=>"Update Proposal", "id"=>"5"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" IN (13, 14, 15)[0m  [["proposal_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "proposals" SET "image" = $1, "updated_at" = $2 WHERE "proposals"."id" = $3[0m  [["image", "螢幕快照_2017-02-16_下午11.49.07.jpg"], ["updated_at", 2017-08-06 12:47:20 UTC], ["id", 5]]
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/5
+Completed 302 Found in 55ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/proposals/5" for ::1 at 2017-08-06 20:47:20 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 200ms (Views: 195.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/rails/info" for ::1 at 2017-08-06 21:14:27 +0800
+Processing by Rails::InfoController#index as HTML
+  Parameters: {"internal"=>true}
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-08-06 21:14:27 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (40.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (43.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (94.8ms)
+Completed 200 OK in 118ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-08-06 21:15:52 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (10.9ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-08-06 21:27:20 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [28 times] (10.7ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 37ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-07 00:36:49 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 242ms (Views: 218.5ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/proposals/5/edit" for ::1 at 2017-08-07 00:36:50 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 5]]
+Started GET "/proposals/5/edit" for ::1 at 2017-08-07 00:37:51 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 5]]
+  Rendered proposals/_form.html.erb (191211.3ms)
+  Rendered proposals/edit.html.erb within layouts/application (191214.4ms)
+Completed 500 Internal Server Error in 191229ms (ActiveRecord: 2.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/views/proposals/_form.html.erb:54:in `block in _app_views_proposals__form_html_erb__1261584702371334216_70207529142840'
+app/views/proposals/_form.html.erb:1:in `_app_views_proposals__form_html_erb__1261584702371334216_70207529142840'
+app/views/proposals/edit.html.erb:3:in `_app_views_proposals_edit_html_erb__1131056041318621169_70207536483120'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.0ms)
+  Rendered proposals/_form.html.erb (255522.6ms)
+  Rendered proposals/edit.html.erb within layouts/application (255525.8ms)
+Completed 401 Unauthorized in 255576ms (ActiveRecord: 11.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8557952834866051260);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSubmitToProposals (20170806164122)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.9ms)[0m  [1m[35mALTER TABLE "proposals" ADD "submit" boolean[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "proposals" ADD "publish" boolean[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170806164122"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8557952834866051260)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY "proposals"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Started GET "/proposals/5/edit" for ::1 at 2017-08-07 00:48:10 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 5]]
+  Rendered proposals/_form.html.erb (188.8ms)
+  Rendered proposals/edit.html.erb within layouts/application (193.6ms)
+Completed 200 OK in 989ms (Views: 902.4ms | ActiveRecord: 16.2ms)
+
+
+Started PUT "/proposals/5/submit" for ::1 at 2017-08-07 00:48:21 +0800
+Processing by ProposalsController#submit as HTML
+  Parameters: {"authenticity_token"=>"7qOYs8yvht0CdfzgOQ6wbILn1qF5OYPDvN0+5sDHkRgcl+8HTbMNmP1KQpDPBzYKrirtF30iQE7c1MKmaHYlBQ==", "id"=>"5"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/proposals_controller.rb:56:in `submit'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.2ms)
+Started PUT "/__web_console/repl_sessions/e6f1d52f82642c1743420d320555b555" for ::1 at 2017-08-07 00:48:31 +0800
+Started PUT "/__web_console/repl_sessions/e6f1d52f82642c1743420d320555b555" for ::1 at 2017-08-07 00:48:39 +0800
+Started PUT "/__web_console/repl_sessions/e6f1d52f82642c1743420d320555b555" for ::1 at 2017-08-07 00:48:39 +0800
+Started PUT "/proposals/5/submit" for ::1 at 2017-08-07 00:48:58 +0800
+Processing by ProposalsController#submit as HTML
+  Parameters: {"authenticity_token"=>"7qOYs8yvht0CdfzgOQ6wbILn1qF5OYPDvN0+5sDHkRgcl+8HTbMNmP1KQpDPBzYKrirtF30iQE7c1MKmaHYlBQ==", "id"=>"5"}
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `id' for #<ProposalsController:0x007fe75e2dd668>):
+  
+app/controllers/proposals_controller.rb:60:in `submit'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (179.9ms)
+Started PUT "/proposals/5/submit" for ::1 at 2017-08-07 00:49:14 +0800
+Processing by ProposalsController#submit as HTML
+  Parameters: {"authenticity_token"=>"7qOYs8yvht0CdfzgOQ6wbILn1qF5OYPDvN0+5sDHkRgcl+8HTbMNmP1KQpDPBzYKrirtF30iQE7c1MKmaHYlBQ==", "id"=>"5"}
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "proposals" SET "submit" = $1, "updated_at" = $2 WHERE "proposals"."id" = $3[0m  [["submit", true], ["updated_at", 2017-08-06 16:49:15 UTC], ["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/5
+Completed 302 Found in 41ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/proposals/5" for ::1 at 2017-08-07 00:49:15 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 112ms (Views: 105.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/proposals/5/edit" for ::1 at 2017-08-07 00:49:19 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProposal Load (8.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 5]]
+  Rendered proposals/_form.html.erb (97.2ms)
+  Rendered proposals/edit.html.erb within layouts/application (99.4ms)
+Completed 200 OK in 288ms (Views: 197.4ms | ActiveRecord: 59.4ms)
+
+
+  [1m[36mProposal Load (0.9ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]

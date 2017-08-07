@@ -27,6 +27,7 @@ class ProposalsController < ApplicationController
   def create
     @proposal = Proposal.new(proposal_params)
     @proposal.user = current_user
+    binding.pry
     respond_to do |format|
       if @proposal.save
         format.html { redirect_to @proposal, notice: 'Proposal was successfully created.' }
@@ -52,6 +53,17 @@ class ProposalsController < ApplicationController
     end
   end
 
+  def submit
+    unless params[:id]
+      redirect_to :back
+    else
+      @proposal = Proposal.find(params[:id])
+      @proposal.submit = true
+      @proposal.save!
+      redirect_to @proposal
+    end
+  end
+
   # DELETE /proposals/1
   # DELETE /proposals/1.json
   def destroy
@@ -70,6 +82,8 @@ class ProposalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def proposal_params
-      params.fetch(:proposal, {}).permit(:title, :user_id, :members_attributes => [:id, :name, :birthday, :phone, :email])
+      params.fetch(:proposal, {}).permit(:description, :user_id, :action_name, :action_intro, :action_location,
+      :how_can_we, :excitement, :image,
+      :members_attributes => [:id, :name, :birthday, :phone, :email])
     end
 end
