@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:facebook]
+         :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
   has_one :proposal
 
   def self.from_omniauth(auth)
@@ -16,6 +16,26 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.remote_avatar_url   = auth.info.image
       # user.skip_confirmation!  # 如果 devise 有使用 confirmable，記得 skip！
+    end
+  end
+
+  def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+    data = access_token.info
+    user = User.where(:provider => access_token.provider, :uid => access_token.uid ).first
+    if user
+      return user
+    else
+      registered_user = User.where(:email => access_token.info.email).first
+      if registered_user
+        return registered_user
+      else
+        user = User.create(name: data["name"],
+          provider:access_token.provider,
+          email: data["email"],
+          uid: access_token.uid ,
+          password: Devise.friendly_token[0,20]
+        )
+      end
     end
   end
 

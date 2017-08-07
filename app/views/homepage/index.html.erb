@@ -6,7 +6,7 @@
     <%= image_tag("logo.png") %>
 	</a>
 	<span class="proposal">
-    <% unless current_user.proposal %>
+    <% unless current_user&.proposal %>
       <%= link_to "我要提案", new_proposal_path %>
     <% else %>
       <%= link_to "我要提案", edit_proposal_path(current_user.proposal) %>
@@ -14,7 +14,7 @@
   </span>
   <span>
     <% unless user_signed_in? %>
-      <%= link_to "登入", user_facebook_omniauth_authorize_path %>
+      <%= link_to "登入", new_user_session_path %>
     <% else %>
       <%= link_to "登出", destroy_user_session_path, method: :delete %>
     <% end %>

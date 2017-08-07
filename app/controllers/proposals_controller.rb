@@ -54,7 +54,7 @@ class ProposalsController < ApplicationController
   end
 
   def submit
-    unless params[:id]
+    if params[:id] == "0"
       redirect_to :back
     else
       @proposal = Proposal.find(params[:id])

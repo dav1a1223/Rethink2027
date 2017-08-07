@@ -44,6 +44,7 @@ gem 'dotenv-rails'
 # omniauth
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 gem 'koala'
 
 # Use Capistrano for deployment

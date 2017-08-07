@@ -51,6 +51,6 @@
 
   <div class="form-actions">
     <%= f.button :submit, "儲存為草稿" %>
-    <%= link_to "繳交提案", submit_proposal_path(f.object.id), method: :put %>
+    <%= link_to "繳交提案", submit_proposal_path(f.object.id || 0), method: :put %>
   </div>
 <% end %>
