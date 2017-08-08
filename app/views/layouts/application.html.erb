@@ -9,6 +9,49 @@
   </head>
 
   <body>
+    <div class="bar" id="topbar">
+    	<div class="burger">
+        <%= image_tag("hamburger.png") %>
+    	</div>
+      <%= link_to image_tag("logo.png"), :root, class: "logo" %>
+    	<span class="proposal">
+        <% unless current_user&.proposal %>
+          <%= link_to "我要提案", new_proposal_path %>
+        <% else %>
+          <%= link_to "我要提案", edit_proposal_path(current_user.proposal) %>
+        <% end %>
+      </span>
+      <span>
+        <% if user_signed_in? %>
+          <%= link_to "登出", destroy_user_session_path, method: :delete %>
+        <% end %>
+      </span>
+    </div>
+
+    <div class="menu">
+    	<div class="circle zoomIn animated">
+    		<a class="text" href="about.html">關於迴響</a>
+    		<div>
+    			<a class="text" href="activities.html">活動辦法</a>
+    			<div>
+    				<a class="text" href="partner.html">行動大使</a>
+    				<div>
+    					<a class="text" href="proposal_wall.html">行動提案牆</a>
+    					<div>
+    						<div>
+    							<div class="final">
+    								Ｘ
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
     <%= yield %>
   </body>
+  <script type="text/javascript">
+    $('#topbar').scrollupbar();
+  </script>
 </html>

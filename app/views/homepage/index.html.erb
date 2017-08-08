@@ -1,60 +1,12 @@
-<div class="bar">
-	<div class="burger">
-    <%= image_tag("hamburger.png") %>
-	</div>
-	<a class="logo" href="index.html">
-    <%= image_tag("logo.png") %>
-	</a>
-	<span class="proposal">
-    <% unless current_user&.proposal %>
-      <%= link_to "我要提案", new_proposal_path %>
-    <% else %>
-      <%= link_to "我要提案", edit_proposal_path(current_user.proposal) %>
-    <% end %>
-  </span>
-  <span>
-    <% unless user_signed_in? %>
-      <%= link_to "登入", new_user_session_path %>
-    <% else %>
-      <%= link_to "登出", destroy_user_session_path, method: :delete %>
-    <% end %>
-  </span>
-</div>
-
-<div class="menu">
-	<div class="circle zoomIn animated">
-		<a class="text" href="about.html">關於迴響</a>
-		<div>
-			<a class="text" href="activities.html">活動辦法</a>
-			<div>
-				<a class="text" href="actionPartner.html">行動大使</a>
-				<div>
-					<div>
-						<div>
-							<div class="final">
-								Ｘ
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
 <div class="LandingPage">
-  <%= image_tag("LP/LP.svg", class: "background") %>
-  <%= image_tag("LP/house.svg", class: "house") %>
-  <%= image_tag("LP/people.svg", class: "people") %>
-  <%= image_tag("LP/redPerson.svg", class: "redPerson") %>
-
-
+  <%= image_tag("landingPage/LP.svg", class: "background") %>
+  <%= image_tag("landingPage/house.svg", class: "house") %>
+  <%= image_tag("landingPage/people.svg", class: "people") %>
+  <%= image_tag("landingPage/redPerson.svg", class: "redPerson") %>
 	<div class="walk">
-    <%= image_tag("LP/walk1.svg", class: "one") %>
-    <%= image_tag("LP/walk2.svg", class: "two") %>
-    <%= image_tag("LP/walk3.svg", class: "three") %>
-    <%= image_tag("LP/walk4.svg", class: "four") %>
-
+    <%= image_tag("landingPage/walk1.svg", class: "one") %>
+    <%= image_tag("landingPage/walk2.svg", class: "two") %>
+    <%= image_tag("landingPage/walk3.svg", class: "three") %>
+    <%= image_tag("landingPage/walk4.svg", class: "four") %>
 	</div>
-
 </div>

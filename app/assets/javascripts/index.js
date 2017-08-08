@@ -39,6 +39,7 @@ $(document).ready(function(){
         scrollTop: height - $(window).height()
     }, scroll_ms, 'easeInOutQuad');
 
+    // people come in animation
     setTimeout(function(){
     	$(".walk").fadeIn();
     	// change to walk in screen
@@ -46,46 +47,45 @@ $(document).ready(function(){
 
 
 	$(window).scroll(function () {
-		var adjust = ($(window).width() / 1280);
-		var scrollBtm = $(document).height() - $(window).height() - $(window).scrollTop()
 
-		// walk path
+		// walk path animation
+		var adjust = ($(window).width() / 1280);
+		var scrollBtm = $(document).height() - $(window).height() - $(window).scrollTop();
 		// num == scroll interval static
 		// num_top, num_left == start position
 		var one = 1360;
-		var one_top = 8200;
-		var one_left = 230;
+		var one_top = 8270;
+		var one_left = 250;
 		var two = 475;
-		var two_top = 6530;
-		var two_left = 1040;
+		var two_top = 6600;
+		var two_left = 1060;
 		var three = 1200;
-		var three_top = 6450;
+		var three_top = 6520;
 		var three_left = 320;
 		var four = 400;
-		var four_top = 5000;
+		var four_top = 5070;
 		var four_left = 880;
 		var five = 1200;
-		var five_top = 4850;
+		var five_top = 4920;
 		var five_left = 280;
 		var six = 390;
-		var six_top = 3400;
+		var six_top = 3470;
 		var six_left = 980;
 		var seven = 1100;
-		var seven_top = 3150;
+		var seven_top = 3220;
 		var seven_left = 280;
 		var eight = 350;
-		var eight_top = 1900;
+		var eight_top = 1970;
 		var eight_left = 900;
 		var nine = 400;
-		var nine_top = 1750;
+		var nine_top = 1720;
 		var nine_left = 300;
 		var ten = 105;
-		var ten_top = 1080;
-		var ten_left = 625;
-		var end_top = 1000;
+		var ten_top = 1100;
+		var ten_left = 632;
+		var end_top = 1026;
 		var end_left = ten_left;
-		// var ten_top = ;
-		// var 
+ 
 		if (scrollBtm > ( one + two + three + four + five + six + seven + eight + nine ) * adjust) {
 			$(".walk").css("top", ten_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight + nine ) * adjust ) * ( (ten_top - end_top) / ten ) + "px"); 
 			$(".walk").css("left", ten_left * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight + nine ) * adjust ) * ( (ten_left - end_left) / ten ) + "px");
@@ -138,10 +138,8 @@ $(document).ready(function(){
 		}
 	});
 
-
-
-
 	$(".background").click(function(){
+		// alert($(".bar").css("top"));
 		// alert($(document).height() - $(window).height() - $(window).scrollTop());
 		// alert((( 7802 - $(window).scrollTop() ) / 23 ) + 23 + "vw");
 		// alert($(window).width());
