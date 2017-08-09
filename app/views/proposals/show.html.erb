@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	<div class="picture">
-		<%= image_tag(@proposal.image_url) %>
+		<%= image_tag(@proposal.image_url || "proposal/default_img.png") %>
 	</div>
 	<div class="quote">
     <%= image_tag("proposal/leftQuote.svg") %>

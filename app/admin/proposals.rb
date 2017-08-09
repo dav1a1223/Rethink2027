@@ -11,7 +11,7 @@ ActiveAdmin.register Proposal do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-scope :submit?
-scope :publish?
+scope :submitted
+scope :published
 
 end

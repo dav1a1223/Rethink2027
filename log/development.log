@@ -13857,3 +13857,1178 @@ puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
   Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (153.1ms)
+Started GET "/index.html" for ::1 at 2017-08-09 13:27:04 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [87 times] (23.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (134.5ms)
+Started GET "/img/hamburger.png" for ::1 at 2017-08-09 13:27:05 +0800
+  
+Started GET "/img/logo.png" for ::1 at 2017-08-09 13:27:05 +0800
+ActionController::RoutingError (No route matches [GET] "/img/hamburger.png"):
+Started GET "/img/about/step1.png" for ::1 at 2017-08-09 13:27:05 +0800
+  
+  
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/img/logo.png"):
+ActionController::RoutingError (No route matches [GET] "/img/about/step1.png"):
+  
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [87 times] (26.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [87 times] (23.6ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [87 times] (25.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (457.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (570.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (685.9ms)
+Started GET "/" for ::1 at 2017-08-09 13:27:08 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (12.6ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 422ms (Views: 415.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 13:27:15 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 359ms (Views: 354.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/proposals/8/edit" for ::1 at 2017-08-09 13:27:16 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 8]]
+  Rendered proposals/_form.html.erb (123.5ms)
+  Rendered proposals/edit.html.erb within layouts/application (125.6ms)
+Completed 200 OK in 471ms (Views: 458.3ms | ActiveRecord: 6.7ms)
+
+
+Started PATCH "/proposals/8" for ::1 at 2017-08-09 13:27:21 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ovIy3kAV3gLa6c9VH2zLFRps1suqjhyLAilJ5LLJt7+PyZOhZ7YzrR8YheK7AUoW7MwecZZQoMd/1x+5M6uRA==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"aaaaww", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"8", "email"=>"1111", "phone"=>"1111", "id"=>"22"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"8", "email"=>"", "phone"=>"", "id"=>"23"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"8", "email"=>"", "phone"=>"", "id"=>"24"}}, "description"=>"gogogo", "action_name"=>"", "action_intro"=>"", "action_location"=>"新北市", "how_can_we"=>"wwwww", "excitement"=>"qqqqqqq"}, "commit"=>"儲存草稿", "id"=>"8"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (1.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" IN (22, 23, 24)[0m  [["proposal_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/8
+Completed 302 Found in 17ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/proposals/8" for ::1 at 2017-08-09 13:27:21 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProposal Load (1.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 337ms (Views: 330.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/proposals" for ::1 at 2017-08-09 13:27:29 +0800
+Processing by ProposalsController#index as HTML
+  Rendering proposals/index.html.erb within layouts/application
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT "proposals".* FROM "proposals"[0m
+  Rendered proposals/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 309ms (Views: 304.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 13:28:13 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 310ms (Views: 306.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 13:28:18 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 301ms (Views: 299.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/proposals/8/edit" for ::1 at 2017-08-09 13:28:20 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 8]]
+  Rendered proposals/_form.html.erb (42.4ms)
+  Rendered proposals/edit.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 331ms (Views: 324.9ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-08-09 14:41:28 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 552ms (Views: 546.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 14:41:32 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 464ms (Views: 453.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 14:41:34 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 477ms (Views: 472.1ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-09 14:41:39 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QRkJS/rfgUD1K6xDySQ2FtKC5YeLQ0xz3PsxFhIySPddrefOBkEO9ko8aWkXtYAS3VhmpWOwNoLtDMhPZDfAbQ=="}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 14:41:39 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 309ms (Views: 306.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 14:41:43 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  Rendered proposals/attention.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 292ms (Views: 291.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-09 14:41:44 +0800
+Processing by ProposalsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-09 14:41:44 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 320ms (Views: 316.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2017-08-09 14:41:54 +0800
+Started GET "/users/auth/google_oauth2" for ::1 at 2017-08-09 14:41:54 +0800
+Started GET "/users/auth/google_oauth2/callback?state=799ffe4d1755739bd8277709aad15cdff3a1e12fe0219f85&code=4%2FGQYfJnNnl8Ebxwj0NnabZtiZgbf9j03PHjJimypE858" for ::1 at 2017-08-09 14:42:05 +0800
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"799ffe4d1755739bd8277709aad15cdff3a1e12fe0219f85", "code"=>"4/GQYfJnNnl8Ebxwj0NnabZtiZgbf9j03PHjJimypE858"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "google_oauth2"], ["uid", "105541092096720221281"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", 2017-08-09 06:42:06 UTC], ["sign_in_count", 2], ["updated_at", 2017-08-09 06:42:06 UTC], ["id", 3]]
+  [1m[35m (95.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/new
+Completed 302 Found in 111ms (ActiveRecord: 103.8ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-09 14:42:06 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (55.3ms)
+  Rendered proposals/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 424ms (Views: 415.2ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-09 14:42:21 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hq7/Vz/SfuOC8DvveR9LcaOZInHiCYzN2Zpki7x2/baJH5UaxEdEDtmpqktkBje4le2ohYwTlCUUBTT9xnrQ6g==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"aaa", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"sss", "phone"=>"sss"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"xxxx", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "commit"=>"儲存草稿"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "proposals" ("description", "action_intro", "action_location", "created_at", "updated_at", "user_id", "action_name", "how_can_we", "excitement") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["description", "xxxx"], ["action_intro", ""], ["action_location", ""], ["created_at", 2017-08-09 06:42:21 UTC], ["updated_at", 2017-08-09 06:42:21 UTC], ["user_id", 3], ["action_name", ""], ["how_can_we", ""], ["excitement", ""]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "aaa"], ["birthday", 2017-08-09 00:00:00 UTC], ["email", "sss"], ["phone", "sss"], ["created_at", 2017-08-09 06:42:21 UTC], ["updated_at", 2017-08-09 06:42:21 UTC], ["proposal_id", 9]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", ""], ["birthday", 2017-08-09 00:00:00 UTC], ["email", ""], ["phone", ""], ["created_at", 2017-08-09 06:42:21 UTC], ["updated_at", 2017-08-09 06:42:21 UTC], ["proposal_id", 9]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", ""], ["birthday", 2017-08-09 00:00:00 UTC], ["email", ""], ["phone", ""], ["created_at", 2017-08-09 06:42:21 UTC], ["updated_at", 2017-08-09 06:42:21 UTC], ["proposal_id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/9
+Completed 302 Found in 25ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/proposals/9" for ::1 at 2017-08-09 14:42:21 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    12: 		</div>
+    13: 	</div>
+    14: 	<div class="picture">
+    15: 		<%= image_tag(@proposal.image_url) %>
+    16: 	</div>
+    17: 	<div class="quote">
+    18:     <%= image_tag("proposal/leftQuote.svg") %>
+  
+app/views/proposals/show.html.erb:15:in `_app_views_proposals_show_html_erb___4388309706657967973_70130199880060'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.6ms)
+Started GET "/proposals/9" for ::1 at 2017-08-09 14:44:04 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 389ms (Views: 383.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/images/proposals/default_img.png" for ::1 at 2017-08-09 14:44:05 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/proposals/default_img.png"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [87 times] (39.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (254.4ms)
+Started GET "/proposals/9" for ::1 at 2017-08-09 14:44:28 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (371.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 720ms (Views: 716.7ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.8ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "members"."name" FROM "members"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "members"."name", "members"."phone" FROM "members"[0m
+Started GET "/proposals/attention" for ::1 at 2017-08-09 14:53:36 +0800
+  
+SyntaxError (/Users/davidlai/Desktop/Rethink2027/app/helpers/proposals_helper.rb:5: syntax error, unexpected &&, expecting ')'
+                   && pp.how_can_we && pp.excitement && pp.image.file)
+                     ^):
+  
+app/helpers/proposals_helper.rb:5: syntax error, unexpected &&, expecting ')'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/proposals_controller.rb:1:in `<top (required)>'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.1ms)
+Started GET "/proposals/9" for ::1 at 2017-08-09 14:54:06 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (16.2ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 710ms (Views: 691.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 14:54:08 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 323ms (Views: 321.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/proposals/9/edit" for ::1 at 2017-08-09 14:54:09 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+  Rendered proposals/_form.html.erb (70.9ms)
+  Rendered proposals/edit.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 389ms (Views: 369.1ms | ActiveRecord: 7.9ms)
+
+
+Started PATCH "/proposals/9" for ::1 at 2017-08-09 14:54:16 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uBrT7cCwixW1i4GWRMBAIr2yJG3lZxCT6LIxaBWenrovq7mgOyWx+O7SEDJZ2Tzri8aumYt9CHslLWEeb5Kz5g==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"aaa", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"sss", "phone"=>"sss", "id"=>"25"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>"", "id"=>"26"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>"", "id"=>"27"}}, "description"=>"xxxx", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "commit"=>"儲存草稿", "id"=>"9"}
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" IN (26, 27)[0m  [["proposal_id", 9]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/9
+Completed 302 Found in 460826ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/proposals/9" for ::1 at 2017-08-09 15:01:57 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 424ms (Views: 409.2ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (17.6ms)[0m  [1m[33mUPDATE "members" SET "proposal_id" = NULL WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+Started PATCH "/proposals/9" for ::1 at 2017-08-09 15:03:09 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oTBO06ccJ+upk8hLjLhOHGz94V2bg1pRfrW66P/McW82gSSeXIkdBvLKWe+RoTLVWolrqfWZQrmzKuqehcBcMw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"aaa", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"sss", "phone"=>"sss", "id"=>"25"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>"", "id"=>"26"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>"", "id"=>"27"}}, "description"=>"xxxx", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "commit"=>"儲存草稿", "id"=>"9"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" = 25[0m  [["proposal_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 404 Not Found in 25ms (ActiveRecord: 6.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Member with ID=25 for Proposal with ID=9):
+  
+app/controllers/proposals_controller.rb:61:in `block in update'
+app/controllers/proposals_controller.rb:60:in `update'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.5ms)
+Started PATCH "/proposals/9" for ::1 at 2017-08-09 15:03:35 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oTBO06ccJ+upk8hLjLhOHGz94V2bg1pRfrW66P/McW82gSSeXIkdBvLKWe+RoTLVWolrqfWZQrmzKuqehcBcMw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"aaa", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"sss", "phone"=>"sss", "id"=>"25"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>"", "id"=>"26"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>"", "id"=>"27"}}, "description"=>"xxxx", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "commit"=>"儲存草稿", "id"=>"9"}
+  [1m[36mProposal Load (3.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (2.0ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" = 25[0m  [["proposal_id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 404 Not Found in 16ms (ActiveRecord: 6.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Member with ID=25 for Proposal with ID=9):
+  
+app/controllers/proposals_controller.rb:61:in `block in update'
+app/controllers/proposals_controller.rb:60:in `update'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.5ms)
+Started PUT "/__web_console/repl_sessions/fdcacd39fe40ad134048b814d8fdf9d8" for ::1 at 2017-08-09 15:03:53 +0800
+Started PUT "/__web_console/repl_sessions/fdcacd39fe40ad134048b814d8fdf9d8" for ::1 at 2017-08-09 15:03:54 +0800
+Started PUT "/__web_console/repl_sessions/fdcacd39fe40ad134048b814d8fdf9d8" for ::1 at 2017-08-09 15:03:57 +0800
+Started PUT "/__web_console/repl_sessions/fdcacd39fe40ad134048b814d8fdf9d8" for ::1 at 2017-08-09 15:03:58 +0800
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+Started GET "/proposals/9/edit" for ::1 at 2017-08-09 15:04:05 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+  Rendered proposals/_form.html.erb (38.1ms)
+  Rendered proposals/edit.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 439ms (Views: 430.8ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/proposals/9" for ::1 at 2017-08-09 15:04:13 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eiogks/UNU6w4XrcuUCbC9u9YL8QThQ3XdeTsydOehOFm0rfNEEPo+u463ikWefC7cnqS35UDN+QSMPFXUJXTw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"aaa", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"111", "phone"=>"111"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"xxxx", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "commit"=>"儲存草稿", "id"=>"9"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "aaa"], ["birthday", 2017-08-09 00:00:00 UTC], ["email", "111"], ["phone", "111"], ["created_at", 2017-08-09 07:04:13 UTC], ["updated_at", 2017-08-09 07:04:13 UTC], ["proposal_id", 9]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/9
+Completed 302 Found in 22ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/proposals/9" for ::1 at 2017-08-09 15:04:13 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 379ms (Views: 375.3ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "proposals"[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[31mDELETE FROM "proposals"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "members"[0m
+Started GET "/" for ::1 at 2017-08-09 15:07:21 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 409ms (Views: 403.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 15:07:24 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 333ms (Views: 331.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-09 15:07:25 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (38.9ms)
+  Rendered proposals/new.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 331ms (Views: 324.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-09 15:07:58 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lCfe6hyO+7rRFNrkOlXT1PqowLLGwk97IJ0zU760UxsDlrSn5xvBV4pNS0AnTK8dzNxKRqjYV5PtAmMlxLh+Rw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "commit"=>"儲存草稿"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "proposals" ("description", "action_intro", "action_location", "created_at", "updated_at", "user_id", "action_name", "how_can_we", "excitement") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["description", ""], ["action_intro", ""], ["action_location", ""], ["created_at", 2017-08-09 07:07:58 UTC], ["updated_at", 2017-08-09 07:07:58 UTC], ["user_id", 3], ["action_name", ""], ["how_can_we", ""], ["excitement", ""]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "賴冠廷"], ["birthday", 2017-08-09 00:00:00 UTC], ["email", "dav1a1223@gmail.com"], ["phone", "0920347478"], ["created_at", 2017-08-09 07:07:58 UTC], ["updated_at", 2017-08-09 07:07:58 UTC], ["proposal_id", 10]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/10
+Completed 302 Found in 25ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/proposals/10" for ::1 at 2017-08-09 15:07:59 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 372ms (Views: 367.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 15:08:19 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 355ms (Views: 352.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 15:08:23 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  Rendered proposals/attention.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 344ms (Views: 343.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-09 15:08:25 +0800
+Processing by ProposalsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-09 15:08:25 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 312ms (Views: 310.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2017-08-09 15:08:32 +0800
+Started GET "/users/auth/facebook" for ::1 at 2017-08-09 15:08:32 +0800
+Started GET "/users/auth/facebook/callback?code=AQAciag2ExuQCf9BE6RouDAk4c6FurKgz1GzsSuBj41ysoU9hAS_tcwglzeTC8FntkIXkpIEZhJD4bDoT_CMOuWzbsVQrEscHzL37v2DLF2ClK_Vp_iDfnZ0iZNZXepMKNZmgdWp3whmBYV4MUDaJsRIlcRQJYU01xpIxNrBcntEQ4XkrvCgk_DIpNpDbzI8HM8Je7TqqRbAWc5A3k2Rg61q8LKLD4ewPozyWBg_-vEV-n3utfJN8p9ZQfpKXphqTyJJv9wQ3uOqQ_6wRxT4GkGkJkqdUazqDzXIpmbXp07cJUWnHeGxbknGO4AMQkW3xe048x-Lq5JOGiDu-zjlaLI5&state=3c0fc47fb1509aba7a24a09bb2685dfdaaf4ae962bf88311" for ::1 at 2017-08-09 15:08:33 +0800
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAciag2ExuQCf9BE6RouDAk4c6FurKgz1GzsSuBj41ysoU9hAS_tcwglzeTC8FntkIXkpIEZhJD4bDoT_CMOuWzbsVQrEscHzL37v2DLF2ClK_Vp_iDfnZ0iZNZXepMKNZmgdWp3whmBYV4MUDaJsRIlcRQJYU01xpIxNrBcntEQ4XkrvCgk_DIpNpDbzI8HM8Je7TqqRbAWc5A3k2Rg61q8LKLD4ewPozyWBg_-vEV-n3utfJN8p9ZQfpKXphqTyJJv9wQ3uOqQ_6wRxT4GkGkJkqdUazqDzXIpmbXp07cJUWnHeGxbknGO4AMQkW3xe048x-Lq5JOGiDu-zjlaLI5", "state"=>"3c0fc47fb1509aba7a24a09bb2685dfdaaf4ae962bf88311"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 ORDER BY "users"."id" ASC LIMIT $3[0m  [["provider", "facebook"], ["uid", "1438007136286466"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-08-09 07:08:34 UTC], ["last_sign_in_at", 2017-08-08 07:19:43 UTC], ["sign_in_count", 11], ["updated_at", 2017-08-09 07:08:34 UTC], ["id", 1]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/new
+Completed 302 Found in 19ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/proposals/new" for ::1 at 2017-08-09 15:08:34 +0800
+Processing by ProposalsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering proposals/new.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (41.3ms)
+  Rendered proposals/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 329ms (Views: 323.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/proposals" for ::1 at 2017-08-09 15:09:43 +0800
+Processing by ProposalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gyxy8sDLIEdwPCddLUZsQxjjgMEdAz3DZ78LaxwfzRFvuy17RhPJFGbkeLXzuhDjrqtk40dF6kXkMJ2w9iplWA==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "commit"=>"儲存草稿"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proposals" ("description", "action_intro", "action_location", "created_at", "updated_at", "user_id", "action_name", "how_can_we", "excitement") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["description", ""], ["action_intro", ""], ["action_location", ""], ["created_at", 2017-08-09 07:09:43 UTC], ["updated_at", 2017-08-09 07:09:43 UTC], ["user_id", 1], ["action_name", ""], ["how_can_we", ""], ["excitement", ""]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "胡抽抽"], ["birthday", 2017-08-09 00:00:00 UTC], ["email", "test@example.com"], ["phone", "0912345678"], ["created_at", 2017-08-09 07:09:43 UTC], ["updated_at", 2017-08-09 07:09:43 UTC], ["proposal_id", 11]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "members" ("name", "birthday", "email", "phone", "created_at", "updated_at", "proposal_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "賴冠廷"], ["birthday", 2017-08-09 00:00:00 UTC], ["email", "dav1a1223@gmail.com"], ["phone", "0920347478"], ["created_at", 2017-08-09 07:09:43 UTC], ["updated_at", 2017-08-09 07:09:43 UTC], ["proposal_id", 11]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/11
+Completed 302 Found in 21ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/proposals/11" for ::1 at 2017-08-09 15:09:43 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 437ms (Views: 432.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 15:11:13 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 416ms (Views: 407.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:11:15 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (11.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (51.9ms)
+  Rendered proposals/edit.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 448ms (Views: 413.2ms | ActiveRecord: 17.4ms)
+
+
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:11:18 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D3yMDlza8SDjGECQWZcrCtx4iXQAAGeKrFhGZs2F1FDj69OH2gIYc/XAH3iHa1eqajBtVlpGsAwv19C9J7B8GQ==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" IN (30, 31)[0m  [["proposal_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/11
+Completed 302 Found in 17ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/proposals/11" for ::1 at 2017-08-09 15:11:18 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 320ms (Views: 314.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 15:11:41 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 385ms (Views: 383.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:11:43 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (2.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (71.8ms)
+  Rendered proposals/edit.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 500ms (Views: 462.6ms | ActiveRecord: 11.9ms)
+
+
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:11:45 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oDvqKc55A4g/l4Llbbq5vjA2qQSs4syFavwSzqKmcJdMrLWgSKHq2ylP3Q2zRsUehn5NJvakGwPpc4QVSJPY3g==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" IN (30, 31)[0m  [["proposal_id", 11]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/11
+Completed 302 Found in 16ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/proposals/11" for ::1 at 2017-08-09 15:11:45 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 412ms (Views: 407.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 15:11:49 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (2.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 354ms (Views: 349.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:11:51 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (27.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (48.1ms)
+  Rendered proposals/edit.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 477ms (Views: 435.2ms | ActiveRecord: 33.7ms)
+
+
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:12:04 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mx/N73q39ViWodT7RYuf4QZYIcr1pi22Rk/8fo9uEoDfiJJm/G8cC4B5ixObd+NBsBDF6K/g+jDFwGqlZVu6yQ==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" IN (30, 31)[0m  [["proposal_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/11
+Completed 302 Found in 54ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/proposals/11" for ::1 at 2017-08-09 15:12:04 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 343ms (Views: 339.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 15:12:11 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 409ms (Views: 398.0ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:12:13 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (1.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (57.6ms)
+  Rendered proposals/edit.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 417ms (Views: 407.7ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:13:03 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T91+wD4LoqkLtA5SjsWB0iCCEEnYhuOJxVGsnJDnC7ijSiFJuNNL+h1sUbpQOf1ylsr0a4LANA9G3jpHetKj8Q==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 437ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `proposal_check' for #<ProposalsController:0x007f90e84c53f8>
+Did you mean?  proposal_path):
+  
+app/controllers/proposals_controller.rb:66:in `update'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (228.2ms)
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:14:49 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AuYmk0bdhEmK5uoOEk+OgqKO+EcynNqwg0Un7qFhH40nMcTy8OfQjDzxEDmtUKavMLfw0aMpOxBgoJEULAsNw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `proposal_check' for #<ProposalsController:0x007f90e9a42028>
+Did you mean?  propsal_check):
+  
+app/controllers/proposals_controller.rb:67:in `update'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (349.8ms)
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:15:19 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (148.6ms)
+  Rendered proposals/edit.html.erb within layouts/application (152.3ms)
+Completed 200 OK in 1584ms (Views: 1517.6ms | ActiveRecord: 14.0ms)
+
+
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:15:23 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrejCYZAg22mZWv8r/7VzR5cPK6Yx4eNXHD9H1A0P42mIPyAAJhqPrC9NBRxAqltqBTYjMKBUAvf/2vEugGXxA==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 1.1ms)
+
+
+  
+NameError (undefined local variable or method `proposal_check' for #<ProposalsController:0x007fc8d7135cc0>
+Did you mean?  propsal_check):
+  
+app/controllers/proposals_controller.rb:67:in `update'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (373.5ms)
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:15:51 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrejCYZAg22mZWv8r/7VzR5cPK6Yx4eNXHD9H1A0P42mIPyAAJhqPrC9NBRxAqltqBTYjMKBUAvf/2vEugGXxA==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 436ms (ActiveRecord: 7.3ms)
+
+
+  
+NameError (undefined local variable or method `proposal_check' for #<ProposalsController:0x007fc8ddfa1d08>
+Did you mean?  propsal_check):
+  
+app/controllers/proposals_controller.rb:66:in `update'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (209.4ms)
+Started PATCH "/proposals/11" for ::1 at 2017-08-09 15:16:25 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrejCYZAg22mZWv8r/7VzR5cPK6Yx4eNXHD9H1A0P42mIPyAAJhqPrC9NBRxAqltqBTYjMKBUAvf/2vEugGXxA==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"胡抽抽", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"test@example.com", "phone"=>"0912345678", "id"=>"30"}, "1"=>{"name"=>"賴冠廷", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"dav1a1223@gmail.com", "phone"=>"0920347478", "id"=>"31"}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"", "action_name"=>"", "action_intro"=>"", "action_location"=>"", "how_can_we"=>"", "excitement"=>""}, "submit_proposal"=>"繳交提案！", "id"=>"11"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "members"."name", "members"."phone" FROM "members"[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "members"."name", "members"."phone" FROM "members"[0m
+  Rendering proposals/edit.html.erb within layouts/application
+  Rendered proposals/_form.html.erb (53.1ms)
+  Rendered proposals/edit.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 62473ms (Views: 455.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/proposals/10/edit" for ::1 at 2017-08-09 15:17:46 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 10]]
+  Rendered proposals/_form.html.erb (58.0ms)
+  Rendered proposals/edit.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 367ms (Views: 361.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 15:18:02 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (44.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 362ms (Views: 353.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 15:18:07 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 379ms (Views: 366.2ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:18:09 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (5.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (48.6ms)
+  Rendered proposals/edit.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 444ms (Views: 431.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:21:55 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (0.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (67.4ms)
+  Rendered proposals/edit.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 27969ms (Views: 417.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/proposals/10/edit" for ::1 at 2017-08-09 15:22:29 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 10]]
+  Rendered proposals/_form.html.erb (32.9ms)
+  Rendered proposals/edit.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 62752ms (Views: 374.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/proposals/10/edit" for ::1 at 2017-08-09 15:23:35 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 10]]
+  Rendered proposals/_form.html.erb (57.9ms)
+  Rendered proposals/edit.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 436ms (Views: 378.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/proposals/10/edit" for ::1 at 2017-08-09 15:23:48 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProposal Load (0.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 10]]
+  Rendered proposals/_form.html.erb (65.2ms)
+  Rendered proposals/edit.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 380898ms (Views: 357.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/proposals/10/edit" for ::1 at 2017-08-09 15:30:14 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProposal Load (0.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 6.1ms)
+
+
+  
+UncaughtThrowError (uncaught throw :abort):
+  
+app/controllers/proposals_controller.rb:140:in `throw'
+app/controllers/proposals_controller.rb:140:in `check_identity'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.4ms)
+Started GET "/proposals/10/edit" for ::1 at 2017-08-09 15:30:51 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProposal Load (0.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :check_identity rendered or redirected
+Completed 302 Found in 38ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 15:30:52 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 286ms (Views: 283.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/proposals/100/edit" for ::1 at 2017-08-09 15:31:01 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Proposal with 'id'=100):
+  
+app/controllers/proposals_controller.rb:106:in `set_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.1ms)
+Started GET "/proposals/11/edit" for ::1 at 2017-08-09 15:31:33 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 11]]
+  Rendered proposals/_form.html.erb (51.2ms)
+  Rendered proposals/edit.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 336ms (Views: 325.6ms | ActiveRecord: 3.4ms)
+
+
