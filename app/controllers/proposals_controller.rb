@@ -106,7 +106,7 @@ class ProposalsController < ApplicationController
   end
 
   def random_proposal
-    @proposal = Proposal.order("RANDOM()").limit(1).first
+    @proposal = Proposal.published.order("RANDOM()").limit(1).first
     render partial: "proposals/proposal"
   end
 
