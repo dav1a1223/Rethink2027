@@ -89,7 +89,7 @@
     </div>
     <div class="form-actions btnSet">
       <%= f.button :submit, "儲存草稿", id: "save", class: "btn" %>
-      <%= link_to "繳交提案！", submit_proposal_path(f.object.id || 0), method: :put, id: "submit", class: "btn" %>
+      <%= f.button :submit, "繳交提案！", id: "submit", class: "btn", name: "submit_proposal" %>
     </div>
   </div>
 <% end %>

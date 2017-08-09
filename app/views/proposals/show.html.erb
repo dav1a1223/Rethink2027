@@ -1,4 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_proposal_path(@proposal) %> |
-<%= link_to 'Back', proposals_path %>
+<div class="proposalPage">
+	<div class="title"><%= @proposal.action_name %></div>
+	<%= @proposal.how_can_we %>
+	<br>
+	<div class="map">
+    <%= image_tag("proposal/mapEx.png", class: "mapImg") %>
+    <%= image_tag("proposal/dialog.png", class: "dialogImg") %>
+		<div class="dialog">
+			<%= @proposal.action_intro %>
+		</div>
+	</div>
+	<div class="picture">
+		<%= image_tag(@proposal.image_url) %>
+	</div>
+	<div class="quote">
+    <%= image_tag("proposal/leftQuote.svg") %>
+    <%= image_tag("proposal/rightQuote.svg") %>
+		<%= @proposal.excitement %>
+	</div>
+</div>
+<%#= link_to 'Edit', edit_proposal_path(@proposal) %> |
+<%#= link_to 'Back', proposals_path %>

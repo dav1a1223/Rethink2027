@@ -15,6 +15,10 @@ class ProposalsController < ApplicationController
 
   # GET /proposals/new
   def new
+    if current_user&.proposal
+      @proposal = current_user.proposal
+      render :edit
+    end
     @proposal = Proposal.new
   end
 
@@ -27,14 +31,17 @@ class ProposalsController < ApplicationController
   def create
     @proposal = Proposal.new(proposal_params)
     @proposal.user = current_user
-    binding.pry
-    respond_to do |format|
-      if @proposal.save
-        format.html { redirect_to @proposal, notice: 'Proposal was successfully created.' }
-        format.json { render :show, status: :created, location: @proposal }
-      else
-        format.html { render :new }
-        format.json { render json: @proposal.errors, status: :unprocessable_entity }
+    if params[:submit_proposal]
+      render :new, notice: "請先儲存提案再提交您的提案"
+    else
+      respond_to do |format|
+        if @proposal.save
+          format.html { redirect_to @proposal, notice: '您的提案已儲存成功！' }
+          format.json { render :show, status: :created, location: @proposal }
+        else
+          format.html { render :new }
+          format.json { render json: @proposal.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -44,7 +51,8 @@ class ProposalsController < ApplicationController
   def update
     respond_to do |format|
       if @proposal.update(proposal_params)
-        format.html { redirect_to @proposal, notice: 'Proposal was successfully updated.' }
+        flash[:notice] = "您的提案已更新成功！"
+        format.html { redirect_to @proposal }
         format.json { render :show, status: :ok, location: @proposal }
       else
         format.html { render :edit }
@@ -55,7 +63,7 @@ class ProposalsController < ApplicationController
 
   def submit
     if params[:id] == "0"
-      redirect_to :back
+      # format.html { redirect_to , notice: '請先儲存再提交您的提案' }
     else
       @proposal = Proposal.find(params[:id])
       @proposal.is_submit = true
@@ -72,6 +80,10 @@ class ProposalsController < ApplicationController
       format.html { redirect_to proposals_url, notice: 'Proposal was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def attention
+    render template: "proposals/attention"
   end
 
   private

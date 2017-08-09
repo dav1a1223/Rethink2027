@@ -1,25 +1,22 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Proposals</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @proposals.each do |proposal| %>
-      <tr>
-        <td><%= link_to 'Show', proposal %></td>
-        <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
-        <td><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="wall">
+  <% @proposals.each do |proposal| %>
+    <a class="proposal" href="<%= proposal.id %>">
+  		<div class="HWM">
+  			<%= proposal.how_can_we %>
+  		</div>
+  		<div class="picture">
+        <%= image_tag(proposal.image_url) %>
+  			<div class="black"></div>
+  		</div>
+  		<div class="content">
+  			<%= proposal.action_intro %>
+  		</div>
+  		<div class="sentence">
+  			<%= "「" + proposal.excitement + "」" %>
+  		</div>
+  		<div class="location">@<%= proposal.action_location %></div>
+  	</a>
+  <% end %>
+</div>
 <br>
-
-<%= link_to 'New Proposal', new_proposal_path %>

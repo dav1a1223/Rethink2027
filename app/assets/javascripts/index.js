@@ -30,8 +30,9 @@ function leftWalk() {
 
 $(document).ready(function(){
 
-	var height = 8454; // total height (px)
-	var scroll_ms = 3000; // scroll pass (ms)
+	var adjust = ($(window).width() / 1280);
+	var height = 9216 * adjust; // total height (px)
+	var scroll_ms = 0; // scroll pass (ms)
 
 	// auto scroll in scroll_ms (var)
     var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
@@ -49,41 +50,41 @@ $(document).ready(function(){
 	$(window).scroll(function () {
 
 		// walk path animation
-		var adjust = ($(window).width() / 1280);
 		var scrollBtm = $(document).height() - $(window).height() - $(window).scrollTop();
 		// num == scroll interval static
 		// num_top, num_left == start position
+		var add = 630; // adjust
 		var one = 1360;
-		var one_top = 8270;
+		var one_top = 8270 + add;
 		var one_left = 250;
 		var two = 475;
-		var two_top = 6600;
+		var two_top = 6600 + add;
 		var two_left = 1060;
 		var three = 1200;
-		var three_top = 6520;
+		var three_top = 6520 + add;
 		var three_left = 320;
 		var four = 400;
-		var four_top = 5070;
+		var four_top = 5070 + add;
 		var four_left = 880;
 		var five = 1200;
-		var five_top = 4920;
+		var five_top = 4920 + add;
 		var five_left = 280;
 		var six = 390;
-		var six_top = 3470;
+		var six_top = 3470 + add;
 		var six_left = 980;
 		var seven = 1100;
-		var seven_top = 3220;
+		var seven_top = 3220 + add;
 		var seven_left = 280;
 		var eight = 350;
-		var eight_top = 1970;
+		var eight_top = 1970 + add;
 		var eight_left = 900;
 		var nine = 400;
-		var nine_top = 1720;
+		var nine_top = 1720 + add;
 		var nine_left = 300;
 		var ten = 105;
-		var ten_top = 1100;
+		var ten_top = 1100 + add;
 		var ten_left = 632;
-		var end_top = 1026;
+		var end_top = 1026 + add;
 		var end_left = ten_left;
  
 		if (scrollBtm > ( one + two + three + four + five + six + seven + eight + nine ) * adjust) {

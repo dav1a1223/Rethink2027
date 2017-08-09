@@ -15,11 +15,7 @@
     	</div>
       <%= link_to image_tag("logo.png"), :root, class: "logo" %>
     	<span class="proposal">
-        <% unless current_user&.proposal %>
-          <%= link_to "我要提案", new_proposal_path %>
-        <% else %>
-          <%= link_to "我要提案", edit_proposal_path(current_user.proposal) %>
-        <% end %>
+        <%= link_to "我要提案", attention_proposals_path %>
       </span>
       <span>
         <% if user_signed_in? %>
@@ -30,15 +26,29 @@
 
     <div class="menu">
     	<div class="circle zoomIn animated">
-    		<a class="text" href="about.html">關於迴響</a>
+    		<a class="text" href="">
+    			青<br>年<br>行<br>動<br>日<br>誌
+    		</a>
     		<div>
-    			<a class="text" href="activities.html">活動辦法</a>
+    			<a class="text" href="partner.html">
+    				行<br>動<br>大<br>使<br>故<br>事
+    			</a>
     			<div>
-    				<a class="text" href="partner.html">行動大使</a>
+    				<a class="text" href="proposal_wall.html">
+    					行<br>動<br>提<br>案<br>牆
+    				</a>
     				<div>
-    					<a class="text" href="proposal_wall.html">行動提案牆</a>
+    					<a class="text" href="activities.html">
+    						活<br>動<br>辦<br>法
+    					</a>
     					<div>
+    						<a class="text" href="about">
+    							關<br>於<br>迴<br>響
+    						</a>
     						<div>
+    							<a class="text" href="">
+    								最<br>新<br>消<br>息
+    							</a>
     							<div class="final">
     								Ｘ
     							</div>
@@ -49,6 +59,9 @@
     		</div>
     	</div>
     </div>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
     <%= yield %>
   </body>
   <script type="text/javascript">
