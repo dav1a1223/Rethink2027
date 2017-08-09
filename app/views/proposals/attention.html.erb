@@ -1,18 +1,24 @@
 <div class="attention">
 	<div class="title">
+    <%= image_tag("proposal/triangle.png") %>
 		提案注意事項
+    <%= image_tag("proposal/triangle.png") %>
 	</div>
 	<ul>
+		<i>1</i>
 		<li>任何時候（除審核期間）此頁面的提案資料都能夠進行「儲存草稿」「提交」與「重新提交」</li>
-		<li>必填資料會以*符號標示，填寫不完整就無法提交/重新提交</li>
-		<li>所有經提交或重新提交的提案，都需經過2-3天的審核，不論是否通過，都將以E-mail對主要提案者進行通知</li>
+		<i>2</i>
+		<li>必填資料會以 * 符號標示，填寫不完整就無法提交/重新提交</li>
+		<i>3</i>
+		<li>所有經提交或重新提交的提案，都需經過2-3天的審核，不論是否通過，都將以 E-mail 對主要提案者進行通知</li>
+		<i>4</i>
 		<li>一旦提案通過審核，你的提案就會顯示於本網站的行動提案牆上囉</li>
 	</ul>
 	<div class="btnArea">
     <% unless current_user&.proposal&.id %>
-      <%= link_to "我瞭解了", new_proposal_path, class: "btn"  %>
+      <%= link_to "我知道了", new_proposal_path, class: "btn"  %>
     <% else %>
-      <%= link_to "我瞭解了", edit_proposal_path(current_user.proposal), class: "btn"  %>
+      <%= link_to "我知道了", edit_proposal_path(current_user.proposal), class: "btn"  %>
     <% end %>
 	</div>
 </div>

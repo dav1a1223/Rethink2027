@@ -4,6 +4,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
+  def extension_whitelist
+    %w(jpg jpeg png)
+  end
+
+  def size_range
+    0..5.megabytes
+  end
+
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
     storage :fog

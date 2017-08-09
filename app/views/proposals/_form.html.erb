@@ -3,102 +3,151 @@
 
   <div class="form">
     <div class="form-inputs">
-      <div class="title">PART1: 個人資料區</div>
-      <div class="right">
-        <h1>【填寫說明】</h1>
-        <br>
-        <ul>
-          <li>第一階段團隊成員上限為3人，若不滿3人，留白即可</li>
-          <li>請盡量填寫中文姓名，若無中文姓名，請填寫護照上的名稱</li>
-          <li>填寫之信箱會做為日後主要聯繫信箱，請填寫能順利收件的信箱地址</li>
-        </ul>
-        <%= f.simple_fields_for :members, @proposal.members[0] || @proposal.members.build do |m| %>
-            <br><br><h1>主要提案者</h1>
-            <%= m.input :name, label: "姓名" %>
-            <%= m.input :birthday, label: "生日", as: :date %><br>
-            <%= m.input :email, label: "信箱" %>
-            <%= m.input :phone, label: "聯絡電話" %><br>
-        <% end %>
-        <%= f.simple_fields_for :members, @proposal.members[1] || @proposal.members.build do |m| %>
-            <br><br><h1>團隊成員之2</h1>
-            <%= m.input :name, label: "姓名" %>
-            <%= m.input :birthday, label: "生日", as: :date %><br>
-            <%= m.input :email, label: "信箱" %>
-            <%= m.input :phone, label: "聯絡電話" %><br>
-        <% end %>
-        <%= f.simple_fields_for :members, @proposal.members[2] || @proposal.members.build do |m| %>
-            <br><br><h1>團隊成員之3</h1>
-            <%= m.input :name, label: "姓名" %>
-            <%= m.input :birthday, label: "生日", as: :date %><br>
-            <%= m.input :email, label: "信箱" %>
-            <%= m.input :phone, label: "聯絡電話" %><br>
-        <% end %>
-      </div><br>
-      <div class="title">part2: 提案資料區</div>
-      <br>
-  		<br>
-  		<h1>一、請針對你在生活中觀察到的社會問題做描述</h1>
-  		<br>
-      <div class="right">
-        a. 200字以內的文字描述<br>
-        <%= f.input :description, placeholder: "問題描述", label: false, input_html: { maxlength: 200 } %>
-        b. 一張照片<br>
-        <%= f.input :image, label: false, as: :file %>
-        <div class="intro">
-  				-請提供.JPG格式，檔案5MB以下之圖檔<br>
-  				-可提供問題現場照片、手繪情境示意圖等 ex.想解決傳統市場的衛生問題，就能到市場實際拍照<br>
-  				-命名格式：主要提案者姓名-團隊成員數量 ex. 劉建成-2.jpg<br>
-  				-圖檔長寬比 1:1 會有最佳顯示效果<br>
-  				-以下狀況將不通過審核、需重新提交，主辦單位保有判定權力，請自行斟酌<br>
-  				-提交之照片與問題描述不符，如品牌Logo<br>
-  				-解析度過低，影響到頁面呈現<br>
+      <div class="greenBackground">
+        <div class="title">
+  				<b>Part1</b><br>
+  				個人資料區
   			</div>
+        <div class="right">
+          <h1>【填寫說明】</h1>
+          <br>
+          <ul>
+            <li>第一階段團隊成員上限為3人，若不滿3人，留白即可</li>
+            <li>請盡量填寫中文姓名，若無中文姓名，請填寫護照上的名稱</li>
+            <li>填寫之信箱會做為日後主要聯繫信箱，請填寫能順利收件的信箱地址</li>
+          </ul>
+          <%= f.simple_fields_for :members, @proposal.members[0] || @proposal.members.build do |m| %>
+              <br><br><h1>主要提案者</h1>
+              <%= m.input :name, label: "姓名" %>
+              <%= m.input :birthday, label: "生日", as: :date %><br>
+              <%= m.input :email, label: "信箱" %>
+              <%= m.input :phone, label: "聯絡電話" %><br>
+          <% end %>
+          <%= f.simple_fields_for :members, @proposal.members[1] || @proposal.members.build do |m| %>
+              <br><br><h1>團隊成員之2</h1>
+              <%= m.input :name, label: "姓名" %>
+              <%= m.input :birthday, label: "生日", as: :date %><br>
+              <%= m.input :email, label: "信箱" %>
+              <%= m.input :phone, label: "聯絡電話" %><br>
+          <% end %>
+          <%= f.simple_fields_for :members, @proposal.members[2] || @proposal.members.build do |m| %>
+              <br><br><h1>團隊成員之3</h1>
+              <%= m.input :name, label: "姓名" %>
+              <%= m.input :birthday, label: "生日", as: :date %><br>
+              <%= m.input :email, label: "信箱" %>
+              <%= m.input :phone, label: "聯絡電話" %><br>
+          <% end %>
+        </div>
       </div>
-      <br>
-  		<br>
-  		<h1>二、請告訴我們你想要執行的第一步行動是什麼？</h1>
-  		<br>
-      <div class="right">
-        -行動定義：不限形式，能實際回應你所提出的社會問題，並觸及真實問題的使用者<br>
-  			-行動限制：團隊成員在20天的時間內、透過6000元行動金的支持就能做得到的事<br>
-  			<br>
-  			a. 10字以內的行動構想名稱<br>
-        <%= f.input :action_name, placeholder: "構想名稱", label: false, input_html: { maxlength: 10 } %>
-        b. 100字以內的構想介紹<br>
-        <%= f.input :action_intro, placeholder: "構想介紹", label: false, input_html: { maxlength: 100 } %>
-        c. 行動位置：這個行動會在什麼地方發生<br>
-        <%= f.input :action_location, label: false, collection: ["台北市", "新北市", "桃園市"] %>
+      <div class="greyBackground">
+        <div class="title">
+  				<b>PART2</b><br>
+  				提案資料區
+  			</div>
+        <br>
+    		<br>
+    		<h1>一、請針對你在生活中觀察到的社會問題做描述</h1>
+    		<br>
+        <div class="right">
+          a. 200字以內的文字描述＊<br>
+          <%= f.input :description, placeholder: "問題描述", label: false, input_html: { maxlength: 200 } %>
+          b. 上傳一張示意照片＊<br>
+          <!-- <%= f.input :image, label: false, as: :file, input_html: { class: "upl" } %> -->
+          <div class="input file optional proposal_image">
+            <img class="preview">
+            <div class="btn">選擇檔案</div>
+            <input class="file optional upl" type="file" name="proposal[image]" id="proposal_image">
+          </div>
+
+          <div class="intro">
+    				-請提供.JPG格式，檔案5MB以下之圖檔<br>
+    				-可提供問題現場照片、手繪情境示意圖等 ex.想解決傳統市場的衛生問題，就能到市場實際拍照<br>
+    				-命名格式：主要提案者姓名-團隊成員數量 ex. 劉建成-2.jpg<br>
+    				-圖檔長寬比 1:1 會有最佳顯示效果<br>
+    				-以下狀況將不通過審核、需重新提交，主辦單位保有判定權力，請自行斟酌<br>
+    				-提交之照片與問題描述不符，如品牌Logo<br>
+    				-解析度過低，影響到頁面呈現<br>
+    			</div>
+        </div>
+        <br>
+    		<br>
+    		<h1>二、請告訴我們你想要執行的第一步行動是什麼？</h1>
+    		<br>
+        <div class="right">
+          -行動定義：不限形式，能實際回應你所提出的社會問題，並觸及真實問題的使用者<br>
+    			-行動限制：團隊成員在20天的時間內、透過6000元行動金的支持就能做得到的事<br>
+    			<br>
+    			a. 10字以內的行動構想名稱＊<br>
+          <%= f.input :action_name, placeholder: "構想名稱", label: false, input_html: { maxlength: 10 } %>
+          b. 100字以內的構想介紹＊<br>
+          <%= f.input :action_intro, placeholder: "構想介紹", label: false, input_html: { maxlength: 100 } %>
+          c. 行動位置：這個行動會在什麼地方發生＊<br>
+          <%= f.input :action_location, label: false, collection:
+            ["網路空間", "台北", "新北", "桃園", "新竹", "苗栗", "台中", "彰化",
+            "南投", "雲林", "嘉義", "台南", "高雄", "屏東", "宜蘭", "花蓮", "台東", "澎湖"] %>
+        </div>
+        <br>
+    		<br>
+    		<h1>三、精煉問題描述</h1>
+    		<br>
+        <div class="right">
+          依據你所輸入的社會問題描述與目前的行動構想，請寫出對應的「我們如何能夠....」句型，來精煉你所想要解決的問題（一句話，25字以內）。例如：我們如何能夠讓臺灣的老街真正展現在地文化？
+          <%= f.input :how_can_we, placeholder: "我們如何能夠......＊", label: false, input_html: { maxlength: 25 } %>
+        </div>
+        <br>
+    		<br>
+    		<br>
+    		<h1>四、現在，這個提案讓我期待與興奮的是.....</h1>
+    		<br>
+        <div class="right">
+          請提供一個以動詞為首的短句。例如：做一件讓自己驕傲的事情、拿到最後的15萬元....
+          <%= f.input :excitement, placeholder: "讓我期待與興奮的是......＊", label: false %>
+        </div>
+        <br>
+    		<h1>五、與提案相關的關鍵字標籤</h1>
+    		<br>
+        <div class="right">
+    			-這可以讓別人更容易透過關鍵字找到你們以及你們的提案，所以建議使用淺白易懂的文字<br>
+    			-可透過#字號自定義關鍵字標籤，至少填入1組，至多20組。例如： #兒童教育 ＃淨灘<br>
+    			<br>
+    			<input placeholder="#關鍵字標籤", name="hashtags", value="<%= @proposal.hashtags.pluck(:text).join(" ") %>">
+    		</div>
+        <div class="form-actions btnSet">
+          <%= f.button :submit, "儲存草稿", id: "save", class: "btn" %>
+          <%= f.button :submit, "繳交提案！", id: "submit", class: "btn", name: "submit_proposal" %>
+        </div>
       </div>
-      <br>
-  		<br>
-  		<h1>三、精煉問題描述</h1>
-  		<br>
-      <div class="right">
-        依據你所輸入的社會問題描述與目前的行動構想，請寫出對應的「我們如何能夠....」句型，來精煉你所想要解決的問題（一句話，25字以內）。例如：我們如何能夠讓臺灣的老街真正展現在地文化？
-        <%= f.input :how_can_we, placeholder: "我們如何能夠......", label: false, input_html: { maxlength: 25 } %>
-      </div>
-      <br>
-  		<br>
-  		<br>
-  		<h1>四、現在，這個提案讓我期待與興奮的是.....</h1>
-  		<br>
-      <div class="right">
-        請提供一個以動詞為首的短句。例如：做一件讓自己驕傲的事情、拿到最後的15萬元....
-        <%= f.input :excitement, placeholder: "讓我期待與興奮的是......", label: false %>
-      </div>
-      <br>
-  		<h1>五、與提案相關的關鍵字標籤</h1>
-  		<br>
-      <div class="right">
-  			-這可以讓別人更容易透過關鍵字找到你們以及你們的提案，所以建議使用淺白易懂的文字<br>
-  			-可透過#字號自定義關鍵字標籤，至少填入1組，至多20組。例如： #兒童教育 ＃淨灘<br>
-  			<br>
-  			<input placeholder="#關鍵字標籤", name="hashtags", value="<%= @proposal.hashtags.pluck(:text).join(" ") %>">
-  		</div>
-    </div>
-    <div class="form-actions btnSet">
-      <%= f.button :submit, "儲存草稿", id: "save", class: "btn" %>
-      <%= f.button :submit, "繳交提案！", id: "submit", class: "btn", name: "submit_proposal" %>
     </div>
   </div>
 <% end %>
+
+<script>
+$(function (){
+
+    function format_float(num, pos)
+    {
+        var size = Math.pow(10, pos);
+        return Math.round(num * size) / size;
+    }
+
+    function preview(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.preview').attr('src', e.target.result);
+                var KB = format_float(e.total / 1024, 2);
+                // $('.size').text("檔案大小：" + KB + " KB");
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("body").on("change", ".upl", function (){
+        preview(this);
+    })
+
+})
+</script>
