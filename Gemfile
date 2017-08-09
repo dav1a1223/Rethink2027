@@ -28,6 +28,8 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'carrierwave', '~> 1.0'
+gem 'fog'
+gem "fog-aws"
 gem 'mini_magick'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
