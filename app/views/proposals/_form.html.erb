@@ -86,6 +86,15 @@
         請提供一個以動詞為首的短句。例如：做一件讓自己驕傲的事情、拿到最後的15萬元....
         <%= f.input :excitement, placeholder: "讓我期待與興奮的是......", label: false %>
       </div>
+      <br>
+  		<h1>五、與提案相關的關鍵字標籤</h1>
+  		<br>
+      <div class="right">
+  			-這可以讓別人更容易透過關鍵字找到你們以及你們的提案，所以建議使用淺白易懂的文字<br>
+  			-可透過#字號自定義關鍵字標籤，至少填入1組，至多20組。例如： #兒童教育 ＃淨灘<br>
+  			<br>
+  			<input placeholder="#關鍵字標籤", name="hashtags", value="<%= @proposal.hashtags.pluck(:text).join(" ") %>">
+  		</div>
     </div>
     <div class="form-actions btnSet">
       <%= f.button :submit, "儲存草稿", id: "save", class: "btn" %>

@@ -32,6 +32,7 @@ class ProposalsController < ApplicationController
   def create
     @proposal = Proposal.new(proposal_params)
     @proposal.user = current_user
+    hash_tags_process(@proposal)
     if params[:submit_proposal]
       if params[:id] == "0"
         render :new, notice: "請先儲存提案再提交您的提案"
@@ -60,6 +61,7 @@ class ProposalsController < ApplicationController
   # PATCH/PUT /proposals/1
   # PATCH/PUT /proposals/1.json
   def update
+    hash_tags_process(@proposal)
     if params[:submit_proposal]
       if params[:id] == "0"
         render :new, notice: "請先儲存提案再提交您的提案"
@@ -133,6 +135,21 @@ class ProposalsController < ApplicationController
         end
       end
       return true
+    end
+
+    def hash_tags_process(proposal)
+      tags = params[:hashtags].split(" ")
+      # proposal_tags = proposal.hashtags.pluck(:text)
+      proposal.hashtags.delete_all
+      tags.each do |tag|
+        # if !proposal_tags.include?(tag)
+        proposal.hashtags.create(text: processed_tag(tag))
+        # end
+      end
+    end
+
+    def processed_tag(tag)
+      (tag[0] != "#") ? ("#" + tag) : tag
     end
 
     def check_identity

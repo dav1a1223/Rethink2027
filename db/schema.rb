@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170807093412) do
+ActiveRecord::Schema.define(version: 20170809073643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,14 @@ ActiveRecord::Schema.define(version: 20170807093412) do
     t.datetime "updated_at",  null: false
     t.integer  "proposal_id"
     t.index ["proposal_id"], name: "index_comments_on_proposal_id", using: :btree
+  end
+
+  create_table "hashtags", force: :cascade do |t|
+    t.string   "text"
+    t.integer  "proposal_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["proposal_id"], name: "index_hashtags_on_proposal_id", using: :btree
   end
 
   create_table "members", force: :cascade do |t|
