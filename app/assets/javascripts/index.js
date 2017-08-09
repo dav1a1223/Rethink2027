@@ -47,7 +47,7 @@ function walkMotion(i, n) {
 	}
 }
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
 	var adjust = ($(window).width() / 1280);
 	var height = 9216 * adjust; // total height (px)
 	var scroll_ms = 0; // scroll pass (ms)
@@ -94,7 +94,7 @@ $(document).ready(function(){
 		$(".walk").animate({top: 415 * adjust + "px"}, 150);
 		$(".sentence").css("display", "none");
 		$(".LandingPage .proposal").fadeOut();
-		setTimeout(function(){	
+		setTimeout(function(){
 			$(".sentence").css("display", "block");
 		}, 100);
 		setTimeout(function(){
@@ -111,10 +111,10 @@ $(document).ready(function(){
 		$(".walk").css("top", 510 * adjust + "px");
 		$(".walk").css("left", 695 * adjust + "px");
 		$(".walk").animate({top: 415 * adjust + "px"}, 150);
-		$(".LandingPage .proposal").css("display", "none");	
-		$(".sentence").fadeOut();	
+		$(".LandingPage .proposal").css("display", "none");
+		$(".sentence").fadeOut();
 		setTimeout(function(){
-			$(".LandingPage .proposal").css("display", "block");	
+			$(".LandingPage .proposal").css("display", "block");
 		}, 100);
 		setTimeout(function(){
 			$(".walk").animate({top: 515 * adjust + "px"}, 150);
@@ -180,10 +180,10 @@ $(document).ready(function(){
 		var ten_left = 632;
 		var end_top = 1026 + add;
 		var end_left = ten_left;
- 
+
 		if (after) {
 			if (scrollBtm > ( one + two + three + four + five + six + seven + eight + nine ) * adjust) {
-				// $(".walk").css("top", ten_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight + nine ) * adjust ) * ( (ten_top - end_top) / ten ) + "px"); 
+				// $(".walk").css("top", ten_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight + nine ) * adjust ) * ( (ten_top - end_top) / ten ) + "px");
 				// $(".walk").css("left", ten_left * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight + nine ) * adjust ) * ( (ten_left - end_left) / ten ) + "px");
 				// rightWalk();
 				$(".walk").animate({top: 510 * adjust +"px"}, 3000, "linear");
@@ -191,44 +191,44 @@ $(document).ready(function(){
 					walkMotion(i % 2, i * 150);
 				};
 				after = false;
-			}	
+			}
 			else if (scrollBtm > ( one + two + three + four + five + six + seven + eight ) * adjust) {
-				$(".walk").css("top", nine_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight ) * adjust ) * ( (nine_top - ten_top) / nine ) + "px"); 
+				$(".walk").css("top", nine_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight ) * adjust ) * ( (nine_top - ten_top) / nine ) + "px");
 				$(".walk").css("left", nine_left * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight ) * adjust ) * ( (nine_left - ten_left) / nine ) + "px");
 				rightWalk();
-			}		
+			}
 			else if (scrollBtm > ( one + two + three + four + five + six + seven ) * adjust) {
-				$(".walk").css("top", eight_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven ) * adjust ) * ( (eight_top - nine_top) / eight ) + "px"); 
+				$(".walk").css("top", eight_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven ) * adjust ) * ( (eight_top - nine_top) / eight ) + "px");
 				$(".walk").css("left", eight_left * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven ) * adjust ) * ( (eight_left - nine_left) / eight ) + "px");
 				leftWalk();
 			}
 			else if (scrollBtm > ( one + two + three + four + five + six ) * adjust) {
-				$(".walk").css("top", seven_top * adjust - ( scrollBtm - ( one + two + three + four + five + six ) * adjust ) * ( (seven_top - eight_top) / seven ) + "px"); 
+				$(".walk").css("top", seven_top * adjust - ( scrollBtm - ( one + two + three + four + five + six ) * adjust ) * ( (seven_top - eight_top) / seven ) + "px");
 				$(".walk").css("left", seven_left * adjust - ( scrollBtm - ( one + two + three + four + five + six ) * adjust ) * ( (seven_left - eight_left) / seven ) + "px");
 				rightWalk();
 			}
 			else if (scrollBtm > ( one + two + three + four + five ) * adjust) {
-				$(".walk").css("top", six_top * adjust - ( scrollBtm - ( one + two + three + four + five ) * adjust ) * ( (six_top - seven_top) / six ) + "px"); 
+				$(".walk").css("top", six_top * adjust - ( scrollBtm - ( one + two + three + four + five ) * adjust ) * ( (six_top - seven_top) / six ) + "px");
 				$(".walk").css("left", six_left * adjust - ( scrollBtm - ( one + two + three + four + five ) * adjust ) * ( (six_left - seven_left) / six ) + "px");
 				leftWalk();
 			}
 			else if (scrollBtm > ( one + two + three + four ) * adjust) {
-				$(".walk").css("top", five_top * adjust - ( scrollBtm - ( one + two + three + four ) * adjust ) * ( (five_top - six_top) / five ) + "px"); 
+				$(".walk").css("top", five_top * adjust - ( scrollBtm - ( one + two + three + four ) * adjust ) * ( (five_top - six_top) / five ) + "px");
 				$(".walk").css("left", five_left * adjust - ( scrollBtm - ( one + two + three + four ) * adjust ) * ( (five_left - six_left) / five ) + "px");
 				rightWalk();
 			}
 			else if (scrollBtm > ( one + two + three ) * adjust) {
-				$(".walk").css("top", four_top * adjust - ( scrollBtm - ( one + two + three ) * adjust ) * ( (four_top - five_top) / four ) + "px"); 
+				$(".walk").css("top", four_top * adjust - ( scrollBtm - ( one + two + three ) * adjust ) * ( (four_top - five_top) / four ) + "px");
 				$(".walk").css("left", four_left * adjust - ( scrollBtm - ( one + two + three ) * adjust ) * ( (four_left - five_left) / four ) + "px");
 				leftWalk();
 			}
 			else if (scrollBtm > ( one + two ) * adjust) {
-				$(".walk").css("top", three_top * adjust - ( scrollBtm - ( one + two ) * adjust ) * ( (three_top - four_top) / three ) + "px"); 
+				$(".walk").css("top", three_top * adjust - ( scrollBtm - ( one + two ) * adjust ) * ( (three_top - four_top) / three ) + "px");
 				$(".walk").css("left", three_left * adjust - ( scrollBtm - ( one + two ) * adjust ) * ( (three_left - four_left) / three ) + "px");
 				rightWalk();
 			}
 			else if (scrollBtm > one * adjust) {
-				$(".walk").css("top", two_top * adjust - ( scrollBtm - one * adjust ) * ( (two_top - three_top) / two ) + "px"); 
+				$(".walk").css("top", two_top * adjust - ( scrollBtm - one * adjust ) * ( (two_top - three_top) / two ) + "px");
 				$(".walk").css("left", two_left * adjust - ( scrollBtm - one * adjust ) * ( (two_left - three_left) / two ) + "px");
 				leftWalk();
 			}

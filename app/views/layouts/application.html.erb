@@ -12,7 +12,7 @@
     	<div class="burger">
         <%= image_tag("hamburger.png") %>
     	</div>
-      <%= link_to image_tag("logo.png"), :root, class: "logo" %>
+      <%= link_to image_tag("logo.png"), root_path, class: "logo" %>
     	<span class="proposal">
         <%= link_to "我要提案", attention_proposals_path %>
         <% if user_signed_in? %>
