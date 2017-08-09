@@ -3,7 +3,6 @@
   <head>
     <title>Rethink2027</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -56,11 +55,12 @@
     	</div>
     </div>
     <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value %></div>
+      <!-- <div class="alert alert-<%= key %>"><%= value %></div> -->
+      <%= ("<script>alert('" + value + "')</script>").html_safe %>
     <% end %>
     <%= yield %>
   </body>
   <script type="text/javascript">
-    $('#topbar').scrollupbar();
+    // $('#topbar').scrollupbar();
   </script>
 </html>

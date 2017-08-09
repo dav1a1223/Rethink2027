@@ -267,73 +267,92 @@ body {
 	width: 100vw;
 	// height: 680vw;
 	// overflow: hidden;
-}
-
-.background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
-
-.walk {
-	position: absolute;
-	top: 8270px;
-	left: 250px;
-	width: 4vw;
-	margin-left: -250px;
-	cursor: pointer;
-	display: none;
-
-	img {
+	.background {
 		position: absolute;
-		width: 100%;
 		top: 0;
+		left: 0;
+		width: 100%;
 	}
 
-	.one, .two, .three, .four {
+	.walk {
+		position: absolute;
+		top: 8900px;
+		left: 250px;
+		width: 4vw;
+		// margin-left: -250px;
+		cursor: pointer;
 		display: none;
-	}
-}
 
-.walkAnimation {
-	animation-name: walkLeft;
-	animation-duration: 1.5s;
-	animation-fill-mode: forwards;
-}
+		img {
+			position: absolute;
+			width: 100%;
+			top: 0;
+		}
 
-@keyframes walkLeft {
-	0% {
-		margin-left: -250px;
+		.one, .two, .three, .four {
+			display: none;
+		}
 	}
 
-	100% {
-		margin-left: 0px;
+	.walkAnimation {
+		animation-name: walkLeft;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
 	}
-}
 
-.house {
-	position: absolute;
-	width: 65vw;
-	left: 51vw;
-	top: 390vw;
-	z-index: 2;
-}
+	@keyframes walkLeft {
+		0% {
+			margin-left: -250px;
+		}
 
-.people {
-	position: absolute;
-	width: 50vw;
-	left: 28vw;
-	top: 248vw;
-	z-index: 2;
-}
+		100% {
+			margin-left: 0px;
+		}
+	}
 
-.redPerson {
-	position: absolute;
-	width: 5vw;
-	left: 37vw;
-	top: 140vw;
-	z-index: 2;
+	.largeLogo {
+		position: absolute;
+		width: 15vw;
+		left: 43vw;
+		top: 7.5vw;
+		z-index: 2;
+	}
+	.brickOne {
+		position: absolute;
+		width: 3.5vw;
+		left: 42.5vw;
+		top: 29vw;
+		z-index: 2;
+		cursor: pointer;
+		animation-iteration-count: infinite;
+	}
+	.brickTwo {
+		position: absolute;
+		width: 3.5vw;
+		left: 48.25vw;
+		top: 29vw;
+		z-index: 2;
+		cursor: pointer;
+		animation-iteration-count: infinite;
+	}
+	.brickThree {
+		position: absolute;
+		width: 3.5vw;
+		left: 54vw;
+		top: 29vw;
+		z-index: 2;
+		cursor: pointer;
+		animation-iteration-count: infinite;
+	}
+	.gold {
+		position: absolute;
+		width: 1.8vw;
+		left: 43.35vw;
+		top: 29.5vw;
+		z-index: 1;
+	}
+
+
 }
 
 
@@ -1018,7 +1037,6 @@ body {
 				}
 			}
 		}
-
 		select {
 			appearance: none;
 			-moz-appearance: none;
@@ -1032,7 +1050,7 @@ body {
 			border: 2px solid $orange;
 			border-radius: 0;
 			color: $orange;
-			background: image-url("../img/proposal/orangeTriangle.png") no-repeat scroll right center transparent;
+			background: image-url("proposal/orangeTriangle.png") no-repeat scroll right center transparent;
 		}
 	}
 
@@ -1084,6 +1102,22 @@ body {
 
 	::placeholder {
 		color: $grey;
+	}
+
+	select {
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		font-size: 16px;
+		width: 91px;
+		margin-top: 10px;
+		// background: transparent;
+		padding: 10px;
+		// padding-right: 20px;
+		border: 2px solid $grey;
+		border-radius: 0;
+		color: $grey;
+		background: image-url("proposal/greyTriangle.png") no-repeat scroll right center transparent;
 	}
 
 	.intro {

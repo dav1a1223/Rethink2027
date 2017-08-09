@@ -9,35 +9,37 @@
   				個人資料區
   			</div>
         <div class="right">
-          <h1>【填寫說明】</h1>
-          <br>
-          <ul>
-            <li>第一階段團隊成員上限為3人，若不滿3人，留白即可</li>
-            <li>請盡量填寫中文姓名，若無中文姓名，請填寫護照上的名稱</li>
-            <li>填寫之信箱會做為日後主要聯繫信箱，請填寫能順利收件的信箱地址</li>
-          </ul>
+          <h1 class="noColor">【填寫說明】</h1>
+  				<div>
+  				1. 第一階段團隊成員上限為3人，若不滿3人，留白即可<br>
+  				2. 請盡量填寫中文姓名，若無中文姓名，請填寫護照上的名稱<br>
+  				3. 填寫之信箱會做為日後主要聯繫信箱，請填寫能順利收件的信箱地址<br>
+  				</div>
           <%= f.simple_fields_for :members, @proposal.members[0] || @proposal.members.build do |m| %>
               <br><br><h1>主要提案者</h1>
-              <%= m.input :name, label: "姓名" %>
-              <%= m.input :birthday, label: "生日", as: :date %><br>
-              <%= m.input :email, label: "信箱" %>
-              <%= m.input :phone, label: "聯絡電話" %><br>
+              <%= m.input :name, label: false, placeholder: "姓名＊", wrapper_html: { style: 'display: inline' } %>
+              <span style="font-size: 20px">生日＊</span>
+              <%= m.input :birthday, label: false, placeholder: "生日＊", as: :date, start_year: Date.today.year - 70, end_year: Date.today.year, wrapper_html: { style: 'display: inline' }  %><br>
+              <%= m.input :email, label: false, placeholder: "信箱＊", wrapper_html: { style: 'display: inline' } %>
+              <%= m.input :phone, label: false, placeholder: "聯絡電話＊", wrapper_html: { style: 'display: inline' } %><br>
           <% end %>
           <%= f.simple_fields_for :members, @proposal.members[1] || @proposal.members.build do |m| %>
               <br><br><h1>團隊成員之2</h1>
-              <%= m.input :name, label: "姓名" %>
-              <%= m.input :birthday, label: "生日", as: :date %><br>
-              <%= m.input :email, label: "信箱" %>
-              <%= m.input :phone, label: "聯絡電話" %><br>
+              <%= m.input :name, label: false, placeholder: "姓名＊", wrapper_html: { style: 'display: inline' } %>
+              <span style="font-size: 20px">生日＊</span>
+              <%= m.input :birthday, label: false, placeholder: "生日＊", as: :date, start_year: Date.today.year - 70, end_year: Date.today.year, wrapper_html: { style: 'display: inline' }  %><br>
+              <%= m.input :email, label: false, placeholder: "信箱＊", wrapper_html: { style: 'display: inline' } %>
+              <%= m.input :phone, label: false, placeholder: "聯絡電話＊", wrapper_html: { style: 'display: inline' } %><br>
           <% end %>
           <%= f.simple_fields_for :members, @proposal.members[2] || @proposal.members.build do |m| %>
               <br><br><h1>團隊成員之3</h1>
-              <%= m.input :name, label: "姓名" %>
-              <%= m.input :birthday, label: "生日", as: :date %><br>
-              <%= m.input :email, label: "信箱" %>
-              <%= m.input :phone, label: "聯絡電話" %><br>
+              <%= m.input :name, label: false, placeholder: "姓名", wrapper_html: { style: 'display: inline' } %>
+              <span style="font-size: 20px">生日＊</span>
+              <%= m.input :birthday, label: false, placeholder: "生日", as: :date, start_year: Date.today.year - 70, end_year: Date.today.year, wrapper_html: { style: 'display: inline' }  %><br>
+              <%= m.input :email, label: false, placeholder: "信箱", wrapper_html: { style: 'display: inline' } %>
+              <%= m.input :phone, label: false, placeholder: "聯絡電話", wrapper_html: { style: 'display: inline' } %><br>
           <% end %>
-        </div>
+        </div><br><br><br>
       </div>
       <div class="greyBackground">
         <div class="title">

@@ -45,15 +45,15 @@ class ProposalsController < ApplicationController
           @proposal.is_submit = true
           @proposal.publish = false
           @proposal.save!
-          redirect_to @proposal, notice: "提案已提交"
+          redirect_to @proposal, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
         else
-          render :edit, notice: "欄位尚未填寫完成"
+          render :edit, notice: "仍有欄位尚未填寫完成，請再檢查有「*」的欄位是否都填寫。"
         end
       end
     else
       respond_to do |format|
         if @proposal.save
-          format.html { redirect_to @proposal, notice: '您的提案已儲存成功！' }
+          format.html { redirect_to @proposal, notice: '草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！' }
           format.json { render :show, status: :created, location: @proposal }
         else
           format.html { render :new }
@@ -74,15 +74,14 @@ class ProposalsController < ApplicationController
         @proposal.is_submit = true
         @proposal.publish = false
         @proposal.save!
-        redirect_to @proposal, notice: "提案已提交"
+        redirect_to @proposal, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
       else
-        render :edit, notice: "欄位尚未填寫完成"
+        render :edit, notice: "仍有欄位尚未填寫完成，請再檢查有「*」的欄位是否都填寫。"
       end
     else
       respond_to do |format|
         if @proposal.save!
-          flash[:notice] = "您的提案已更新成功！"
-          format.html { redirect_to @proposal }
+          format.html { redirect_to @proposal, notice: "草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！" }
           format.json { render :show, status: :ok, location: @proposal }
         else
           format.html { render :edit }
