@@ -297,7 +297,7 @@ body {
   margin-bottom: 20px;
 }
 /* line 316, ../sass/style.scss */
-.logIn form .facebook, .logIn form .google {
+.logIn .facebook, .logIn .google {
   display: inline-block;
   text-align: left;
   width: 97%;
@@ -311,21 +311,21 @@ body {
   margin-bottom: 30px;
 }
 /* line 329, ../sass/style.scss */
-.logIn form .facebook img, .logIn form .google img {
+.logIn .facebook img, .logIn .google img {
   height: 100%;
   vertical-align: -40%;
 }
 /* line 335, ../sass/style.scss */
-.logIn form .facebook {
+.logIn .facebook {
   background: #3b5998;
   text-indent: 8px;
 }
 /* line 339, ../sass/style.scss */
-.logIn form .facebook img {
+.logIn .facebook img {
   margin-right: 8px;
 }
 /* line 345, ../sass/style.scss */
-.logIn form .google {
+.logIn .google {
   background: #dc4e41;
 }
 /* line 349, ../sass/style.scss */

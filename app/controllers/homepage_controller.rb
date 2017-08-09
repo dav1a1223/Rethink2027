@@ -7,6 +7,14 @@ class HomepageController < ApplicationController
     render template: "homepage/about"
   end
 
+  def activities
+    render templete: "homepage/activities"
+  end
+
+  def partner
+    render template: "homepage/partner"
+  end
+
   def about_depath
     render template: "homepage/#{request.path}"
   end
