@@ -316,11 +316,12 @@ body {
 		left: 43vw;
 		top: 7.5vw;
 		z-index: 2;
+		display: none;
 	}
 	.brickOne {
 		position: absolute;
 		width: 3.5vw;
-		left: 42.5vw;
+		left: 43vw;
 		top: 29vw;
 		z-index: 2;
 		cursor: pointer;
@@ -329,7 +330,7 @@ body {
 	.brickTwo {
 		position: absolute;
 		width: 3.5vw;
-		left: 48.25vw;
+		left: 48.75vw;
 		top: 29vw;
 		z-index: 2;
 		cursor: pointer;
@@ -338,7 +339,7 @@ body {
 	.brickThree {
 		position: absolute;
 		width: 3.5vw;
-		left: 54vw;
+		left: 54.5vw;
 		top: 29vw;
 		z-index: 2;
 		cursor: pointer;
@@ -347,11 +348,144 @@ body {
 	.gold {
 		position: absolute;
 		width: 1.8vw;
-		left: 43.35vw;
+		left: 43.85vw;
 		top: 29.5vw;
 		z-index: 1;
 	}
 
+	.goldArea {
+		position: absolute;
+		width: 8vw;
+		left: 7vw;
+		top: 6vw;
+		font-size: 1.2em;
+		color: $lightGreen;
+		font-weight: bold;
+		letter-spacing: 2px;
+		display: none;
+
+		.goldTwo {
+			width: 1.8vw;
+			vertical-align: -20%;
+		}
+	}
+
+	.sentence {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		color: $yellow;
+		top: 16vw;
+		z-index: 1;
+		font-size: 2.4vw;
+		letter-spacing: 0.15vw;
+		text-indent: 1.45vw;
+		// animation-iteration-count: infinite;
+		animation-duration: 1s;
+		display: none;
+	}
+
+
+	.proposal {
+		position: absolute;
+		left: 65vw;
+		top: 7vw;
+		display: inline-block;
+		vertical-align: top;
+		width: 280px;
+		// height: 400px;
+		margin: 0px 2.5%;
+		margin-bottom: 100px;
+		line-height: 20px;
+		cursor: pointer;
+		color: white;
+		text-decoration: none;
+		background: $green;
+		border: 4px solid white;
+		border-radius: 4px;
+		display: none;
+
+		.HWM {
+			position: relative;
+			padding: 20px;
+			text-align: left;
+			color: $yellow;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+
+		.picture {
+			position: relative;
+			width: 100%;
+			height: 280px;
+			// border-radius: 50%;
+			overflow: hidden;
+			// background: blue;
+			margin-bottom: 20px;
+
+			.content {
+				position: absolute;
+				top: 0;
+				font-size: 14px;
+				line-height: 18px;
+				padding: 25px;
+				text-align: left;
+				z-index: 2;
+				opacity: 0;
+
+				.name {
+					width: 100%;
+					text-align: center;
+					margin-top: 30px;
+					margin-bottom: 60px;
+					font-size: 16px;
+				}
+			}
+
+			img {
+				height: 100%;
+			}
+		}
+
+		.hashtag {
+			position: relative;
+			font-size: 14px;
+			font-weight: bold;
+			width: 76%;
+			left: 0%;
+			bottom: 0;
+			text-align: center;
+			// font-size: 18px;
+			padding-bottom: 16px;
+			color: $lightGreen;
+		}
+
+		.location {
+			position: absolute;
+			font-size: 14px;
+			font-weight: bold;
+			right: 20px;
+			margin-top: -40px;
+			color: $lightGreen;
+
+			img {
+				vertical-align: middle;
+			}
+		}
+
+		&:hover {
+			.picture {
+				img {
+					transition-duration: 0.5s;
+					filter: grayscale(100%) blur(8px) brightness(50%);
+				}
+				.content {
+					transition-duration: 0.5s;
+					opacity: 1;
+				}
+			}
+		}
+	}
 
 }
 

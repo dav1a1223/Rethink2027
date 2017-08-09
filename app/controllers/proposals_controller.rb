@@ -105,6 +105,11 @@ class ProposalsController < ApplicationController
     render template: "proposals/attention"
   end
 
+  def random_proposal
+    @proposal = Proposal.order("RANDOM()").limit(1).first
+    render partial: "proposals/proposal"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_proposal

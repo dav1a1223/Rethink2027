@@ -23379,3 +23379,918 @@ Processing by ProposalsController#edit as HTML
 Completed 200 OK in 864ms (Views: 807.9ms | ActiveRecord: 47.0ms)
 
 
+Started GET "/rails/info" for ::1 at 2017-08-09 23:15:34 +0800
+Processing by Rails::InfoController#index as HTML
+  Parameters: {"internal"=>true}
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-08-09 23:15:34 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [90 times] (83.9ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (60.2ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (160.0ms)
+Completed 200 OK in 183ms (Views: 175.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 23:30:10 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (2433.5ms)
+Completed 500 Internal Server Error in 2465ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    4:   <%= image_tag("landingPage/largeLogo.svg", class: "largeLogo pulse animated") %>
+    5:   <%= image_tag("landingPage/brick.svg", class: "brickOne puls animated") %>
+    6:   <%= image_tag("landingPage/brick.svg", class: "brickTwo puls animated") %>
+    7:   <%= link_to image_tag("landingPage/brick.svg", random_proposal_proposals_path, class: "brickThree puls animated", id: "ajax-load") %>
+    8:   <%= image_tag("landingPage/gold.svg", class: "gold") %>
+    9: 
+   10: 	<div class="goldArea">
+  
+app/views/homepage/index.html.erb:7:in `_app_views_homepage_index_html_erb___1306250463047391954_70211102154360'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (106.2ms)
+Started GET "/" for ::1 at 2017-08-09 23:30:44 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"proposals", :id=>nil} missing required keys: [:id]):
+    17: 		“寶可夢，我抓到了！”
+    18: 	</div>
+    19: 
+    20:   <%= link_to proposal_path(@proposal), id: "proposal" do %>
+    21:   <% end %>
+    22: 
+    23: 	<div class="walk">
+  
+app/views/homepage/index.html.erb:20:in `_app_views_homepage_index_html_erb___1306250463047391954_70211126950180'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.9ms)
+Started GET "/" for ::1 at 2017-08-09 23:31:38 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 485ms (Views: 471.1ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/images/landingPage/gold.svg" for ::1 at 2017-08-09 23:31:39 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/landingPage/gold.svg"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [90 times] (52.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (292.8ms)
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:31:47 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (2.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered proposals/_proposal.html.erb (54.6ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `how_can_we' for #<Proposal::ActiveRecord_Relation:0x007fb69a118598>):
+    1: <%= link_to proposal_path(@proposal), class: "proposal" do %>
+    2:   <div class="HWM"><%= @proposal.how_can_we %></div>
+    3:   <div class="picture">
+    4:     <%= image_tag(@proposal.image_url) %>
+    5:     <div class="content">
+  
+app/views/proposals/_proposal.html.erb:2:in `block in _app_views_proposals__proposal_html_erb___1345791069734928453_70211098576860'
+app/views/proposals/_proposal.html.erb:1:in `_app_views_proposals__proposal_html_erb___1345791069734928453_70211098576860'
+app/controllers/proposals_controller.rb:110:in `random_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (90.8ms)
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:31:48 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered proposals/_proposal.html.erb (26.6ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `how_can_we' for #<Proposal::ActiveRecord_Relation:0x007fb697376bf8>):
+    1: <%= link_to proposal_path(@proposal), class: "proposal" do %>
+    2:   <div class="HWM"><%= @proposal.how_can_we %></div>
+    3:   <div class="picture">
+    4:     <%= image_tag(@proposal.image_url) %>
+    5:     <div class="content">
+  
+app/views/proposals/_proposal.html.erb:2:in `block in _app_views_proposals__proposal_html_erb___1345791069734928453_70211098878880'
+app/views/proposals/_proposal.html.erb:1:in `_app_views_proposals__proposal_html_erb___1345791069734928453_70211098878880'
+app/controllers/proposals_controller.rb:110:in `random_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (71.4ms)
+Started GET "/" for ::1 at 2017-08-09 23:32:44 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (18.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 230ms (Views: 225.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/landingPage/gold.svg" for ::1 at 2017-08-09 23:32:44 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/landingPage/gold.svg"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [90 times] (81.6ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (299.5ms)
+Started GET "/" for ::1 at 2017-08-09 23:34:21 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (1145.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 1601ms (Views: 1578.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/images/landingPage/gold.svg" for ::1 at 2017-08-09 23:34:23 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/landingPage/gold.svg"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [90 times] (51.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.1ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (412.2ms)
+Started GET "/" for ::1 at 2017-08-09 23:40:00 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (28.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 301ms (Views: 296.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:40:11 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (3.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered proposals/_proposal.html.erb (80.2ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 8.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `how_can_we' for #<Proposal::ActiveRecord_Relation:0x007fcc8639c588>):
+    1: <%= link_to proposal_path(@proposal), class: "proposal" do %>
+    2:   <div class="HWM"><%= @proposal.how_can_we %></div>
+    3:   <div class="picture">
+    4:     <%= image_tag(@proposal.image_url) %>
+    5:     <div class="content">
+  
+app/views/proposals/_proposal.html.erb:2:in `block in _app_views_proposals__proposal_html_erb__4372021967908958768_70258189997100'
+app/views/proposals/_proposal.html.erb:1:in `_app_views_proposals__proposal_html_erb__4372021967908958768_70258189997100'
+app/controllers/proposals_controller.rb:110:in `random_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.4ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.5ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (83.8ms)
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:40:12 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered proposals/_proposal.html.erb (25.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `how_can_we' for #<Proposal::ActiveRecord_Relation:0x007fcc880aaf80>):
+    1: <%= link_to proposal_path(@proposal), class: "proposal" do %>
+    2:   <div class="HWM"><%= @proposal.how_can_we %></div>
+    3:   <div class="picture">
+    4:     <%= image_tag(@proposal.image_url) %>
+    5:     <div class="content">
+  
+app/views/proposals/_proposal.html.erb:2:in `block in _app_views_proposals__proposal_html_erb__4372021967908958768_70258216224100'
+app/views/proposals/_proposal.html.erb:1:in `_app_views_proposals__proposal_html_erb__4372021967908958768_70258216224100'
+app/controllers/proposals_controller.rb:110:in `random_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.5ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (82.2ms)
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:40:12 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered proposals/_proposal.html.erb (26.4ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `how_can_we' for #<Proposal::ActiveRecord_Relation:0x007fcc88131b70>):
+    1: <%= link_to proposal_path(@proposal), class: "proposal" do %>
+    2:   <div class="HWM"><%= @proposal.how_can_we %></div>
+    3:   <div class="picture">
+    4:     <%= image_tag(@proposal.image_url) %>
+    5:     <div class="content">
+  
+app/views/proposals/_proposal.html.erb:2:in `block in _app_views_proposals__proposal_html_erb__4372021967908958768_70258216524600'
+app/views/proposals/_proposal.html.erb:1:in `_app_views_proposals__proposal_html_erb__4372021967908958768_70258216524600'
+app/controllers/proposals_controller.rb:110:in `random_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (68.4ms)
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:40:13 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered proposals/_proposal.html.erb (24.0ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `how_can_we' for #<Proposal::ActiveRecord_Relation:0x007fcc86cb81f8>):
+    1: <%= link_to proposal_path(@proposal), class: "proposal" do %>
+    2:   <div class="HWM"><%= @proposal.how_can_we %></div>
+    3:   <div class="picture">
+    4:     <%= image_tag(@proposal.image_url) %>
+    5:     <div class="content">
+  
+app/views/proposals/_proposal.html.erb:2:in `block in _app_views_proposals__proposal_html_erb__4372021967908958768_70258212916860'
+app/views/proposals/_proposal.html.erb:1:in `_app_views_proposals__proposal_html_erb__4372021967908958768_70258212916860'
+app/controllers/proposals_controller.rb:110:in `random_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.text.erb (53.0ms)
+Started GET "/rails/info" for ::1 at 2017-08-09 23:41:46 +0800
+Processing by Rails::InfoController#index as HTML
+  Parameters: {"internal"=>true}
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2017-08-09 23:41:46 +0800
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [90 times] (27.8ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:01 +0800
+Processing by ProposalsController#random_proposal as HTML
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered proposals/_proposal.html.erb (9.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `how_can_we' for #<Proposal::ActiveRecord_Relation:0x007fcc878957c8>):
+    1: <%= link_to proposal_path(@proposal), class: "proposal" do %>
+    2:   <div class="HWM"><%= @proposal.how_can_we %></div>
+    3:   <div class="picture">
+    4:     <%= image_tag(@proposal.image_url) %>
+    5:     <div class="content">
+  
+app/views/proposals/_proposal.html.erb:2:in `block in _app_views_proposals__proposal_html_erb__4372021967908958768_70258200386960'
+app/views/proposals/_proposal.html.erb:1:in `_app_views_proposals__proposal_html_erb__4372021967908958768_70258200386960'
+app/controllers/proposals_controller.rb:110:in `random_proposal'
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/davidlai/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.5ms)
+Started PUT "/__web_console/repl_sessions/0f4b097e1ddcf3c53df72c296ab48770" for ::1 at 2017-08-09 23:42:20 +0800
+Started PUT "/__web_console/repl_sessions/0f4b097e1ddcf3c53df72c296ab48770" for ::1 at 2017-08-09 23:42:22 +0800
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:35 +0800
+Processing by ProposalsController#random_proposal as HTML
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (30.6ms)
+Completed 200 OK in 48ms (Views: 30.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 23:42:42 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 303ms (Views: 295.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:45 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.8ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (17.6ms)
+Completed 200 OK in 45ms (Views: 33.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:48 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (11.7ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:49 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (1.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (16.3ms)
+Completed 200 OK in 41ms (Views: 34.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:49 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (3.0ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (4.9ms)
+Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:50 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (18.6ms)
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:42:59 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (3.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (11.5ms)
+Completed 200 OK in 47ms (Views: 38.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:00 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (2.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (17.9ms)
+Completed 200 OK in 47ms (Views: 34.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:08 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (16.9ms)
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:09 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (15.5ms)
+Completed 200 OK in 41ms (Views: 31.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:10 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (6.0ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (7.4ms)
+Completed 200 OK in 39ms (Views: 27.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:10 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (9.9ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (12.8ms)
+Completed 200 OK in 54ms (Views: 36.5ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:11 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (2.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (11.5ms)
+Completed 200 OK in 43ms (Views: 32.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:11 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (5.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (12.0ms)
+Completed 200 OK in 45ms (Views: 30.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:12 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (2.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (17.7ms)
+Completed 200 OK in 51ms (Views: 45.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:12 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (8.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (10.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (20.5ms)
+Completed 200 OK in 57ms (Views: 36.0ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:12 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (18.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (14.2ms)
+Completed 200 OK in 59ms (Views: 32.7ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:13 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (7.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (21.8ms)
+Completed 200 OK in 57ms (Views: 32.5ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:13 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (9.9ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:14 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (2.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (6.9ms)
+Completed 200 OK in 42ms (Views: 36.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:14 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (4.9ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (6.9ms)
+Completed 200 OK in 34ms (Views: 26.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:14 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (1.2ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (16.7ms)
+Completed 200 OK in 49ms (Views: 35.4ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:15 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (7.7ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:15 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (5.0ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (6.2ms)
+Completed 200 OK in 60ms (Views: 44.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:15 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (2.0ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (5.2ms)
+Completed 200 OK in 67ms (Views: 61.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:15 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (40.5ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:16 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (3.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (16.3ms)
+Completed 200 OK in 45ms (Views: 37.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:16 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (4.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (14.9ms)
+Completed 200 OK in 45ms (Views: 30.9ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:17 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (3.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (9.9ms)
+Completed 200 OK in 36ms (Views: 30.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:17 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (4.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (6.9ms)
+Completed 200 OK in 51ms (Views: 44.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:17 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (12.8ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:17 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (14.7ms)
+Completed 200 OK in 51ms (Views: 43.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:20 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (6.0ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:43:28 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (5.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (13.8ms)
+Completed 200 OK in 58ms (Views: 48.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 23:44:05 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (16.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 307ms (Views: 303.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:44:07 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (14.1ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:44:10 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (19.1ms)
+Completed 200 OK in 45ms (Views: 35.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/proposals/attention" for ::1 at 2017-08-09 23:45:15 +0800
+Processing by ProposalsController#attention as HTML
+  Rendering proposals/attention.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."user_id" = $1 LIMIT $2[0m  [["user_id", 6], ["LIMIT", 1]]
+  Rendered proposals/attention.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 246ms (Views: 242.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/proposals/15/edit" for ::1 at 2017-08-09 23:45:16 +0800
+Processing by ProposalsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering proposals/edit.html.erb within layouts/application
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_form.html.erb (171.7ms)
+  Rendered proposals/edit.html.erb within layouts/application (173.9ms)
+Completed 200 OK in 390ms (Views: 364.2ms | ActiveRecord: 8.9ms)
+
+
+Started PATCH "/proposals/15" for ::1 at 2017-08-09 23:45:31 +0800
+Processing by ProposalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RB3Bfe5WMkpVEzHfaCeMAm32uf/egcYN0VO6PyAv6TH9AKu5UFlE3NiIsrsLcDyCTRKtDeaUUUf3AFY37KTaqw==", "proposal"=>{"members_attributes"=>{"0"=>{"name"=>"賴賴", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"davidlai@gmail.com", "phone"=>"111", "id"=>"37"}, "1"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}, "2"=>{"name"=>"", "birthday(1i)"=>"2017", "birthday(2i)"=>"8", "birthday(3i)"=>"9", "email"=>"", "phone"=>""}}, "description"=>"征服世界", "action_name"=>"征服地球", "action_intro"=>"征服", "action_location"=>"網路空間", "how_can_we"=>"統一兩岸", "excitement"=>"反攻大陸"}, "hashtags"=>"#426 #689", "commit"=>"儲存草稿", "id"=>"15"}
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (8.6ms)[0m  [1m[33mUPDATE "hashtags" SET "proposal_id" = NULL WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."proposal_id" = $1 AND "members"."id" = 37[0m  [["proposal_id", 15]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "hashtags" ("text", "proposal_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["text", "#426"], ["proposal_id", 15], ["created_at", 2017-08-09 15:45:31 UTC], ["updated_at", 2017-08-09 15:45:31 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hashtags" ("text", "proposal_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["text", "#689"], ["proposal_id", 15], ["created_at", 2017-08-09 15:45:31 UTC], ["updated_at", 2017-08-09 15:45:31 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/proposals/15
+Completed 302 Found in 44ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/proposals/15" for ::1 at 2017-08-09 23:45:31 +0800
+Processing by ProposalsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" WHERE "proposals"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering proposals/show.html.erb within layouts/application
+  Rendered proposals/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 221ms (Views: 212.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 23:45:35 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 295ms (Views: 291.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:36 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (5.6ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:38 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (4.7ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:40 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.3ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (4.8ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:40 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (4.6ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:40 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (6.2ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:41 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.5ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (6.2ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 23:45:44 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 240ms (Views: 236.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:46 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (22.5ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:49 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (1.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (14.1ms)
+Completed 200 OK in 45ms (Views: 36.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:45:50 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (1.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (6.8ms)
+Completed 200 OK in 33ms (Views: 27.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-09 23:46:52 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 203ms (Views: 200.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:46:54 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.8ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-08-09 23:46:58 +0800
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (15.7ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 213ms (Views: 208.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:46:59 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.8ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (11388.1ms)
+Completed 200 OK in 11413ms (Views: 11408.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:47:20 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.7ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (12.5ms)
+Completed 200 OK in 40ms (Views: 33.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:47:22 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (2.1ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (11.0ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 13]]
+  Rendered proposals/_proposal.html.erb (17.5ms)
+Completed 200 OK in 50ms (Views: 32.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:47:26 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.6ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (11.9ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:47:28 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (0.4ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 15]]
+  Rendered proposals/_proposal.html.erb (9.6ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/proposals/random_proposal" for ::1 at 2017-08-09 23:47:29 +0800
+Processing by ProposalsController#random_proposal as */*
+  [1m[36mProposal Load (5.9ms)[0m  [1m[34mSELECT  "proposals".* FROM "proposals" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "hashtags"."text" FROM "hashtags" WHERE "hashtags"."proposal_id" = $1[0m  [["proposal_id", 14]]
+  Rendered proposals/_proposal.html.erb (12.5ms)
+Completed 200 OK in 86ms (Views: 76.8ms | ActiveRecord: 6.3ms)
+
+

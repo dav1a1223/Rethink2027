@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :proposals do
     collection do
       get "attention"
+      get "random_proposal"
     end
 
     member do

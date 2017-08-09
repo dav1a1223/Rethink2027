@@ -1,0 +1,16 @@
+<%= link_to proposal_path(@proposal), class: "proposal zoomInLeft animated" do %>
+  <div class="HWM"><%= @proposal.how_can_we %></div>
+  <div class="picture">
+    <%= image_tag(@proposal.image_url) %>
+    <div class="content">
+      <div class="name">
+        <%= @proposal.action_name %>
+      </div>
+      <%= @proposal.action_intro %>
+    </div>
+  </div>
+  <div class="hashtag">
+    <%= @proposal.hashtags.pluck(:text).join(" ") %>
+  </div>
+  <div class="location"><%= image_tag("proposal/location.png") %><%= @proposal.action_location %></div>
+<% end %>

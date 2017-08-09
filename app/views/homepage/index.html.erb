@@ -1,9 +1,43 @@
 <div class="LandingPage">
+
   <%= image_tag("landingPage/LP.svg", class: "background") %>
+  <%= image_tag("landingPage/largeLogo.svg", class: "largeLogo pulse animated") %>
+  <%= image_tag("landingPage/brick.svg", class: "brickOne puls animated") %>
+  <%= image_tag("landingPage/brick.svg", class: "brickTwo puls animated") %>
+  <%= link_to image_tag("landingPage/brick.svg"), random_proposal_proposals_path, class: "brickThree puls animated", id: "ajax-load" %>
+  <%= image_tag("landingPage/gold.png", class: "gold") %>
+
+	<div class="goldArea">
+    <%= image_tag("landingPage/gold.png", class: "goldTwo") %>
+		&nbspx
+		<span class="number">0</span>
+	</div>
+
+	<div class="sentence zoomInUp animate">
+		“寶可夢，我抓到了！”
+	</div>
+
+  <div id="proposal">
+
+  </div>
+
 	<div class="walk">
-    <%= image_tag("landingPage/walk1.svg", class: "one") %>
+		<%= image_tag("landingPage/walk1.svg", class: "one") %>
     <%= image_tag("landingPage/walk2.svg", class: "two") %>
     <%= image_tag("landingPage/walk3.svg", class: "three") %>
     <%= image_tag("landingPage/walk4.svg", class: "four") %>
 	</div>
+
 </div>
+
+<script>
+  $('#ajax-load').click( function(e){
+    e.preventDefault();
+    var url =  $(this).attr("href");
+    $.ajax(url, {
+      success: function(response) {
+        $("#proposal").html(response);
+      }
+    });
+  })
+</script>
