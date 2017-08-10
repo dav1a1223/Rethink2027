@@ -8,6 +8,11 @@ class ProposalsController < ApplicationController
   # GET /proposals.json
   def index
     @proposals = Proposal.published
+    if current_user&.proposal
+      if @proposals.include? current_user.proposal
+        @proposals.unshift(@proposals.delete(current_user.proposal))
+      end
+    end
     if current_user&.proposal&.is_submit && !(current_user&.proposal&.publish)
       @proposals = [current_user.proposal] + @proposals
     end
@@ -76,7 +81,7 @@ class ProposalsController < ApplicationController
         @proposal.save!
         redirect_to @proposal, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
       else
-        render :edit, notice: "仍有欄位尚未填寫完成，請再檢查有「*」的欄位是否都填寫。"
+        render :edit
       end
     else
       respond_to do |format|
@@ -123,7 +128,7 @@ class ProposalsController < ApplicationController
           params[:proposal][:members_attributes].delete(k)
         end
       end
-      tags = params[:hashtags].split(" ")
+      tags = Charwidth.normalize(params[:hashtags]).split(" ")
       tags_hash = {}
       tags.each_with_index do |tag, i|
         tags_hash[i.to_s] = { "text": processed_tag(tag) }
@@ -138,7 +143,17 @@ class ProposalsController < ApplicationController
     def proposal_check
       pp = @proposal
       column_exist = (pp.description.present? && pp.action_intro.present? && pp.action_name.present? && pp.action_location.present? && pp.how_can_we.present? && pp.excitement.present? && pp.image.file.present?)
-      members_valid = (pp.members.count >= 1) && members_not_repeated(pp)
+      unless column_exist
+        flash[:notice] = "仍有欄位尚未填寫完成，請再檢查有「*」的欄位是否都填寫。"
+      end
+      members_valid = (pp.members.count >= 2) && members_not_repeated(pp)
+      unless members_valid
+        if pp.members.count < 2
+          flash[:notice] = "您的提案成員至少需兩人。"
+        else members_not_repeated(pp)
+          flash[:notice] = "您的提案成員至少有一人已參與其他提案。"
+        end
+      end
       column_exist && members_valid
     end
 

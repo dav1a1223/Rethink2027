@@ -82,4 +82,44 @@ ActiveAdmin.register Proposal do
 
     f.actions
   end
+
+  csv do
+    column :id
+    column :action_name
+    column :description
+    column :user
+    column :action_intro
+    column :action_location
+    column :how_can_we
+    column :excitement
+    column :publish
+    column :members1_name do |proposal|
+      proposal.members.first&.name || "無"
+    end
+    column :members1_phone do |proposal|
+      proposal.members.first&.phone || "無"
+    end
+    column :members1_email do |proposal|
+      proposal.members.first&.email || "無"
+    end
+    column :members2_name do |proposal|
+      proposal.members.second&.name || "無"
+    end
+    column :members2_phone do |proposal|
+      proposal.members.second&.phone || "無"
+    end
+    column :members2_email do |proposal|
+      proposal.members.second&.email || "無"
+    end
+    column :members3_name do |proposal|
+      proposal.members.third&.name || "無"
+    end
+    column :members3_phone do |proposal|
+      proposal.members.third&.phone || "無"
+    end
+    column :members3_email do |proposal|
+      proposal.members.third&.email || "無"
+    end
+
+  end
 end

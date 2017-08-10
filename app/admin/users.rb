@@ -10,4 +10,9 @@ ActiveAdmin.register User do
     column :created_at
     actions
   end
+
+  csv do
+    column :email
+    column :name
+  end
 end

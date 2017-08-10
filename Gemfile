@@ -9,6 +9,7 @@ ruby "2.3.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
+gem 'rails-i18n'
 # Use mysql as the database for Active Record
 # gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem "pg"
@@ -23,7 +24,9 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
+gem 'devise-i18n'
 gem 'simple_form'
+gem 'charwidth'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
