@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1245 1212" style="enable-background:new 0 0 1245 1212;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EB635A;stroke:#EB635A;stroke-width:6.0392;stroke-miterlimit:10;}
+	.st1{fill:#006261;}
+	.st2{fill:#EB635A;}
+	.st3{fill:none;stroke:#006261;stroke-width:7.7643;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#006261;stroke-width:7.7643;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:#666560;}
+	.st6{fill:#9A685F;}
+	.st7{fill:#C6685D;}
+</style>
+<g>
+	<circle class="st0" cx="639.9" cy="605.6" r="602"/>
+	<g>
+		
+			<ellipse transform="matrix(1 -5.984425e-03 5.984425e-03 1 -3.0883 7.1424)" class="st1" cx="1191.9" cy="519.6" rx="15.7" ry="9.4"/>
+		<path class="st1" d="M1179.6,514.9l9.4-37.2c1.6-4.2,4.9-3.6,5.5,0.9l10.2,39.5c0.3,1.3-0.3,2.3-0.9,3c-3,4.2-8.6,5.3-15.7,4.2
+			C1179.5,524.1,1178.4,517.8,1179.6,514.9z"/>
+		<path class="st2" d="M1187.1,485.2l-1.4,5.4c0,0,2,2,6.1,2.1c4.1,0.1,5.7-2.4,5.7-2.4l-1.3-5.2c0,0-1.5,1.9-4.5,1.8
+			C1188.8,486.7,1187.1,485.2,1187.1,485.2z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<path class="st1" d="M107.2,292.8l34,58.1c7.2,12.3-1.7,27.9-16,27.9H54.7c-14.6,0-23.4-16-15.7-28.4l36.6-58.1
+				C83,280.6,100.2,280.8,107.2,292.8z"/>
+		</g>
+		<polyline class="st3" points="89.9,420 89.9,364.8 111.2,338.5 		"/>
+		<line class="st4" x1="89.9" y1="364.8" x2="68.5" y2="343.4"/>
+		<line class="st4" x1="89.9" y1="366.4" x2="89.9" y2="304.3"/>
+	</g>
+	<g>
+		<g>
+			<path class="st5" d="M72.6,423.3l34,58.1c7.2,12.3-1.7,27.9-16,27.9H20.1c-14.6,0-23.4-16-15.7-28.4L41,422.8
+				C48.4,411,65.6,411.3,72.6,423.3z"/>
+		</g>
+		<polyline class="st3" points="55.3,550.5 55.3,495.2 76.6,469 		"/>
+		<line class="st4" x1="55.3" y1="495.2" x2="33.9" y2="473.8"/>
+		<line class="st4" x1="55.3" y1="496.8" x2="55.3" y2="434.8"/>
+	</g>
+	<g>
+		<g>
+			<path class="st6" d="M72.6,555.7l34,58.1c7.2,12.3-1.7,27.9-16,27.9H20c-14.6,0-23.4-16-15.7-28.4l36.6-58.1
+				C48.3,543.4,65.6,543.7,72.6,555.7z"/>
+		</g>
+		<polyline class="st3" points="55.3,682.8 55.3,627.6 76.6,601.4 		"/>
+		<line class="st4" x1="55.3" y1="627.6" x2="33.9" y2="606.2"/>
+		<line class="st4" x1="55.3" y1="629.2" x2="55.3" y2="567.1"/>
+	</g>
+	<g>
+		<g>
+			<path class="st7" d="M125.2,678.2l34,58.1c7.2,12.3-1.7,27.9-16,27.9H72.6c-14.6,0-23.4-16-15.7-28.4l36.6-58.1
+				C100.9,665.9,118.2,666.2,125.2,678.2z"/>
+		</g>
+		<polyline class="st3" points="107.9,805.3 107.9,750.1 129.2,723.9 		"/>
+		<line class="st4" x1="107.9" y1="750.1" x2="86.5" y2="728.7"/>
+		<line class="st4" x1="107.9" y1="751.7" x2="107.9" y2="689.6"/>
+	</g>
+	<g>
+		<g>
+			<path class="st2" d="M210,782.4l34,58.1c7.2,12.3-1.7,27.9-16,27.9h-70.5c-14.6,0-23.4-16-15.7-28.4l36.6-58.1
+				C185.7,770.1,203,770.4,210,782.4z"/>
+		</g>
+		<polyline class="st3" points="192.7,909.6 192.7,854.4 214,828.1 		"/>
+		<line class="st4" x1="192.7" y1="854.4" x2="171.3" y2="832.9"/>
+		<line class="st4" x1="192.7" y1="855.9" x2="192.7" y2="793.9"/>
+	</g>
+</g>
+</svg>

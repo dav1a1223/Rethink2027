@@ -1,26 +1,45 @@
 <div class="wall">
+  <div class="title">
+    這裡是<br>
+    <b>行動提案牆</b>
+  </div>
+  <div class="subTitle">動動滑鼠探索各種有趣的行動提案！</div>
   <% @proposals.each do |proposal| %>
-    <div class="title">
-      這裡是<br>
-      <b>行動提案牆</b>
-    </div>
-    <div class="subTitle">動動滑鼠探索各種有趣的行動提案！</div>
-    <%= link_to proposal_path(proposal), class: "proposal" do %>
-  		<div class="HWM"><%= proposal.how_can_we %></div>
-  		<div class="picture">
-        <%= image_tag(proposal.image_url) %>
-        <div class="content">
-          <div class="name">
-            <%= proposal.action_name %>
+    <% if proposal.checking? %>
+      <%= link_to proposal_path(proposal), class: "proposal mine" do %>
+        <div class="HWM"><%= proposal.how_can_we %></div>
+        <div class="picture">
+          <%= image_tag(proposal.image_url) %>
+          <div class="content">
+            <div class="name">
+              <%= proposal.action_name %>
+            </div>
+            <%= proposal.action_intro %>
           </div>
-    			<%= proposal.action_intro %>
+        </div>
+        <div class="sentence">
+          審核中...
+        </div>
+        <div class="location"><%= image_tag("proposal/location.png") %><%= proposal.action_location %></div>
+      <% end %>
+    <% else %>
+      <%= link_to proposal_path(proposal), class: "proposal" do %>
+    		<div class="HWM"><%= proposal.how_can_we %></div>
+    		<div class="picture">
+          <%= image_tag(proposal.image_url) %>
+          <div class="content">
+            <div class="name">
+              <%= proposal.action_name %>
+            </div>
+      			<%= proposal.action_intro %>
+      		</div>
     		</div>
-  		</div>
-  		<div class="sentence">
-  			<%= proposal.hashtags.pluck(:text).join(" ") %>
-  		</div>
-  		<div class="location"><%= image_tag("proposal/location.png") %><%= proposal.action_location %></div>
-  	<% end %>
+    		<div class="sentence">
+    			<%= proposal.hashtags.pluck(:text).join(" ") %>
+    		</div>
+    		<div class="location"><%= image_tag("proposal/location.png") %><%= proposal.action_location %></div>
+    	<% end %>
+    <% end %>
   <% end %>
 </div>
 <br>

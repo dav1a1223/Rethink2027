@@ -20,24 +20,24 @@
               <%= m.input :name, label: false, placeholder: "姓名＊", wrapper_html: { style: 'display: inline' } %>
               <span style="font-size: 20px">生日＊</span>
               <%= m.input :birthday, label: false, placeholder: "生日＊", as: :date, start_year: Date.today.year - 70, end_year: Date.today.year, wrapper_html: { style: 'display: inline' }  %><br>
-              <%= m.input :email, label: false, placeholder: "信箱＊", wrapper_html: { style: 'display: inline' } %>
-              <%= m.input :phone, label: false, placeholder: "聯絡電話＊", wrapper_html: { style: 'display: inline' } %><br>
+              <%= m.input :email, label: false, placeholder: "Email＊", wrapper_html: { style: 'display: inline' } %>
+              <%= m.input :phone, label: false, placeholder: "手機號碼＊Ex:0912345678", wrapper_html: { style: 'display: inline' } %><br>
           <% end %>
           <%= f.simple_fields_for :members, @proposal.members[1] || @proposal.members.build do |m| %>
               <br><br><h1>團隊成員之2</h1>
               <%= m.input :name, label: false, placeholder: "姓名＊", wrapper_html: { style: 'display: inline' } %>
               <span style="font-size: 20px">生日＊</span>
               <%= m.input :birthday, label: false, as: :date, start_year: Date.today.year - 70, end_year: Date.today.year, wrapper_html: { style: 'display: inline' }  %><br>
-              <%= m.input :email, label: false, placeholder: "信箱＊", wrapper_html: { style: 'display: inline' } %>
-              <%= m.input :phone, label: false, placeholder: "聯絡電話＊", wrapper_html: { style: 'display: inline' } %><br>
+              <%= m.input :email, label: false, placeholder: "Email＊", wrapper_html: { style: 'display: inline' } %>
+              <%= m.input :phone, label: false, placeholder: "手機號碼＊Ex:0912345678", wrapper_html: { style: 'display: inline' } %><br>
           <% end %>
           <%= f.simple_fields_for :members, @proposal.members[2] || @proposal.members.build do |m| %>
               <br><br><h1>團隊成員之3</h1>
               <%= m.input :name, label: false, placeholder: "姓名", wrapper_html: { style: 'display: inline' } %>
               <span style="font-size: 20px">生日</span>
               <%= m.input :birthday, label: false, as: :date, start_year: Date.today.year - 70, end_year: Date.today.year, wrapper_html: { style: 'display: inline' }  %><br>
-              <%= m.input :email, label: false, placeholder: "信箱", wrapper_html: { style: 'display: inline' } %>
-              <%= m.input :phone, label: false, placeholder: "聯絡電話", wrapper_html: { style: 'display: inline' } %><br>
+              <%= m.input :email, label: false, placeholder: "Email", wrapper_html: { style: 'display: inline' } %>
+              <%= m.input :phone, label: false, placeholder: "手機號碼 Ex:0912345678", wrapper_html: { style: 'display: inline' } %><br>
           <% end %>
         </div><br><br><br>
       </div>

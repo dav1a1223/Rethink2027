@@ -10,40 +10,69 @@
   <body>
     <div class="bar" id="topbar">
     	<div class="burger">
-        <%= image_tag("hamburger.png") %>
+        <%= image_tag("hamburger.svg") %>
     	</div>
-      <%= link_to image_tag("logo.png"), root_path, class: "logo" %>
+      <%= link_to image_tag("logo.svg"), root_path, class: "logo" %>
     	<span class="proposal">
-        <%= link_to "我要提案", attention_proposals_path %>
+        <% if !user_signed_in? %>
+          <%= link_to new_user_session_path do %>
+            <%= image_tag('goProposalWord.svg', class: "pulse") %>
+            <%= image_tag('goProposal.svg') %>
+          <% end %>
+        <% elsif current_user.proposal.nil? %>
+          <%= link_to new_proposal_path do %>
+            <%= image_tag('goProposalWord.svg', class: "pulse") %>
+            <%= image_tag('goProposal.svg') %>
+          <% end %>
+        <% elsif current_user.proposal.checking? %>
+          <%= link_to proposals_path do %>
+            <%= image_tag('goProposalWord.svg', class: "pulse") %>
+            <%= image_tag('goProposal.svg') %>
+          <% end %>
+        <% else %>
+          <%= link_to edit_proposal_path(current_user.proposal) do %>
+            <%= image_tag('goProposalWord.svg', class: "pulse") %>
+            <%= image_tag('goProposal.svg') %>
+          <% end %>
+        <% end %>
+
         <% if user_signed_in? %>
           <%= link_to "登出", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "登入", new_user_session_path %>
         <% end %>
       </span>
     </div>
 
     <div class="menu">
     	<div class="circle zoomIn animated">
-    		<a class="text" href="">
+    		<a class="text not-allowed" id="btnDaily" href="">
     			青<br>年<br>行<br>動<br>日<br>誌
     		</a>
+        <%= image_tag('circleSix.svg', id: "picDaily") %>
     		<div class="zoomIn animated">
-    			<a class="text" href="partner">
+    			<a class="text" href="partner" id="btnPartner">
     				行<br>動<br>大<br>使<br>故<br>事
     			</a>
+          <%= image_tag('circleFive.svg', id: "picPartner") %>
     			<div class="zoomIn animated">
-            <%= link_to "行<br>動<br>提<br>案<br>牆".html_safe, proposals_path, class: "text" %>
+            <%= link_to "行<br>動<br>提<br>案<br>牆".html_safe, proposals_path, class: "text", id: "btnWall" %>
+            <%= image_tag('circleFour.svg', id: "picWall") %>
     				<div class="zoomIn animated">
-    					<a class="text" href="activities">
+    					<a class="text" href="activities" id="btnActivity">
     						活<br>動<br>辦<br>法
     					</a>
+              <%= image_tag('circleThree.svg', id: "picActivity") %>
     					<div class="zoomIn animated">
-    						<a class="text" href="about">
+    						<a class="text" href="about" id="btnAbout">
     							關<br>於<br>迴<br>響
     						</a>
+                <%= image_tag('circleTwo.svg', id: "picAbout") %>
     						<div class="zoomIn animated">
-    							<a class="text" href="">
+    							<a class="text not-allowed" href="" id="btnNews">
     								最<br>新<br>消<br>息
     							</a>
+                  <%= image_tag('circleOne.svg', id: "picNews") %>
     							<div class="final zoomIn animated">
     								Ｘ
     							</div>

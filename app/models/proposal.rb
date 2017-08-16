@@ -9,4 +9,8 @@ class Proposal < ApplicationRecord
 
   scope :published, ->{ where("publish = ?", true) }
   scope :submitted, ->{ where("is_submit = ?", true) }
+
+  def checking?
+    !publish && is_submit
+  end
 end
