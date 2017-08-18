@@ -164,16 +164,9 @@ class ProposalsController < ApplicationController
     def proposal_check
       pp = @proposal
       column_exist = (pp.description.present? && pp.action_intro.present? && pp.action_name.present? && pp.action_location.present? && pp.how_can_we.present? && pp.excitement.present? && pp.image.file.present?)
-      unless column_exist
-        flash[:notice] = "仍有欄位尚未填寫完成，請再檢查有「*」的欄位是否都填寫。"
-      end
       members_valid = (pp.members.count >= 2) && members_not_repeated(pp)
-      unless members_valid
-        if pp.members.count < 2
-          flash[:notice] = "您的提案成員至少需兩人。"
-        else members_not_repeated(pp)
-          flash[:notice] = "您的提案成員至少有一人已參與其他提案。"
-        end
+      if !column_exist || !members_valid
+        flash[:notice] = "Oops！好像有哪邊沒有填完整呢，檢查以下地方後再送出一次看看吧\n1.成員人數不可為1人\n2.每位成員只能參與其中一個提案\n3.手機格式檢查 ex.0912345678\n4.照片格式檢查\n5.必填的格子都有填入內容\n6.關鍵字標籤至少1組，#為英打輸入"
       end
       column_exist && members_valid
     end
