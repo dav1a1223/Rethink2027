@@ -165,6 +165,9 @@ class ProposalsController < ApplicationController
       column_exist = (pp.description.present? && pp.action_intro.present? && pp.action_name.present? && pp.action_location.present? && pp.how_can_we.present? && pp.excitement.present? && pp.image.file.present?)
       members_valid = (pp.members.count >= 2) && members_not_repeated(pp)
       pp.members.each do |m|
+        if m.name.blank? || m.email.blank?
+          members_valid = false
+        end
         if m.phone.length != 10
           members_valid = false
         end
