@@ -62,7 +62,7 @@ class ProposalsController < ApplicationController
     else
       respond_to do |format|
         if @proposal.save
-          format.html { redirect_to @proposal, notice: '草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！' }
+          format.html { redirect_to proposals_path, notice: '草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！' }
           format.json { render :show, status: :created, location: @proposal }
         else
           format.html { render :new }
