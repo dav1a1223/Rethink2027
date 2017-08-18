@@ -10,7 +10,8 @@ class ProposalsController < ApplicationController
     @proposals = Proposal.published
     if current_user&.proposal
       if @proposals.include? current_user.proposal
-        @proposals.unshift(@proposals.delete(current_user.proposal))
+        without_selfs = @proposals.reject { |pp| pp == current_user.proposal }
+        @proposals = [current_user.proposal] + without_selfs
       end
     end
     if current_user&.proposal&.is_submit && !(current_user&.proposal&.publish)
@@ -34,6 +35,9 @@ class ProposalsController < ApplicationController
 
   # GET /proposals/1/edit
   def edit
+    if current_user.proposal.publish
+      flash[:notice] = "若您重新儲存提案則需重新提交/審核哦！"
+    end
   end
 
   # POST /proposals
@@ -74,19 +78,21 @@ class ProposalsController < ApplicationController
     # hash_tags_process(@proposal)
     @proposal.hashtags.delete_all
     @proposal.assign_attributes(proposal_params)
+    @proposal.publish = false
+    @proposal.is_submit = false
     if params[:submit_proposal]
       if proposal_check
         @proposal.is_submit = true
         @proposal.publish = false
         @proposal.save!
-        redirect_to @proposal, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
+        redirect_to root_path, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
       else
         render :edit
       end
     else
       respond_to do |format|
         if @proposal.save!
-          format.html { redirect_to @proposal, notice: "草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！" }
+          format.html { redirect_to root_path, notice: "草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！" }
           format.json { render :show, status: :ok, location: @proposal }
         else
           format.html { render :edit }
@@ -113,6 +119,18 @@ class ProposalsController < ApplicationController
   def random_proposal
     @proposal = Proposal.published.order("RANDOM()").limit(1).first
     render partial: "proposals/proposal"
+  end
+
+  def proposal_redirect
+    if !user_signed_in?
+      redirect_to new_user_session_path
+    elsif current_user.proposal.nil?
+      redirect_to attention_proposals_path
+    elsif current_user.proposal.checking?
+      redirect_to proposals_path
+    else
+      redirect_to attention_proposals_path
+    end
   end
 
   private

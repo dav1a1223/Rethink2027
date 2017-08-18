@@ -1,14 +1,14 @@
 <div class="logIn">
-  <div class="title">Log in</div>
+  <div class="title">登入</div>
 	<br>
 	<br>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.email_field :email, autofocus: true, placeholder: "email" %>
+      <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
     </div>
 
     <div class="field">
-      <%= f.password_field :password, autocomplete: "off", placeholder: "password" %>
+      <%= f.password_field :password, autocomplete: "off", placeholder: "密碼" %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
@@ -19,9 +19,8 @@
     <% end -%>
 
     <div class="actions">
-      <%= submit_tag "Log in", class: "btn" %>
+      <%= submit_tag "登入", class: "btn" %>
     </div>
   <% end %>
-  OR
   <%= render "devise/shared/links" %>
 </div>

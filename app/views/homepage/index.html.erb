@@ -1,33 +1,612 @@
+<%#= video_tag('ntu_action.mp3', class: 'bgsound', autoplay: true, loop: true) %>
+
 <div class="LandingPage">
 
-  <%= image_tag("landingPage/LP.svg", class: "background") %>
-  <%= image_tag("landingPage/largeLogo.svg", class: "largeLogo pulse animated") %>
-  <%= image_tag("landingPage/brick.svg", class: "brickOne puls animated") %>
-  <%= image_tag("landingPage/brick.svg", class: "brickTwo puls animated") %>
-  <%= link_to image_tag("landingPage/brick.svg"), random_proposal_proposals_path, class: "brickThree puls animated", id: "ajax-load" %>
-  <%= image_tag("landingPage/gold.png", class: "gold") %>
+  <div class="black">
+    <%= image_tag('landingPage/blackBackground.png', class: "blackBackground") %>
+    <div class="ani ani24">
+      <%= image_tag('landingPage/animation/21_echo_1.png', class: "sub1") %>
+      <%= image_tag('landingPage/animation/21_echo_2.png', class: "sub2") %>
+      <%= image_tag('landingPage/animation/21_echo_3.png', class: "sub3") %>
+      <%= image_tag('landingPage/animation/21_echo_4.png', class: "sub4") %>
+		</div>
+
+    <%= image_tag('landingPage/blackStage.png', class: "blackStage") %>
+  </div>
+
+  <%= image_tag("landingPage/All_bg.png", class: "background") %>
+  <%= image_tag("landingPage/largeLogo.png", class: "largeLogo pulse animated") %>
+  <%= image_tag("landingPage/brick.png", class: "brickOne puls animated") %>
+  <%= image_tag("landingPage/brick.png", class: "brickTwo puls animated") %>
+  <%= link_to image_tag("landingPage/brick.png", class: "brickThree puls animated"), random_proposal_proposals_path, id: "ajax-load" %>
+  <%= image_tag("landingPage/gold.svg", class: "gold") %>
 
 	<div class="goldArea">
-    <%= image_tag("landingPage/gold.png", class: "goldTwo") %>
+    <%= image_tag("landingPage/gold.svg", class: "goldTwo") %>
 		&nbspx
 		<span class="number">0</span>
 	</div>
 
-	<div class="sentence zoomInUp animate">
-		“寶可夢，我抓到了！”
+	<div class="sentence bounceIn animate">
+		「我們何其幸運，無法確知自己生活在什麼樣的世界。」——辛波絲卡
+	</div>
+
+  <!-- what behind of walker -->
+
+  <div class="obj obj3">
+		<!-- 摩托車 -->
+    <%= image_tag('landingPage/03_motor.png') %>
+	</div>
+
+	<div class="ani ani12">
+		<!-- step3 -->
+    <%= image_tag('landingPage/animation/12_step_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/12_step_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/12_step_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/12_step_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani7">
+		<!-- step2 -->
+    <%= image_tag('landingPage/animation/07_step_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/07_step_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/07_step_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/07_step_4.png', class: "sub4") %>
+	</div>
+
+  <!-- walker -->
+
+	<div class="walk">
+    <%= image_tag('landingPage/walk1.svg', class: "one") %>
+    <%= image_tag('landingPage/walk2.svg', class: "two") %>
+    <%= image_tag('landingPage/walk3.svg', class: "three") %>
+    <%= image_tag('landingPage/walk4.svg', class: "four") %>
+
+		<div class="talk bounceIn animated">
+      <%= image_tag('landingPage/LDPG_actioner_talk.png') %>
+			<div class="talking">
+				咦？這是什麼地方？
+			</div>
+		</div>
 	</div>
 
   <div id="proposal">
-
   </div>
 
-	<div class="walk">
-		<%= image_tag("landingPage/walk1.svg", class: "one") %>
-    <%= image_tag("landingPage/walk2.svg", class: "two") %>
-    <%= image_tag("landingPage/walk3.svg", class: "three") %>
-    <%= image_tag("landingPage/walk4.svg", class: "four") %>
+  <div class="ani ani24">
+		<!-- wave -->
+    <%= image_tag('landingPage/animation/21_echo_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/21_echo_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/21_echo_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/21_echo_4.png', class: "sub4") %>
 	</div>
 
+	<div class="obj obj13">
+		<!-- 舞台 -->
+    <%= image_tag('landingPage/13_stage.png') %>
+	</div>
+
+	<div class="hover hover24">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover23">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover22">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/06_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/06_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover21">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover20">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover19">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover18">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/06_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/06_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover17">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover16">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/06_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/06_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover15">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover14">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/06_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/06_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover13">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover12">
+		<!-- partner5 -->
+    <%= image_tag('landingPage/hover/11_partner_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/11_partner_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover11">
+		<!-- partner4 -->
+    <%= image_tag('landingPage/hover/10_partner_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/10_partner_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover10">
+		<!-- partner1 -->
+    <%= image_tag('landingPage/hover/09_partner_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/09_partner_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover9">
+		<!-- partner2 -->
+    <%= image_tag('landingPage/hover/08_partner_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/08_partner_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover8">
+		<!-- partner4 -->
+    <%= image_tag('landingPage/hover/07_partner_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/07_partner_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover7">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover6">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="hover hover5">
+		<!-- dash man -->
+    <%= image_tag('landingPage/hover/05_dash_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/05_dash_2.png', class: "light") %>
+	</div>
+
+	<div class="ani ani23">
+		<!-- people -->
+    <%= image_tag('landingPage/animation/20_people_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/20_people_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/20_people_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/20_people_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani22">
+		<!-- people -->
+    <%= image_tag('landingPage/animation/20_people_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/20_people_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/20_people_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/20_people_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani21">
+		<!-- people -->
+    <%= image_tag('landingPage/animation/20_people_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/20_people_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/20_people_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/20_people_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani20">
+		<!-- people -->
+    <%= image_tag('landingPage/animation/20_people_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/20_people_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/20_people_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/20_people_4.png', class: "sub4") %>
+	</div>
+
+	<div class="obj obj12">
+		<!-- 樹 -->
+    <%= image_tag('landingPage/12_tree.png') %>
+	</div>
+
+	<div class="ani ani19">
+		<!-- river -->
+    <%= image_tag('landingPage/animation/19_river_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/19_river_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/19_river_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/19_river_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani18">
+		<!-- river -->
+    <%= image_tag('landingPage/animation/18_river_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/18_river_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/18_river_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/18_river_4.png', class: "sub4") %>
+	</div>
+
+	<div class="obj obj10">
+		<!-- 樹 -->
+    <%= image_tag('landingPage/10_tree.png') %>
+	</div>
+
+	<div class="obj obj11">
+		<!-- 黑板 -->
+    <%= image_tag('landingPage/11_goods.png') %>
+	</div>
+
+	<div class="obj obj9">
+		<!-- 建築 -->
+    <%= image_tag('landingPage/09_building.png') %>
+	</div>
+
+	<div class="ani ani17">
+		<!-- step3 -->
+    <%= image_tag('landingPage/animation/17_step_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/17_step_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/17_step_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/17_step_4.png', class: "sub4") %>
+	</div>
+
+	<div class="obj obj8">
+		<!-- 職人建築 -->
+    <%= image_tag('landingPage/08_partner.png') %>
+	</div>
+
+	<div class="hover hover4">
+		<!-- step3 -->
+    <%= image_tag('landingPage/hover/04_step_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/04_step_2.png', class: "light") %>
+
+    <%= link_to image_tag('landingPage/hover/04_step_3.svg', class: "hoverImg"), about_path, class: "subHover", target: "_blank" %>
+
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+	</div>
+
+	<div class="obj obj7">
+		<!-- 文化銀行建築 -->
+    <%= image_tag('landingPage/07_partner.png') %>
+	</div>
+
+	<div class="ani ani14">
+		<!-- 文化銀行 -->
+    <%= image_tag('landingPage/animation/14_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/14_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/14_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/14_partner_4.png', class: "sub4") %>
+
+		<span class="functional">
+      <%= image_tag('landingPage/animation/14_partner_5.png', class: "subHover") %>
+      <%= image_tag('landingPage/animation/14_partner_6.png', class: "subDialog") %>
+		</span>
+	</div>
+
+	<div class="ani ani13">
+		<!-- 文化銀行彩帶 -->
+    <%= image_tag('landingPage/animation/13_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/13_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/13_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/13_partner_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani16">
+		<!-- 職人 -->
+    <%= image_tag('landingPage/animation/16_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/16_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/16_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/16_partner_4.png', class: "sub4") %>
+		<span class="functional">
+      <%= image_tag('landingPage/animation/16_partner_5.png', class: "subHover") %>
+      <%= image_tag('landingPage/animation/16_partner_6.png', class: "subDialog") %>
+		</span>
+	</div>
+
+	<div class="ani ani15">
+		<!-- 職人腳踏車 -->
+    <%= image_tag('landingPage/animation/15_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/15_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/15_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/15_partner_4.png', class: "sub4") %>
+	</div>
+
+	<div class="hover hover3">
+		<!-- step1 -->
+    <%= image_tag('landingPage/hover/03_step_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/03_step_2.png', class: "light") %>
+
+    <%= link_to image_tag('landingPage/hover/03_step_3.svg', class: "hoverImg"), about_path, class: "subHover", target: "_blank" %>
+
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+	</div>
+
+	<div class="ani ani10">
+		<!-- 複雜生活節站的星球 -->
+    <%= image_tag('landingPage/animation/10_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/10_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/10_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/10_partner_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani11">
+		<!-- 複雜生活節 -->
+    <%= image_tag('landingPage/animation/11_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/11_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/11_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/11_partner_4.png', class: "sub4") %>
+		<span class="functional">
+      <%= image_tag('landingPage/animation/11_partner_5.png', class: "subHover") %>
+      <%= image_tag('landingPage/animation/11_partner_6.png', class: "subDialog") %>
+		</span>
+	</div>
+
+	<div class="ani ani9">
+		<!-- 複雜生活節星球 -->
+    <%= image_tag('landingPage/animation/09_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/09_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/09_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/09_partner_4.png', class: "sub4") %>
+	</div>
+
+	<div class="obj obj6">
+		<!-- 建築 -->
+    <%= image_tag('landingPage/06_building.png') %>
+	</div>
+
+  <%= link_to proposals_path, target: "_blank", class: "ani ani8" do %>
+    <!-- 提案牆 -->
+    <%= image_tag('landingPage/animation/08_proposal_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/08_proposal_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/08_proposal_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/08_proposal_4.png', class: "sub4") %>
+    <span class="functional">
+      <%= image_tag('landingPage/animation/08_proposal_5.png', class: "subDialog") %>
+    </span>
+  <% end %>
+
+	<div class="obj obj5">
+		<!-- 建築 -->
+    <%= image_tag('landingPage/05_building.png') %>
+	</div>
+
+	<div class="hover hover2">
+		<!-- step1 -->
+    <%= image_tag('landingPage/hover/02_step_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/02_step_2.png', class: "light") %>
+
+    <%= link_to image_tag('landingPage/hover/02_step_3.svg', class: "hoverImg"), about_path, class: "subHover", target: "_blank" %>
+
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+	</div>
+
+	<div class="obj obj4">
+		<!-- 建築 -->
+    <%= image_tag('landingPage/04_partner.png') %>
+	</div>
+
+  <%= link_to activities_path, target: "_blank", class: "ani ani6" do %>
+    <!-- 提案牆 -->
+    <%= image_tag('landingPage/animation/06_activities_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/06_activities_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/06_activities_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/06_activities_4.png', class: "sub4") %>
+    <span class="functional">
+      <%= image_tag('landingPage/animation/06_activities_5.png', class: "subDialog") %>
+    </span>
+  <% end %>
+
+	<div class="ani ani4">
+		<!-- 城市浪人紙飛機 -->
+    <%= image_tag('landingPage/animation/04_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/04_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/04_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/04_partner_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani5">
+		<!-- 城市浪人 -->
+    <%= image_tag('landingPage/animation/05_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/05_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/05_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/05_partner_4.png', class: "sub4") %>
+		<span class="functional">
+      <%= image_tag('landingPage/animation/05_partner_5.png', class: "subHover") %>
+      <%= image_tag('landingPage/animation/05_partner_6.png', class: "subDialog") %>
+		</span>
+	</div>
+
+	<div class="obj obj2">
+		<!-- 玖樓 -->
+    <%= image_tag('landingPage/02_partner.png') %>
+	</div>
+
+	<div class="ani ani3">
+		<!-- step0 -->
+    <%= image_tag('landingPage/animation/03_step_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/03_step_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/03_step_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/03_step_4.png', class: "sub4") %>
+	</div>
+
+	<div class="ani ani1">
+		<!-- 人生百味路燈 -->
+    <%= image_tag('landingPage/animation/01_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/01_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/01_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/01_partner_4.png', class: "sub4") %>
+	</div>
+
+	<div class="hover hover1">
+		<!-- step0 -->
+    <%= image_tag('landingPage/hover/01_step_1.png', class: "dark") %>
+    <%= image_tag('landingPage/hover/01_step_2.png', class: "light") %>
+
+    <%= link_to image_tag('landingPage/hover/01_step_3.svg', class: "hoverImg"), about_path, class: "subHover", target: "_blank" %>
+
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+	</div>
+
+	<div class="obj obj1">
+		<!-- 森林 -->
+    <%= image_tag('landingPage/01_forest.png') %>
+	</div>
+
+	<a class="ani ani2">
+		<!-- 人生百味 -->
+    <%= image_tag('landingPage/animation/02_partner_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/02_partner_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/02_partner_3.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/02_partner_4.png', class: "sub4") %>
+		<span class="functional">
+      <%= image_tag('landingPage/animation/02_partner_5.png', class: "subHover") %>
+      <%= image_tag('landingPage/animation/02_partner_6.png', class: "subDialog") %>
+		</span>
+	</a>
+
+	<div class="obj obj0">
+		<!-- 燈與長椅 -->
+    <%= image_tag('landingPage/00_light.png') %>
+	</div>
+
+	<!-- joker -->
+
+	<div class="ani ani25">
+		<!-- joker -->
+    <%= image_tag('landingPage/animation/LDPG_Joker_1.png', class: "sub1") %>
+    <%= image_tag('landingPage/animation/LDPG_Joker_2.png', class: "sub2") %>
+    <%= image_tag('landingPage/animation/LDPG_Joker_1.png', class: "sub3") %>
+    <%= image_tag('landingPage/animation/LDPG_Joker_2.png', class: "sub4") %>
+	</div>
+
+	<div class="obj obj14 bounceIn animated">
+		<!--  -->
+    <%= image_tag('landingPage/LDPG_Joker_talk.png') %>
+		<div class="jokerSaying">
+			<b>Mr.Joker：</b><br><br>
+			<div class="saying">
+
+			</div>
+		</div>
+	</div>
+
+	<!-- click partner -->
+
+	<div class="partnerWindow" id="partnerWone">
+    <%= image_tag('landingPage/animation/02_partner_7.svg') %>
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+		<div class="windowText">
+			因為學運而走上街頭，卻也因此觀察到存在街頭上的人生百態。2014 年，三位青年發起「石頭湯」、「人生柑仔店」等實驗，並以「人生百味」之名成立公司，關注無家者與街賣文化。人生百味相信，世界上沒有一種人叫做「窮人」，流浪、落魄、貧困都是一種狀態，是人生的不同風貌、不同味道。透過各種簡單有趣的計畫，讓社會上每一個人都有機會嘗試照顧周圍弱勢的人們。人生百味不改變人，而是改變街頭的風景，使街頭成為明亮友善的地方，人們願意放慢腳步，注意與關心周遭的人事物。
+		</div>
+    <%= link_to "", partner_one_path, class: "superLink", target: "_blank" %>
+	</div>
+
+	<div class="partnerWindow" id="partnerWtwo">
+    <%= image_tag('landingPage/animation/05_partner_7.svg') %>
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+		<div class="windowText">
+			有感於青年在既有教育體制中，極少關心「自我探索」與「社會參與」，因此無法在畢業時進入適合自己發展的領域，或是過於專注於個人發展，而忽略了社會其他群體的需求。城市浪人鼓勵人們翹掉不滿意的生活，把城市當成教室，透過「流浪挑戰賽」，用最有趣的方式探索自我、參與社會，而找到想花一輩子追尋的熱情，成為讓別人快樂的存在。城市浪人相信，改變世界，不是一個人做了很多，而是很多人都做了一點點。從 2013 年創辦至今，影響超過 5000 名年輕人一齊認同並實踐「跨出舒適圈、探索自我、參與社會」的生活價值。
+		</div>
+    <%= link_to "", partner_two_path, class: "superLink", target: "_blank" %>
+	</div>
+
+	<div class="partnerWindow" id="partnerWthree">
+    <%= image_tag('landingPage/animation/11_partner_7.svg') %>
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+		<div class="windowText">
+			複雜生活節由一群有以下特質的人們組成：連續工作狂、反覆實踐、自稱系邊...。也是在 40 天之內籌備、達 250 人參加，一場屬於八年級生的聚會。複雜生活節相信，論壇除了討論「成功」之外有更多的可能，於是逐漸發展出了以「成長」為名、說做就做的祭典。身兼中醫師的皓甯，也是複雜生活節的總召，對學生社團活動有著近乎痴迷的狂熱。他善用身邊累積的許多厲害美宣、行政庶務人才等資源，和自己賭了一把。希望透過活動找到一起成長的人，在探索的過程中得到更多反饋。
+		</div>
+    <%= link_to "", partner_three_path, class: "superLink", target: "_blank" %>
+	</div>
+
+	<div class="partnerWindow" id="partnerWfour">
+    <%= image_tag('landingPage/animation/14_partner_7.svg') %>
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+		<div class="windowText">
+			文化銀行由一群關注到傳統文化正在流逝的青年所發起。以各種方式採集、保留臺灣傳統技藝及生活樣態，文化銀行不僅留存記憶的圖像及形體，更要發揮人文思考的價值，使文化不再只是名詞，而能以生動面貌重新活在你我的生活中。<br>
+			在文化銀行裡，你可以存入文化，讓記憶中的美好時光再次鮮活；你也能提取文化，在生活中發揮創意，重現傳統文化的價值。從 2014 年推出台北 1949 青年旅館開始，「文化銀行」團隊攜手展開了一段從文化體驗、文化保存，到文化再行銷的創業旅程。
+		</div>
+    <%= link_to "", partner_five_path, class: "superLink", target: "_blank" %>
+		</a>
+	</div>
+
+	<div class="partnerWindow" id="partnerWfive">
+    <%= image_tag('landingPage/animation/16_partner_7.svg') %>
+		<div class="close">
+      <%= image_tag('landingPage/close.png') %>
+      <%= image_tag('landingPage/closeH.png') %>
+		</div>
+		<div class="windowText">
+			《職人》是臺灣第一本原創社會企業雜誌。以「所有人參與」、「書寫臺灣職人故事」以及「為全臺灣孩子出版」三個方向，讓家長、孩子認識臺灣各專業領域與技職科系的發展。期盼藉由探討教育問題和書寫職場、教育現場故事，改善社會對於學位文憑的迷思；藉由豐富的人物歷程，提供孩子們認識多元專業領域的機會。《職人》希望解開更多人心中的刻板印象，帶領孩子們認識是什麼樣的人用他們的工作及專業，撐起我們所生活的社會。
+		</div>
+    <%= link_to "", partner_four_path, class: "superLink", target: "_blank" %>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<div class="footer">
+  <%= image_tag('landingPage/footer.svg') %>
+	<a class="superLink" href="https://www.facebook.com/RethinkTaiwan2027/" target="_blank">
+
+	</a>
 </div>
 
 <script>

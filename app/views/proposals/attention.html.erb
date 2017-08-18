@@ -1,4 +1,5 @@
 <div class="attention">
+  <%= image_tag('Registration_bg.svg', class: "wallpaper")
 	<div class="title">
     <%= image_tag("proposal/triangle.png") %>
 		提案注意事項
@@ -15,7 +16,9 @@
 		<li>一旦提案通過審核，你的提案就會顯示於本網站的行動提案牆上囉</li>
 	</ul>
 	<div class="btnArea">
-    <% unless current_user&.proposal&.id %>
+    <% if !user_signed_in? %>
+      <%= link_to "我知道了", root_path, class: "btn"  %>
+    <% elsif !current_user.proposal&.id %>
       <%= link_to "我知道了", new_proposal_path, class: "btn"  %>
     <% else %>
       <%= link_to "我知道了", edit_proposal_path(current_user.proposal), class: "btn"  %>

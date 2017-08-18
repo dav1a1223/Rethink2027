@@ -63,8 +63,8 @@
 
 <div class="time">
 	<div class="step">
-    <%= image_tag('activities/step0.svg', class: "stepImg", style: "width: 260px;") %>
-		<h2>階段行動說明</h2>
+    <%= image_tag('activities/step0.png', class: "stepImg", style: "width: 330px;") %>
+		<h2 style="margin-top: -20px;">階段行動說明</h2>
 		本階段有<span class="green"> 3 件</span>具體行動需完成：<br>
 		<br>
 		<span class="green">網路提案：</span>
@@ -196,13 +196,13 @@
 
 
 <div class="QandA QAgrp">
-  <%= image_tag('activities/QAone.svg', class: 'active') %>
-  <%= image_tag('activities/QAtwo.svg') %>
-  <%= image_tag('activities/QAthree.svg', class: 'height: 45px') %>
-  <%= image_tag('activities/QAfour.svg') %>
-  <%= image_tag('activities/QAfive.svg') %>
+  <%= image_tag('activities/QAone.svg', class: 'QAoneBtn active') %>
+  <%= image_tag('activities/QAtwo.svg', class: 'QAtwoBtn') %>
+  <%= image_tag('activities/QAthree.svg', class: 'QAthreeBtn', style: 'height: 45px') %>
+  <%= image_tag('activities/QAfour.svg', class: 'QAfourBtn') %>
+  <%= image_tag('activities/QAfive.svg', class: 'QAfiveBtn') %>
 </div>
-<div class="QandA QAsec">
+<div class="QandA QAsec QAone">
 	<h1>關於繳交行動提案</h1>
 	<div class="Q">
 		<div class="topic">
@@ -217,7 +217,15 @@
 			什麼是行動提案？想要學爵士鼓也算是行動提案嗎？
 		</div>
 		<div class="A">
-			首先我必須承認對付偉德比對付春豔棘手，我跟春豔棋逢敵手，像是阿諾遇上馮迪索。我用著令人忌妒的呈現文字技術藝術的層面盡心盡力放手一搏盡情享受欺負著春豔。但是對付偉德我必須不斷把歌詞更新，我常常在想，這樣寫會不會傷到他的自尊心。
+			行動提案不止是點子，而是需要提出「你看見的問題（需與社會或他人相關）」以及你打算採取什麼「具體的行動」來做為解決這個問題的第一步。所以如果是單純個人的活動，像是學爵士鼓，是不行的喔。
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			我有許多想法，可以一次提交多個行動提案嗎？
+		</div>
+		<div class="A">
+			不行喔！為了確保每個階段的行動品質，每位申請者（或是成員）只能參與一個行動提案。
 		</div>
 	</div>
 	<div class="Q">
@@ -225,7 +233,7 @@
 			我一定要在網站上提交行動提案嗎？
 		</div>
 		<div class="A">
-			喔。
+			是的，所有的提案都需要經過官方網站進行提交，不過不用擔心，你不用一次填寫完所有資料，可以透過儲存草稿的方式，分次填寫完畢後送出。
 		</div>
 	</div>
 	<div class="Q">
@@ -233,7 +241,7 @@
 			我如何知道自己的提案是否提交成功？
 		</div>
 		<div class="A">
-			abcdef ghijklmnopqrsitv wxyzabcdefgh ijklmnopqrsitvwxyzabcdefghi jklmnopqrsit vwxyzabcdefghijklmnopqrsitvwxyzabcdefghijkl mnopqrsit vwxyzabcdefghijklmnopqr sitvwxyzabcdefg hijklmnop qrsitvw xyzabcdefgh ijklmnop qrsit vwxyzabcdefgh ijklmnopq rsitvwxyz
+			提案確認送出，經審核通過（2-3天），就會公開出現在官網的提案牆上；不論審核是否通過，在審核結果確認後，我們都會寄送通知至你所填寫的電子郵件信箱，讓你知道有沒有提交成功。
 		</div>
 	</div>
 	<div class="Q">
@@ -241,7 +249,7 @@
 			如果時間到了還沒有收到審核結果信該怎麼辦？
 		</div>
 		<div class="A">
-
+			若超過4天沒有回音，可能是系統出現問題，請直接聯繫籌備單位（台大創新設計學院），請寄信至rethinktaiwan2027@gmail.com，或撥打專線電話：02-33661869 分機55385。
 		</div>
 	</div>
 	<div class="Q">
@@ -249,7 +257,7 @@
 			提案內容可以修改嗎？
 		</div>
 		<div class="A">
-
+			除了提案送審期間，你可以隨時修改提案內容，不過若是曾經審核通過之提案，修改後再次提交就必須再一次經過審核。
 		</div>
 	</div>
 	<div class="Q">
@@ -257,7 +265,7 @@
 			我可以找朋友一起報名嗎？
 		</div>
 		<div class="A">
-
+			可以，在網路提案階段（8/10-9/24），一個行動提案至多可有3名成員，你可以在提案頁面進行成員資料填寫。
 		</div>
 	</div>
 	<div class="Q">
@@ -265,7 +273,7 @@
 			隊友可以改嗎？
 		</div>
 		<div class="A">
-
+			修改隊友資料，視為修正提案內容。除了提案送審期間你可以隨時修改提案內容，不過若是曾經審核通過之提案，修改後再次提交就必須再一次經過審核。
 		</div>
 	</div>
 	<div class="Q">
@@ -273,7 +281,7 @@
 			參加過其他比賽的提案也可以來提嗎？
 		</div>
 		<div class="A">
-
+			可以的喔，我們鼓勵各種不同的行動發生，所以如果是針對曾經參與過其他比賽的提案，而你也願意「展開行動」，我們一樣歡迎。
 		</div>
 	</div>
 	<div class="Q">
@@ -281,9 +289,165 @@
 			計畫的第二階段是「創吧！品牌」，如果我們已經有品牌了，還可以參加計畫嗎？
 		</div>
 		<div class="A">
-
+			雖然迴響計畫最希望傳達的是「從想法到行動」的精神，也就是讓那些還未採取行動的人可以動身行動，但若你是已經有品牌的團隊（表示已經有一些行動），就「鼓勵行動發生」的立場，我們還是可以接受參加計畫喔。而對已有品牌的團隊而言，第二階段的行動可以就「重塑品牌定位」或是「讓更多人記得」來進行。
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			我需要一次提交三個階段的行動提案嗎？
+		</div>
+		<div class="A">
+			不需要！在網路提案的階段，你只需要提出第一階段「去吧！行動」的行動提案即可。而接下來的行動提案則是在上一個階段行動結束後的發表中一併附上，做為是否能晉級的評選項目之一。
 		</div>
 	</div>
 </div>
+<div class="QAsec QAtwo">
+	<h1>關於行動夥伴</h1>
+	<div class="Q">
+		<div class="topic">
+			什麼是行動夥伴？
+		</div>
+		<div class="A">
+			行動夥伴是目前臺灣在各個領域中具有年輕活力的行動表率，代表了迴響計畫的核心精神。他們會在迴響計畫中提供具體行動經驗、人脈資源、物資協助及社群影響力，降低迴響青年採取行動的基礎門檻。
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			行動夥伴有哪些人？
+		</div>
+		<div class="A">
+			你可以在我們精心設計的網站首頁看到這些夥伴，更詳細的介紹可以到<a href="partner.html">行動夥伴</a>頁面看更多喔。
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			如果我加入迴響計畫，行動夥伴跟我的關係是什麼？我可以跟他們交流嗎？
+		</div>
+		<div class="A">
+			行動夥伴是行動的先行者，行動夥伴是已經具備將想法變為最小可行行動迴路的人。在第2階段：「創吧！品牌」之後更會以Mentor的角色輔助各團隊執行行動計畫。因此，在行動夥伴同意的情況下，當然可以做自由的交流喔。但行動夥伴並不會直接給予答案，屬於你的問題，希望你能自己去尋找答案！
+		</div>
+	</div>
+</div>
+<div class="QAsec QAthree">
+	<h1>關於各階段評選機制</h1>
+	<div class="Q">
+		<div class="topic">
+			進入第1階段「去吧！行動」的評選機制為何？
+		</div>
+		<div class="A big">
+			評選機制：本階段僅以「行動力」及「開放心態」為主要篩選目標。於本網站提案成功後，將依序獲得三項挑戰任務，於時限前 (9/24)完成最後一個挑戰，即有機會參與迴響大會師（依完成時間順序列正取或備取）。迴響青年大會師中，受邀團隊於各項活動調整計畫，建立更能落地的提案，經行動夥伴簽署後，40組各獲6000元行動金。<br>
+			注意事項：<br>
+			<li>
+				三項任務挑戰不事先公布，線上提案成功後始獲得任務包。
+			</li>
+			<li>
+				受邀參與大會師不代表進入第1階段，仍須參與大會師，並經行動夥伴簽署支持後，始進入第1階段。
+			</li>
+			<li>
+				因應場地及行動夥伴人數限制，大會師門票發放以40組為上限，計畫將每日倒數剩餘名額。
+			</li>
+			<li>
+				完成三項挑戰之團隊達40組後，後續於時限前完成挑戰的團隊依序列為候補。
+			</li>
+			<li>
+				主辦單位將於09/26對所有正備取團隊寄發確認信件，若未能於09/27, 23:59前回覆資料，將視同放棄入選大會師資格，空出名額則依序往後遞補，09/28將以信件通知入選大會師確認組別。
+			</li>
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			進入第2階段「創吧！品牌」的評選機制為何？
+		</div>
+		<div class="A big">
+			評選機制：由初選（佔總分80%）及複選（佔總分20%）加總組成。<br>
+			<br>
+			<ul>
+				初選
+				<li>
+					評選標準：團隊執行力 30%、行動後的反思 30%、行動品牌發展潛力 20%、行動記錄完整性 10%、下階段執行策略 10％。
+				</li>
+				<li>
+					進行方式：團隊簡報＋評審問答。簡報形式不拘，惟內容需包含：第1階段行動呈現與反思、問題重新定義、行動品牌介紹，以及落地計畫。
+				</li>
+			</ul>
+			<br>
+			<ul>
+				複選<br>
+				<li>
+					評選標準：社群號召與影響力100%。
+				</li>
+				<li>
+					進行方式：團隊需建立一臉書活動頁面，以活動參加人數、有興趣人數做為積分（詳細積分規則見簡章）。
+				</li>
+			</ul>
+			<br>
+			<ul>
+				總分將以初選、複選得分加總，於10/25, 23:59前於粉絲專頁公布第2階段入選名單。
+			</ul>
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			進入第三階段「上吧！大夥」的評選機制為何？
+		</div>
+		<div class="A">
+			評選機制：由專業評審團（70%）與發表會現場觀眾投票（30%）加總組成。<br>
+			1. 專業評審團評選標準：團隊執行力30％、品牌識別力30％、社會影響力20％、下階段行動落地可能性20%
+			2. 現場觀眾以不記名一人一票對團隊進行投票，觀眾包含所有迴響青年以及一般民眾
+			3. 總分將以專業評審團與現場觀眾分數加總，於12/17發表會現場公布第3階段入選名單。
+		</div>
+	</div>
+</div>
+<div class="QAsec QAfour">
+	<h1>關於行動金與行動執行的義務</h1>
+	<div class="Q">
+		<div class="topic">
+			我在行動執行期間有義務做哪些事情？
+		</div>
+		<div class="A">
+			主要有兩件事情<br>
+			1. 行動：依照行動提案中的規劃完成行動；<br>
+			2. 記錄：將行動過程記錄（文字、圖片、影片）至大會提供的記錄表格中，在每階段發表的同時繳回，做為評選依據之一。
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			行動金的使用，是否需要有發票或收據呢？
+		</div>
+		<div class="A">
+			不需要，行動金即是做為獎金整筆發放。唯第三階段行動金因金額較於龐大，需要依照檢核點發放：12/17發表會當天發放60%，1/21檢核發放25％，3/3繳交行動記錄時發放15％。<br>
+			註：獎金的發放，皆依照綜合所得稅扣繳規定進行辦理。
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			目前看起來沒有第4階段的行動，那麼第3階段的行動記錄在什麼時候需要提交？
+		</div>
+		<div class="A">
+			第三階段的執行期間為2017年12月18日至2018年02月18日，而行動記錄最晚需要於03月03日前繳交。
+		</div>
+	</div>
+</div>
+<div class="QAsec QAfive">
+	<h1>關於籌辦單位</h1>
+	<div class="Q">
+		<div class="topic">
+			籌備團隊是誰，你們為什麼要辦這個活動？
+		</div>
+		<div class="A">
+			迴響計畫是由教育部青年發展署發起，台大創新設計學院特設「迴響小組」籌辦，目的是將「行動的習慣」與「驗證的觀念」埋入台灣青年的基因庫。<br>
+			此外，也希望從設計思考的基礎框架發展出「從想法到行動」的方法理論，以此成果鼓勵臺灣更多青年，在面對問題時有勇氣跨出行動的第一步。
+		</div>
+	</div>
+	<div class="Q">
+		<div class="topic">
+			如果有更多疑問，我要怎麼和你們聯絡？
+		</div>
+		<div class="A">
+			不要害羞，請打專線電話：02-33661869 分機55385，或寄信至rethinktaiwan2027@gmail.com將有專人為您服務！
+		</div>
+	</div>
+</div>
+
 <%= image_tag('activities/elevator.svg', class: "elevator") %>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>

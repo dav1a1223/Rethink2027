@@ -18,22 +18,24 @@
   <%- resource_class.omniauth_providers.each do |provider| %>
     <% if OmniAuth::Utils.camelize(provider) == "Facebook" %>
     <a class="facebook" href="/users/auth/facebook">
-			<%= image_tag("FB_login.png") %>
-			Continue with Facebook
+			<%= image_tag("FB_login.png") %>&nbsp&nbsp&nbsp
+			使用 Facebook 帳號註冊
+			<span class="small">&nbsp&nbspFacebook 登入</span>
 		</a>
     <% else %>
     <a class="google" href="/users/auth/google_oauth2">
-      <%= image_tag("G_login.png") %>
-      Continue with Google
+      <%= image_tag("G_login.png") %>&nbsp&nbsp
+			使用 Google 帳號註冊
+			<span class="small">&nbspGoogle 登入</span>
     </a>
     <% end %>
   <% end -%>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  Not register yet? <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+  尚未擁有帳號嗎？ <%= link_to "立即建立帳號！", new_registration_path(resource_name) %><br />
 <% end -%>
 
 <%- if controller_name != 'sessions' %>
-  Already a member? <%= link_to "Log in", new_session_path(resource_name) %><br />
+  已經擁有帳號嗎？ <%= link_to "立即登入！", new_session_path(resource_name) %><br />
 <% end -%>

@@ -1,4 +1,5 @@
 <div class="wall">
+  <%= image_tag('proposal/action wall_bg.svg', class: "wallpaper") %>
   <div class="title">
     這裡是<br>
     <b>行動提案牆</b>
@@ -6,7 +7,7 @@
   <div class="subTitle">動動滑鼠探索各種有趣的行動提案！</div>
   <% @proposals.each do |proposal| %>
     <% if proposal.checking? %>
-      <%= link_to proposal_path(proposal), class: "proposal mine" do %>
+      <div class="proposal mine">
         <div class="HWM"><%= proposal.how_can_we %></div>
         <div class="picture">
           <%= image_tag(proposal.image_url) %>
@@ -21,10 +22,10 @@
           審核中...
         </div>
         <div class="location"><%= image_tag("proposal/location.png") %><%= proposal.action_location %></div>
-      <% end %>
+      </div>
     <% else %>
-      <%= link_to proposal_path(proposal), class: "proposal" do %>
-    		<div class="HWM"><%= proposal.how_can_we %></div>
+      <div class="proposal">
+        <div class="HWM"><%= proposal.how_can_we %></div>
     		<div class="picture">
           <%= image_tag(proposal.image_url) %>
           <div class="content">
@@ -38,7 +39,7 @@
     			<%= proposal.hashtags.pluck(:text).join(" ") %>
     		</div>
     		<div class="location"><%= image_tag("proposal/location.png") %><%= proposal.action_location %></div>
-    	<% end %>
+      </div>
     <% end %>
   <% end %>
 </div>

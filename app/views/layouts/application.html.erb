@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicon.png' %>
   </head>
 
   <body>
@@ -12,41 +13,48 @@
     	<div class="burger">
         <%= image_tag("hamburger.svg") %>
     	</div>
-      <%= link_to image_tag("logo.svg"), root_path, class: "logo" %>
-    	<span class="proposal">
-        <% if !user_signed_in? %>
-          <%= link_to new_user_session_path do %>
-            <%= image_tag('goProposalWord.svg', class: "pulse") %>
-            <%= image_tag('goProposal.svg') %>
-          <% end %>
-        <% elsif current_user.proposal.nil? %>
-          <%= link_to new_proposal_path do %>
-            <%= image_tag('goProposalWord.svg', class: "pulse") %>
-            <%= image_tag('goProposal.svg') %>
-          <% end %>
-        <% elsif current_user.proposal.checking? %>
-          <%= link_to proposals_path do %>
-            <%= image_tag('goProposalWord.svg', class: "pulse") %>
-            <%= image_tag('goProposal.svg') %>
-          <% end %>
-        <% else %>
-          <%= link_to edit_proposal_path(current_user.proposal) do %>
-            <%= image_tag('goProposalWord.svg', class: "pulse") %>
-            <%= image_tag('goProposal.svg') %>
-          <% end %>
-        <% end %>
 
-        <% if user_signed_in? %>
-          <%= link_to "登出", destroy_user_session_path, method: :delete %>
-        <% else %>
-          <%= link_to "登入", new_user_session_path %>
+      <%= link_to image_tag("logo.png"), root_path, class: "logo" %>
+
+      <% if !user_signed_in? %>
+        <%= link_to new_user_session_path(proposal: "go"), class: "proposal" do %>
+          <%= image_tag('goProposalWord.svg', class: "pulse") %>
+          <%= image_tag('goProposal.svg') %>
         <% end %>
-      </span>
+      <% elsif current_user.proposal.nil? %>
+        <%= link_to new_proposal_path, class: "proposal" do %>
+          <%= image_tag('goProposalWord.svg', class: "pulse") %>
+          <%= image_tag('goProposal.svg') %>
+        <% end %>
+      <% elsif current_user.proposal.checking? %>
+        <%= link_to proposal_path(current_user.proposal), class: "proposal" do %>
+          <%= image_tag('waitProposalWord.svg', class: "pulse") %>
+          <%= image_tag('waitProposal.svg') %>
+        <% end %>
+      <% else %>
+        <%= link_to edit_proposal_path(current_user.proposal), class: "proposal" do %>
+          <%= image_tag('myProposalWord.svg', class: "myProposalBtn") %>
+          <%= image_tag('myProposal.svg') %>
+        <% end %>
+      <% end %>
+      <!-- 登入登出 -->
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete, class: "logInBtn" do %>
+          <%= image_tag('LDPG_login_close.png') %>
+          <%= image_tag('LDPG_login_open.png') %>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "logInBtn" do %>
+          <%= image_tag('LDPG_login_close.png') %>
+          <%= image_tag('LDPG_login_open.png') %>
+        <% end %>
+      <% end %>
+
     </div>
 
     <div class="menu">
     	<div class="circle zoomIn animated">
-    		<a class="text not-allowed" id="btnDaily" href="">
+    		<a class="text not-allowed" id="btnDaily">
     			青<br>年<br>行<br>動<br>日<br>誌
     		</a>
         <%= image_tag('circleSix.svg', id: "picDaily") %>
@@ -69,7 +77,7 @@
     						</a>
                 <%= image_tag('circleTwo.svg', id: "picAbout") %>
     						<div class="zoomIn animated">
-    							<a class="text not-allowed" href="" id="btnNews">
+    							<a class="text not-allowed" id="btnNews">
     								最<br>新<br>消<br>息
     							</a>
                   <%= image_tag('circleOne.svg', id: "picNews") %>
@@ -84,12 +92,8 @@
     	</div>
     </div>
     <% flash.each do |key, value| %>
-      <!-- <div class="alert alert-<%= key %>"><%= value %></div> -->
       <%= ("<script>alert('" + value + "')</script>").html_safe %>
     <% end %>
     <%= yield %>
   </body>
-  <script type="text/javascript">
-    // $('#topbar').scrollupbar();
-  </script>
 </html>

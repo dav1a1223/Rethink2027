@@ -1,6 +1,5 @@
 class HomepageController < ApplicationController
   def index
-
   end
 
   def about
@@ -16,6 +15,10 @@ class HomepageController < ApplicationController
   end
 
   def about_depath
+    render template: "homepage/#{request.path}"
+  end
+
+  def partner_depath
     render template: "homepage/#{request.path}"
   end
 end
