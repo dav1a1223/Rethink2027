@@ -99,7 +99,7 @@ window.onload = function(){
 }
 
 
-$(document).on('turbolinks:load', function(){
+$(document).ready(function(){
 
 	$(window).scroll(function () {
 		var adjust = ($(window).width() / 1280);

@@ -51,7 +51,7 @@ function walkMotion(i, n) {
 var script_name= document.location.pathname.match(/[^\/]*$/)[0];
 if (script_name == "") {
 
-	$(document).on("turbolinks:load", function(){
+	$(document).ready(function(){
 		var adjust = ($(window).width() / 1280);
 		var height = 9216 * adjust; // total height (px)
 		var scroll_ms = 3000; // 2000 scroll pass (ms)

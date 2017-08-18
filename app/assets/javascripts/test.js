@@ -61,7 +61,7 @@ function animationSlow(a) {
 // }
 
 
-$(document).on("turbolinks:load", function(){
+$(document).ready(function(){
 	var open = false;
 
 	animation(1);

@@ -3,7 +3,7 @@
   <head>
     <title>Rethink2027</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'favicon.png' %>
   </head>
@@ -22,7 +22,7 @@
           <%= image_tag('goProposal.svg') %>
         <% end %>
       <% elsif current_user.proposal.nil? %>
-        <%= link_to new_proposal_path, class: "proposal" do %>
+        <%= link_to attention_proposals_path, class: "proposal" do %>
           <%= image_tag('goProposalWord.svg', class: "pulse") %>
           <%= image_tag('goProposal.svg') %>
         <% end %>
@@ -32,7 +32,7 @@
           <%= image_tag('waitProposal.svg') %>
         <% end %>
       <% else %>
-        <%= link_to edit_proposal_path(current_user.proposal), class: "proposal" do %>
+        <%= link_to attention_proposals_path, class: "proposal" do %>
           <%= image_tag('myProposalWord.svg', class: "myProposalBtn") %>
           <%= image_tag('myProposal.svg') %>
         <% end %>

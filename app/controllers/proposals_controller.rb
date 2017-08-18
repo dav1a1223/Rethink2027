@@ -142,7 +142,10 @@ class ProposalsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def proposal_params
       params[:proposal][:members_attributes].each do |k ,v|
-        if v["name"].blank? || v["phone"].blank? || v["email"].blank?
+        if v["name"].blank? && v["phone"].blank? && v["email"].blank?
+          if !v["id"].blank?
+            Member.find(v["id"].to_i).destroy
+          end
           params[:proposal][:members_attributes].delete(k)
         end
       end
