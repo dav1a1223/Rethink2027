@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="hashtag">
-    <%= @proposal.hashtags.pluck(:text).join(" ") %>
+    <%= @proposal.hashtags.pluck(:text)[0..2].join(" ") %>
   </div>
   <div class="location"><%= image_tag("proposal/location.png") %><%= @proposal.action_location %></div>
 <% end %>

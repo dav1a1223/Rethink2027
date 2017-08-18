@@ -81,10 +81,9 @@ class ProposalsController < ApplicationController
     @proposal.publish = false
     @proposal.is_submit = false
     if params[:submit_proposal]
+      @proposal.save!
       if proposal_check
-        @proposal.is_submit = true
-        @proposal.publish = false
-        @proposal.save!
+        @proposal.update_attributes(is_submit: true, publish: false)
         redirect_to root_path, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
       else
         render :edit
@@ -165,8 +164,13 @@ class ProposalsController < ApplicationController
       pp = @proposal
       column_exist = (pp.description.present? && pp.action_intro.present? && pp.action_name.present? && pp.action_location.present? && pp.how_can_we.present? && pp.excitement.present? && pp.image.file.present?)
       members_valid = (pp.members.count >= 2) && members_not_repeated(pp)
+      pp.members.each do |m|
+        if m.phone.length != 10
+          members_valid = false
+        end
+      end
       if !column_exist || !members_valid
-        flash[:notice] = "Oops！好像有哪邊沒有填完整呢，檢查以下地方後再送出一次看看吧\n1.成員人數不可為1人\n2.每位成員只能參與其中一個提案\n3.手機格式檢查 ex.0912345678\n4.照片格式檢查\n5.必填的格子都有填入內容\n6.關鍵字標籤至少1組，#為英打輸入"
+        flash[:notice] = "Oops！好像有哪邊沒有填完整呢，檢查以下地方後再送出一次看看吧 1.成員人數不可為1人 2.每位成員只能參與其中一個提案 3.手機格式檢查 ex.0912345678 4.照片格式檢查 5.必填的格子都有填入內容 6.關鍵字標籤至少1組，#為英打輸入"
       end
       column_exist && members_valid
     end
