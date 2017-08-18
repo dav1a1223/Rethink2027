@@ -203,7 +203,7 @@ class ProposalsController < ApplicationController
     end
 
     def check_show_identity
-      if !@proposal.publish && @proposal.user != current_user
+      if !@proposal.checking? && @proposal.user != current_user
         redirect_to :root
       end
     end
