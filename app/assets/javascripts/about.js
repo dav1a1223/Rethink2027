@@ -91,7 +91,7 @@ function showtime(ts) {
 }
 
 window.onload = function(){
-	var end = ["2027", "8", "17", "17", "0"];
+	var end = ["2027", "1", "1", "0", "0"];
 	//alert(secMinus(activityOne));
 	//alert(activityOne[1]);
 
