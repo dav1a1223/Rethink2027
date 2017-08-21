@@ -688,9 +688,9 @@ body {
 /* line 768, ../sass/style.scss */
 .footer .superLink {
   position: absolute;
-  width: 3vw;
+  width: 12vw;
   height: 3vw;
-  left: 78.65vw;
+  left: 63.65vw;
   top: 4vw;
 }
 
@@ -2408,7 +2408,7 @@ body {
   }
   to {
     padding: 15px 3%;
-    height: 100px;
+    height: 150px;
   }
 }
 @keyframes QandAbig {
@@ -2418,7 +2418,7 @@ body {
   }
   to {
     padding: 15px 3%;
-    height: 340px;
+    height: 380px;
   }
 }
 /* line 2726, ../sass/style.scss */
