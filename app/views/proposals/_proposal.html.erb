@@ -1,6 +1,15 @@
-<%= link_to proposal_path(@proposal), class: "proposal bounceIn animated indexProposal" do %>
-  <div class="HWM"><%= @proposal.how_can_we %></div>
+<div class="proposalSize indexProposal bounceIn animated">
+  <div class="HWM">
+    <div class="icon">
+      <%= image_tag('proposal/greenQ.svg') %>
+      <%= image_tag('proposal/yellowQ.svg') %>
+    </div>
+    <div class="t">
+      <%= @proposal.how_can_we %>
+    </div>
+  </div>
   <div class="picture">
+    <%= image_tag(@proposal.image_url) %>
     <%= image_tag(@proposal.image_url) %>
     <div class="content">
       <div class="name">
@@ -10,7 +19,8 @@
     </div>
   </div>
   <div class="hashtag">
-    <%= @proposal.hashtags.pluck(:text)[0..2].join(" ") %>
+    <%= @proposal.hashtags.pluck(:text)[0..2].join(" ") %><br>
   </div>
-  <div class="location"><%= image_tag("proposal/location.png") %><%= @proposal.action_location %></div>
-<% end %>
+  <div class="location"><%= image_tag("proposal/location.svg") %><%= @proposal.action_location %></div>
+  <div class="proposalBorder"></div>
+</div>
