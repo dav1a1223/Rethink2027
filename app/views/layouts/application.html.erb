@@ -91,22 +91,16 @@
     		</a>
         <%= image_tag('circleSix.svg', id: "picDaily") %>
     		<div class="zoomIn animated">
-    			<a class="text" href="partner" id="btnPartner">
-    				行<br>動<br>夥<br>伴<br>故<br>事
-    			</a>
+          <%= link_to "行<br>動<br>夥<br>伴<br>故<br>事".html_safe, partner_path, class: "text", id: "btnPartner" %>
           <%= image_tag('circleFive.svg', id: "picPartner") %>
     			<div class="zoomIn animated">
             <%= link_to "行<br>動<br>提<br>案<br>牆".html_safe, proposals_path, class: "text", id: "btnWall" %>
             <%= image_tag('circleFour.svg', id: "picWall") %>
     				<div class="zoomIn animated">
-    					<a class="text" href="activities" id="btnActivity">
-    						活<br>動<br>辦<br>法
-    					</a>
+              <%= link_to "活<br>動<br>辦<br>法".html_safe, activities_path, class: "text", id: "btnActivity" %>
               <%= image_tag('circleThree.svg', id: "picActivity") %>
     					<div class="zoomIn animated">
-    						<a class="text" href="about" id="btnAbout">
-    							關<br>於<br>迴<br>響
-    						</a>
+                <%= link_to "關<br>於<br>迴<br>響".html_safe, about_path, class: "text", id: "btnAbout" %>
                 <%= image_tag('circleTwo.svg', id: "picAbout") %>
     						<div class="zoomIn animated">
     							<a class="text not-allowed" id="btnNews">
