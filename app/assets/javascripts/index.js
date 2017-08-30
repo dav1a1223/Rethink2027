@@ -53,9 +53,9 @@ if (script_name == "") {
 
 	$(document).ready(function(){
 		var adjust = ($(window).width() / 1280);
-		var height = 9326 * adjust; // total height (px)
-		var scroll_ms = 3000; // 2000 scroll pass (ms)
-		var stop_ms = 2400; // 1200
+		var height = 9226 * adjust; // total height (px)
+		var scroll_ms = 3000; // 3000 scroll pass (ms)
+		var stop_ms = 2400; // 2400
 		var after = false;
 		var goldCount = 0;
 
@@ -80,6 +80,8 @@ if (script_name == "") {
 			$(".walk").css("top", 510 * adjust + "px");
 			$(".walk").css("left", 545 * adjust + "px");
 			$(".walk").animate({top: 415 * adjust + "px"}, 150);
+			$(".sentence").fadeOut();
+			$(".LandingPage .indexProposal").fadeOut();
 			setTimeout(function(){
 				$(".walk").animate({top: 515 * adjust + "px"}, 150);
 			}, 200);
@@ -139,7 +141,7 @@ if (script_name == "") {
 	    // people come in animation
 	    setTimeout(function(){
 	    	$(".walk").css("display", "block");
-	    	$(".walk").css("top", 9000 * adjust +"px");
+	    	$(".walk").css("top", 8920 * adjust +"px");
 	    	$(".walk").css("left", 250 * adjust +"px");
 	    	$(".walk").addClass("walkAnimation");
 			walkMotion(2, 50);
@@ -147,7 +149,7 @@ if (script_name == "") {
 			walkMotion(1, 600);
 			walkMotion(2, 800);
 			after = true;
-			$(".bar .proposal .pulse").fadeOut();
+			// $(".bar .proposal .pulse").fadeOut();
 			$(".bar .proposal .pulse").removeClass("animated");
 
 			$(".black").fadeOut();
@@ -164,9 +166,11 @@ if (script_name == "") {
 				$(".obj14").css("display", "block");
 			}, talkTime + 1500)
 
+
+			// small man talk
 			setTimeout(function(){
 				$(".talk").css("display", "none");
-				var say = "登登登等 ~ Yo！歡迎來到行動者大道，這個世界還多的事你不知道。";
+				var say = "登登登等 ~ Yo！<br>歡迎來到行動者大道，<br>這個世界還多的事你不知道。";
 				var count = 0;
 
 				function fir(){
@@ -182,7 +186,7 @@ if (script_name == "") {
 			}, talkTime + 2000);
 
 			setTimeout(function(){
-				say = "就 ~ 順著感覺往上探索啦，旅程的開始不能太平凡吧。";
+				say = "就 ~ 順著感覺往上探索啦，<br>旅程的開始不能太平凡吧。<br>罐頭的故事閃一邊，<br>想法到行動他他他才是亮點。";
 				count = 0;
 
 				function sec(){
@@ -195,10 +199,10 @@ if (script_name == "") {
 				}
 
 				var typewriter = window.setInterval(sec, 50);
-			}, talkTime + 5500);
+			}, talkTime + 8500);
 
 			setTimeout(function(){
-				say = "罐頭的故事閃一邊，想法到行動他他他才是亮點，那驚喜只是附加、有細節不怕找碴，手癢的朋友就滑鼠點一下，看！迴響ㄟ麻吉隆底家！";
+				say = "那驚喜只是附加、有細節不怕找碴，<br>手癢的朋友就滑鼠點一下，<br>看！迴響ㄟ麻吉隆底家！";
 				count = 0;
 
 				function thi(){
@@ -211,7 +215,7 @@ if (script_name == "") {
 				}
 
 				var typewriter = window.setInterval(thi, 150);
-			}, talkTime + 9500);
+			}, talkTime + 14500);
 
 			setTimeout(function(){
 				say = "怎麼樣？你也有Freestyle麼！？";
@@ -227,7 +231,7 @@ if (script_name == "") {
 				}
 
 				var typewriter = window.setInterval(fou, 50);
-			}, talkTime + 15000);
+			}, talkTime + 20000);
 
 
 			// 上面是在滑完之後執行的動畫，諸如小人走出來，小丑對話
@@ -241,7 +245,7 @@ if (script_name == "") {
 			// 140 = footer hieght
 			// num == scroll interval static
 			// num_top, num_left == start position
-			var add = 730; // adjust
+			var add = 650; // adjust
 			var one = 1360;
 			var one_top = 8270 + add;
 			var one_left = 250;

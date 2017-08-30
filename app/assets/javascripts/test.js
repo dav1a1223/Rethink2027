@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 	animation(1);
 	setTimeout("animation(2)", 300);
-	setTimeout("animation(3)", 100);
+	setTimeout("animation(3)", 100); 
 	animation(4);
 	setTimeout("animation(5)", 300);
 	animation(6);
@@ -89,6 +89,14 @@ $(document).ready(function(){
 	setTimeout("animation(23)", 600);
 	animationSlow(24);
 	animation(25);
+	animation(101);
+	setTimeout("animation(102)", 200);
+	animation(103);
+	animation(104);
+	animation(105);
+	animation(106);
+	setTimeout("animation(107)", 200);
+	animation(108);
 
 	$(".hover").click(function(){
 		if (!open) {
@@ -138,6 +146,34 @@ $(document).ready(function(){
 	})
 	$(".partnerWindow .close").click(function(){
 		$("#partnerWfive").css("display", "none");
+	})
+
+	$(".ani102").click(function(){
+		$("#partnerWsix").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWsix").css("display", "none");
+	})
+
+	$(".ani104").click(function(){
+		$("#partnerWseven").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWseven").css("display", "none");
+	})
+
+	$(".ani106").click(function(){
+		$("#partnerWeight").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWeight").css("display", "none");
+	})
+
+	$(".ani108").click(function(){
+		$("#partnerWnine").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWnine").css("display", "none");
 	})
 
 

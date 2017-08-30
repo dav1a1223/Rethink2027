@@ -1,12 +1,12 @@
 <div class="vertify">
   <%= image_tag('proposal/verifyPage.svg', class: "vertifyPage") %>
 
-	<div class="proposal vertifyProposal">
+	<div class="proposalSize vertifyProposal">
 		<div class="HWM">
 			<%= @proposal.how_can_we %>
 		</div>
 		<div class="picture">
-			<img src="img/proposal/ex1.png">
+      <%= image_tag(@proposal.image_url || "proposal/default_img.png") %>
       <%= image_tag(@proposal.image_url || "proposal/default_img.png") %>
 			<div class="content">
 				<div class="name">
@@ -18,7 +18,7 @@
 		<div class="hashtag">
 			<%= @proposal.hashtags.pluck(:text)[0..2].join(" ") %>
 		</div>
-		<div class="location"><%= image_tag("proposal/location.png") %><%= @proposal.action_location %></div>
+		<div class="location"><%= image_tag("proposal/location.svg") %><%= @proposal.action_location %></div>
 	</div>
 
   <%= link_to "我知道了，感恩", proposals_path, class: "vertifyBtn" %>
