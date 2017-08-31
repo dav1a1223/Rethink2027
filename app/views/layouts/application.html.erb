@@ -69,13 +69,13 @@
         <%= link_to destroy_user_session_path, method: :delete, class: "logInBtn" do %>
           <%= image_tag('LDPG_login_close.png') %>
           <%= image_tag('LDPG_login_open.png') %>
-          <%= image_tag('logOutWord.svg') %>
+          <%= image_tag('logOutWord.svg', class: "word") %>
         <% end %>
       <% else %>
         <%= link_to new_user_session_path, class: "logInBtn" do %>
           <%= image_tag('LDPG_login_close.png') %>
           <%= image_tag('LDPG_login_open.png') %>
-          <%= image_tag('logInWord.svg') %>
+          <%= image_tag('logInWord.svg', class: "word") %>
         <% end %>
       <% end %>
 

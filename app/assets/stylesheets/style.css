@@ -699,7 +699,6 @@ body {
 /* line 779, ../sass/style.scss */
 .LandingPage .indexProposal {
   position: absolute;
-  display: none;
   right: 2vw;
   top: 7vw;
   z-index: 2;
