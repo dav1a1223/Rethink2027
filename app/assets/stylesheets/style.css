@@ -1588,7 +1588,7 @@ body {
   text-decoration: none;
 }
 /* line 1639, ../sass/style.scss */
-.logIn form .facebook, .logIn form .google {
+.logIn .facebook, .logIn .google {
   display: inline-block;
   text-align: left;
   width: 95%;
@@ -1605,25 +1605,25 @@ body {
   cursor: pointer;
 }
 /* line 1655, ../sass/style.scss */
-.logIn form .facebook img, .logIn form .google img {
+.logIn .facebook img, .logIn .google img {
   height: 100%;
   vertical-align: -40%;
 }
 /* line 1660, ../sass/style.scss */
-.logIn form .facebook .small, .logIn form .google .small {
+.logIn .facebook .small, .logIn .google .small {
   font-size: 0;
 }
 /* line 1665, ../sass/style.scss */
-.logIn form .facebook {
+.logIn .facebook {
   background: #3b5998;
   text-indent: 3px;
 }
 /* line 1669, ../sass/style.scss */
-.logIn form .facebook img {
+.logIn .facebook img {
   margin-right: 8px;
 }
 /* line 1675, ../sass/style.scss */
-.logIn form .google {
+.logIn .google {
   background: #dc4e41;
 }
 /* line 1683, ../sass/style.scss */
