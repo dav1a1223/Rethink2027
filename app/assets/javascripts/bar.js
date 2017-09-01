@@ -59,7 +59,7 @@ $(document).ready(function(){
 			$(".elevator").fadeIn();
 		}
 		else {
-			$(".elevator").fadeOut();	
+			$(".elevator").fadeOut();
 		}
 	})
 
@@ -299,6 +299,78 @@ $(document).ready(function(){
 		$(".objDefault").css("display", "block");
 		$(".ansTwelve").css("display", "none");
 	})
+  $(".p6Thing1").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp6T1").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp6T1").css("display", "none");
+	})
+  $(".p6Thing2").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp6T2").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp6T2").css("display", "none");
+	})
+  $(".p6Thing3").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp6T3").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp6T3").css("display", "none");
+	})
+  $(".p6Thing4").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp6T4").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp6T4").css("display", "none");
+	})
+  $(".p6Thing5").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp6T5").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp6T5").css("display", "none");
+	})
+  $(".p7Thing1").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp7T1").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp7T1").css("display", "none");
+	})
+  $(".p7Thing2").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp7T2").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp7T2").css("display", "none");
+	})
+  $(".p7Thing3").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp7T3").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp7T3").css("display", "none");
+	})
+  $(".p7Thing4").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp7T4").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp7T4").css("display", "none");
+	})
+  $(".p7Thing5").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp7T5").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp7T5").css("display", "none");
+	})
+
+
 
 	$(".objectFive").click(function(){
 		$(".bagWindow").css("display", "block")
@@ -309,8 +381,3 @@ $(document).ready(function(){
 	})
 
 });
-
-
-
-
-

@@ -29,6 +29,10 @@ Rails.application.routes.draw do
   get "partner_three", to: "homepage#partner_depath"
   get "partner_four", to: "homepage#partner_depath"
   get "partner_five", to: "homepage#partner_depath"
+  # get "partner_six", to: "homepage#partner_depath"
+  # get "partner_seven", to: "homepage#partner_depath"
+  # get "partner_eight", to: "homepage#partner_depath"
+  # get "partner_nine", to: "homepage#partner_depath"
 
   devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks", sessions: 'users/sessions'}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

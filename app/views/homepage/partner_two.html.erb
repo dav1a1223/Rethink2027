@@ -1,6 +1,9 @@
 <div class="partner">
-  <%= image_tag('partner/backgroundTwo.svg', class: "backgroundImg") %>
-  <%= link_to image_tag('partner/partnerBack.svg', class: "back"), partner_path %>
+  <%= image_tag('partner/02_partner_bg-city.svg', class: "backgroundImg") %>
+  <%= link_to partner_path do %>
+    <%= image_tag('partner/partner00.svg', class: "backImg") %>
+    <%= image_tag('partner/partnerBack.svg', class: "back") %>
+  <% end %>
   <div class="partnerGrp">
     <%= link_to partner_one_path do %>
       <%= image_tag('partner/partnerOneSmall.svg') %>
@@ -22,8 +25,39 @@
       <%= image_tag('partner/partnerFiveSmall.svg', class: "fiveImg") %>
       <%= image_tag('partner/partnerFiveDialog.svg', class: "fiveDia") %>
     <% end %>
-	</div>
-  <%= image_tag('partner/photoTwo.png', class: "photo") %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_man.svg', class: "xmanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_woman.svg', class: "xwomanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_man.svg', class: "xmanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_man.svg', class: "xmanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_man.svg', class: "xmanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_woman.svg', class: "xwomanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_man.svg', class: "xmanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+    <%= link_to "#" do %>
+      <%= image_tag('partner/partner0x_woman.svg', class: "xwomanImg") %>
+      <%= image_tag('partner/partner0x_comingsoon.svg', class: "nineDia") %>
+    <% end %>
+  </div>
 
 	<div class="intro">
 		<h1>整個城市都是你的教室——城市浪人</h1>

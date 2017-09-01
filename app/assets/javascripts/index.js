@@ -170,7 +170,7 @@ if (script_name == "") {
 			// small man talk
 			setTimeout(function(){
 				$(".talk").css("display", "none");
-				var say = "登登登等 ~ Yo！<br>歡迎來到行動者大道，<br>這個世界還多的事你不知道。";
+				var say = "登登登等～Yo！<br>歡迎來到行動者大道";
 				var count = 0;
 
 				function fir(){
@@ -186,7 +186,7 @@ if (script_name == "") {
 			}, talkTime + 2000);
 
 			setTimeout(function(){
-				say = "就 ~ 順著感覺往上探索啦，<br>旅程的開始不能太平凡吧。<br>罐頭的故事閃一邊，<br>想法到行動他他他才是亮點。";
+				say = "就~順著感覺往上探索啦，<br>旅程的開始不能太平凡呀。";
 				count = 0;
 
 				function sec(){
@@ -199,10 +199,10 @@ if (script_name == "") {
 				}
 
 				var typewriter = window.setInterval(sec, 50);
-			}, talkTime + 8500);
+			}, talkTime + 4200);
 
 			setTimeout(function(){
-				say = "那驚喜只是附加、有細節不怕找碴，<br>手癢的朋友就滑鼠點一下，<br>看！迴響ㄟ麻吉隆底家！";
+				say = "手癢滑鼠點一下，<br>迴響ㄟ麻吉隆底家！";
 				count = 0;
 
 				function thi(){
@@ -215,7 +215,7 @@ if (script_name == "") {
 				}
 
 				var typewriter = window.setInterval(thi, 150);
-			}, talkTime + 14500);
+			}, talkTime + 6400);
 
 			setTimeout(function(){
 				say = "怎麼樣？你也有Freestyle麼！？";
@@ -231,7 +231,7 @@ if (script_name == "") {
 				}
 
 				var typewriter = window.setInterval(fou, 50);
-			}, talkTime + 20000);
+			}, talkTime + 8600);
 
 
 			// 上面是在滑完之後執行的動畫，諸如小人走出來，小丑對話
