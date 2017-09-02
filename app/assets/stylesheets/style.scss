@@ -778,7 +778,6 @@ body {
 
 	.indexProposal {
 		position: absolute;
-		display: none;
 		right: 2vw;
 		top: 7vw;
 		z-index: 2;
@@ -1586,6 +1585,50 @@ body {
 		margin-bottom: 5px;
 	}
 
+  .facebook, .google {
+    display: inline-block;
+    text-align: left;
+    width: 95%;
+    height: 30px;
+    padding: 7px 0;
+    padding-left: 5%;
+    line-height: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      vertical-align: -40%;
+    }
+
+    .small {
+      font-size: 0;
+    }
+  }
+
+  .facebook {
+    background: #3b5998;
+    text-indent: 3px;
+
+    img {
+      margin-right: 8px;
+
+    }
+  }
+
+  .google {
+    background: #dc4e41;
+
+    img {
+      // height: 90%;
+    }
+  }
+
 	form {
 		text-align: center;
 		letter-spacing: 1px;
@@ -1634,50 +1677,6 @@ body {
 			line-height: 45px;
 			text-decoration: none;
 
-		}
-
-		.facebook, .google {
-			display: inline-block;
-			text-align: left;
-			width: 95%;
-			height: 30px;
-			padding: 7px 0;
-			padding-left: 5%;
-			line-height: 20px;
-			border-radius: 8px;
-			font-size: 18px;
-			letter-spacing: 0.5px;
-			margin-bottom: 30px;
-			text-decoration: none;
-			color: white;
-			cursor: pointer;
-
-			img {
-				height: 100%;
-				vertical-align: -40%;
-			}
-
-			.small {
-				font-size: 0;
-			}
-		}
-
-		.facebook {
-			background: #3b5998;
-			text-indent: 3px;
-
-			img {
-				margin-right: 8px;
-
-			}
-		}
-
-		.google {
-			background: #dc4e41;
-
-			img {
-				// height: 90%;
-			}
 		}
 
 		a {
@@ -4103,7 +4102,7 @@ body {
 			border: 2px solid $orange;
 			border-radius: 0;
 			color: $orange;
-			background: url("../img/proposal/orangeTriangle.png") no-repeat scroll right center transparent;
+			background: url("proposal/orangeTriangle.png") no-repeat scroll right center transparent;
 		}
 	}
 
@@ -4176,7 +4175,7 @@ body {
 		border: 2px solid $grey;
 		border-radius: 0;
 		color: $grey;
-		background: url("../img/proposal/greyTriangle.png") no-repeat scroll right center transparent;
+		background: url("proposal/greyTriangle.png") no-repeat scroll right center transparent;
 	}
 
 	.intro {
