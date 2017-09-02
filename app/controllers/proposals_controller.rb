@@ -120,6 +120,12 @@ class ProposalsController < ApplicationController
     render partial: "proposals/proposal"
   end
 
+  def random_excitement
+    proposal = Proposal.published.order("RANDOM()").limit(1).first
+    @excitement = proposal.excitement
+    render partial: "proposals/excitement"
+  end
+
   def proposal_redirect
     if !user_signed_in?
       redirect_to new_user_session_path

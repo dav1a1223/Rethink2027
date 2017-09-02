@@ -18,6 +18,7 @@
   <%= image_tag("landingPage/largeLogo.png", class: "largeLogo pulse animated") %>
   <%= image_tag("landingPage/brick.png", class: "brickOne puls animated") %>
   <%= image_tag("landingPage/brick.png", class: "brickTwo puls animated") %>
+  <%= link_to image_tag("landingPage/brick.png", class: "brickTwo puls animated"), random_excitement_proposals_path, id: "ajax-load2" %>
   <%= link_to image_tag("landingPage/brick.png", class: "brickThree puls animated"), random_proposal_proposals_path, id: "ajax-load" %>
   <%= image_tag("landingPage/gold.svg", class: "gold") %>
 
@@ -27,8 +28,7 @@
 		<span class="number">0</span>
 	</div>
 
-	<div class="sentence bounceIn animate">
-		「我們何其幸運，無法確知自己生活在什麼樣的世界。」——辛波絲卡
+	<div class="sentence bounceIn animate" id="excitement">
 	</div>
 
   <!-- what behind of walker -->
@@ -744,6 +744,16 @@
     $.ajax(url, {
       success: function(response) {
         $("#proposal").html(response);
+      }
+    });
+  })
+
+  $('#ajax-load2').click( function(e){
+    e.preventDefault();
+    var url =  $(this).attr("href");
+    $.ajax(url, {
+      success: function(response) {
+        $("#excitement").html(response);
       }
     });
   })

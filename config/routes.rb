@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get "attention"
       get "random_proposal"
+      get "random_excitement"
     end
 
     member do
