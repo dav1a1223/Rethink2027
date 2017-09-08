@@ -56,7 +56,11 @@
           b. 上傳一張示意照片＊<br>
           <!-- <%= f.input :image, label: false, as: :file, input_html: { class: "upl" } %> -->
           <div class="input file optional proposal_image">
-            <img class="preview">
+            <% if f.object.image_url.present? %>
+              <%= image_tag(f.object.image_url, class: "preview") %>
+            <% else %>
+              <img class="preview">
+            <% end %>
             <div class="btn">選擇檔案</div>
             <input class="file optional upl" type="file" name="proposal[image]" id="proposal_image">
           </div>

@@ -2,7 +2,7 @@
   <%= image_tag('partner/03_partner_bg-festival.svg', class: "backgroundImg") %>
   <%= link_to partner_path do %>
     <%= image_tag('partner/partner00.svg', class: "backImg") %>
-    <%= image_tag('partner/partnerBack.svg', class: "back") %>
+    <%= image_tag('partner/partnerBack.svg', class: "back", name: "top") %>
   <% end %>
   <div class="partnerGrp">
     <%= link_to partner_one_path do %>
@@ -327,6 +327,6 @@
     <%= image_tag('partner/photoThree_2.png', style: "left: -15vw;") %>
 	</div>
 
-  <%= link_to image_tag('partner/watchMore.svg', class: "watchMore"), partner_path %>
+  <a href="#top"><%= image_tag('partner/watchMore.svg', class: "watchMore") %></a>
   <%= link_to image_tag('partner/goProposal.svg', class: "goProposal"), proposal_redirect_path %>
 </div>

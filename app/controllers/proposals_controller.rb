@@ -47,18 +47,8 @@ class ProposalsController < ApplicationController
     @proposal.user = current_user
     # hash_tags_process(@proposal)
     if params[:submit_proposal]
-      if @proposal.id.nil?
-        render :new, notice: "請先儲存提案再提交您的提案"
-      else
-        if proposal_check
-          @proposal.is_submit = true
-          @proposal.publish = false
-          @proposal.save!
-          redirect_to @proposal, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
-        else
-          render :edit, notice: "仍有欄位尚未填寫完成，請再檢查有「*」的欄位是否都填寫。"
-        end
-      end
+      flash[:notice] = "請先儲存提案再提交您的提案。"
+      render :new
     else
       respond_to do |format|
         if @proposal.save
