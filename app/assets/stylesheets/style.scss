@@ -3836,6 +3836,118 @@ body {
 		}
 	}
 
+  .p8Thing1 {
+    top: 221vw;
+    left: 30vw;
+    width: 11vw;
+    &:hover {
+			.hover {
+				width: 8.3vw;
+			}
+		}
+  }
+
+  .p8Thing2 {
+    top: 229vw;
+    left: 40vw;
+    width: 6.5vw;
+    &:hover {
+			.hover {
+				width: 4.2vw;
+			}
+		}
+  }
+
+  .p8Thing3 {
+    top: 226vw;
+    left: 47vw;
+    width: 7.7vw;
+    &:hover {
+			.hover {
+				width: 6.3vw;
+			}
+		}
+  }
+
+  .p8Thing4 {
+		top: 224vw;
+		left: 56vw;
+		width: 9vw;
+
+		&:hover {
+			.hover {
+				width: 4.2vw;
+			}
+		}
+	}
+
+  .p8Thing5 {
+		top: 223vw;
+		left: 61.2vw;
+		width: 20vw;
+
+		&:hover {
+			.hover {
+				width: 20vw;
+			}
+		}
+	}
+
+  .p9Thing1 {
+    top: 223vw;
+    left: 30vw;
+    width: 10vw;
+    &:hover {
+			.hover {
+				width: 8.1vw;
+			}
+		}
+  }
+
+  .p9Thing2 {
+    top: 226vw;
+    left: 40vw;
+    width: 6.5vw;
+    &:hover {
+			.hover {
+				width: 4.2vw;
+			}
+		}
+  }
+
+  .p9Thing3 {
+    top: 224vw;
+    left: 47vw;
+    width: 7.7vw;
+    &:hover {
+			.hover {
+				width: 6.3vw;
+			}
+		}
+  }
+
+  .p9Thing4 {
+		top: 227vw;
+		left: 51vw;
+		width: 7vw;
+		&:hover {
+			.hover {
+				width: 6.8vw;
+			}
+		}
+	}
+
+  .p9Thing5 {
+		top: 223vw;
+		left: 61.2vw;
+		width: 25vw;
+		&:hover {
+			.hover {
+				width: 20vw;
+			}
+		}
+	}
+
 	.objectAns {
 		position: absolute;
 		top: 238vw;

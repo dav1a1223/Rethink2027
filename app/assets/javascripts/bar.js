@@ -369,6 +369,76 @@ $(document).ready(function(){
 		$(".objDefault").css("display", "block");
 		$(".ansp7T5").css("display", "none");
 	})
+  $(".p8Thing1").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp8T1").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp8T1").css("display", "none");
+	})
+  $(".p8Thing2").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp8T2").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp8T2").css("display", "none");
+	})
+  $(".p8Thing3").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp8T3").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp8T3").css("display", "none");
+	})
+  $(".p8Thing4").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp8T4").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp8T4").css("display", "none");
+	})
+  $(".p8Thing5").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp8T5").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp8T5").css("display", "none");
+	})
+  $(".p9Thing1").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp9T1").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp9T1").css("display", "none");
+	})
+  $(".p9Thing2").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp9T2").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp9T2").css("display", "none");
+	})
+  $(".p9Thing3").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp9T3").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp9T3").css("display", "none");
+	})
+  $(".p9Thing4").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp9T4").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp9T4").css("display", "none");
+	})
+  $(".p9Thing5").hover(function(){
+		$(".objDefault").css("display", "none");
+		$(".ansp9T5").css("display", "block");
+	}, function(){
+		$(".objDefault").css("display", "block");
+		$(".ansp9T5").css("display", "none");
+	})
 
 
 
