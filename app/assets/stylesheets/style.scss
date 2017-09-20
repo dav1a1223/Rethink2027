@@ -4238,7 +4238,7 @@ body {
 			border: 2px solid $orange;
 			border-radius: 0;
 			color: $orange;
-			background: url("proposal/orangeTriangle.png") no-repeat scroll right center transparent;
+			background: image-url("proposal/orangeTriangle.png") no-repeat scroll right center transparent;
 		}
 	}
 
@@ -4311,7 +4311,7 @@ body {
 		border: 2px solid $grey;
 		border-radius: 0;
 		color: $grey;
-		background: url("proposal/greyTriangle.png") no-repeat scroll right center transparent;
+		background: image-url("proposal/greyTriangle.png") no-repeat scroll right center transparent;
 	}
 
 	.intro {
