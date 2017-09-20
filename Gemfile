@@ -28,6 +28,9 @@ gem 'devise-i18n'
 gem 'simple_form'
 gem 'charwidth'
 
+# cache
+gem "dalli"
+
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'carrierwave', '~> 1.0'
