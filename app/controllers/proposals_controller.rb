@@ -17,6 +17,7 @@ class ProposalsController < ApplicationController
     if current_user&.proposal&.is_submit && !(current_user&.proposal&.publish)
       @proposals = [current_user.proposal] + @proposals
     end
+    @proposals = Proposal.where(id: @proposals.map(&:id)).page(params[:page])
   end
 
   # GET /proposals/1
@@ -26,6 +27,7 @@ class ProposalsController < ApplicationController
 
   # GET /proposals/new
   def new
+    # redirect_to :root, notice: "已經超過提案繳交期限！"
     if current_user&.proposal
       @proposal = current_user.proposal
       render :edit
@@ -35,6 +37,7 @@ class ProposalsController < ApplicationController
 
   # GET /proposals/1/edit
   def edit
+    # redirect_to :root, notice: "已經超過提案繳交期限！"
     if current_user.proposal.publish
       flash[:notice] = "若您重新儲存提案則需重新提交/審核哦！"
     end

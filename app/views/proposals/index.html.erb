@@ -10,64 +10,10 @@
  		動動滑鼠探索這些來自臺灣各地的超酷構想吧！<br>
   </div>
   <br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <% cache [@proposals] do %>
-    <% @proposals.each do |proposal| %>
-      <% if proposal.checking? %>
-        <div class="proposal mine">
-          <div class="HWM">
-            <div class="icon">
-              <%= image_tag('proposal/greenQ.svg') %>
-              <%= image_tag('proposal/yellowQ.svg') %>
-            </div>
-            <div class="t">
-              <%= proposal.how_can_we %>
-            </div>
-          </div>
-          <div class="picture">
-            <%= image_tag(proposal.image_url) %>
-            <%= image_tag(proposal.image_url) %>
-            <div class="content">
-              <div class="name">
-                <%= proposal.action_name %>
-              </div>
-              <%= proposal.action_intro %>
-            </div>
-          </div>
-          <div class="hashtag">
-            審核中...
-          </div>
-          <div class="location"><%= image_tag("proposal/location.svg") %><%= proposal.action_location %></div>
-          <div class="proposalBorder"></div>
-        </div>
-      <% else %>
-        <div class="proposal">
-          <div class="HWM">
-            <div class="icon">
-              <%= image_tag('proposal/greenQ.svg') %>
-              <%= image_tag('proposal/yellowQ.svg') %>
-            </div>
-            <div class="t">
-              <%= proposal.how_can_we %>
-            </div>
-          </div>
-      		<div class="picture">
-            <%= image_tag(proposal.image_url) %>
-            <%= image_tag(proposal.image_url) %>
-            <div class="content">
-              <div class="name">
-                <%= proposal.action_name %>
-              </div>
-        			<%= proposal.action_intro %>
-        		</div>
-      		</div>
-      		<div class="hashtag">
-      			<%= proposal.hashtags.pluck(:text).join(" ") %>
-      		</div>
-      		<div class="location"><%= image_tag("proposal/location.svg") %><%= proposal.action_location %></div>
-          <div class="proposalBorder"></div>
-        </div>
-      <% end %>
-    <% end %>
-  <% end %>
+  <%# cache [@proposals] do %>
+  <%= render partial: "proposals/proposals", object: @proposals %>
+  <%# end %>
+  <p class="pagination">
+    <%= link_to_next_page @proposals, 'Next Page', remote: true %>
+  </p>
 </div>
-<br>
