@@ -20,7 +20,7 @@ Released under the MIT License
     defaults:
       debug: false  # set to true to log messages to the console
       navSelector: 'a[rel=next]'
-      buffer: 1000  # 1000px buffer by default
+      buffer: 200  # 1000px buffer by default
       loading: null # optional callback when next-page request begins
       success: null # optional callback when next-page request finishes
       error:   null # optional callback when next-page request fails
