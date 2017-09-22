@@ -1,7 +1,6 @@
 $("<%=j render(partial: 'proposals/proposals', object: @proposals) %>").appendTo($(".wall"));
 
 // Update pagination link
-<% binding.pry %>
 <% if @proposals.last_page? %>
   $('.pagination').html("That's all, folks!");
 <% else %>
