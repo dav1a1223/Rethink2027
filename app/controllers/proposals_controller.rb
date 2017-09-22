@@ -27,7 +27,7 @@ class ProposalsController < ApplicationController
 
   # GET /proposals/new
   def new
-    # redirect_to :root, notice: "已經超過提案繳交期限！"
+    redirect_to :root, notice: "已經超過提案繳交期限！"
     if current_user&.proposal
       @proposal = current_user.proposal
       render :edit
@@ -37,7 +37,7 @@ class ProposalsController < ApplicationController
 
   # GET /proposals/1/edit
   def edit
-    # redirect_to :root, notice: "已經超過提案繳交期限！"
+    redirect_to :root, notice: "已經超過提案繳交期限！"
     if current_user.proposal.publish
       flash[:notice] = "若您重新儲存提案則需重新提交/審核哦！"
     end
@@ -45,54 +45,54 @@ class ProposalsController < ApplicationController
 
   # POST /proposals
   # POST /proposals.json
-  def create
-    @proposal = Proposal.new(proposal_params)
-    @proposal.user = current_user
-    # hash_tags_process(@proposal)
-    if params[:submit_proposal]
-      flash[:notice] = "請先儲存提案再提交您的提案。"
-      render :new
-    else
-      respond_to do |format|
-        if @proposal.save
-          format.html { redirect_to proposals_path, notice: '草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！' }
-          format.json { render :show, status: :created, location: @proposal }
-        else
-          format.html { render :new }
-          format.json { render json: @proposal.errors, status: :unprocessable_entity }
-        end
-      end
-    end
-  end
+  # def create
+  #   @proposal = Proposal.new(proposal_params)
+  #   @proposal.user = current_user
+  #   # hash_tags_process(@proposal)
+  #   if params[:submit_proposal]
+  #     flash[:notice] = "請先儲存提案再提交您的提案。"
+  #     render :new
+  #   else
+  #     respond_to do |format|
+  #       if @proposal.save
+  #         format.html { redirect_to proposals_path, notice: '草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！' }
+  #         format.json { render :show, status: :created, location: @proposal }
+  #       else
+  #         format.html { render :new }
+  #         format.json { render json: @proposal.errors, status: :unprocessable_entity }
+  #       end
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /proposals/1
   # PATCH/PUT /proposals/1.json
-  def update
-    # hash_tags_process(@proposal)
-    @proposal.hashtags.delete_all
-    @proposal.assign_attributes(proposal_params)
-    @proposal.publish = false
-    @proposal.is_submit = false
-    if params[:submit_proposal]
-      @proposal.save!
-      if proposal_check
-        @proposal.update_attributes(is_submit: true, publish: false)
-        redirect_to root_path, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
-      else
-        render :edit
-      end
-    else
-      respond_to do |format|
-        if @proposal.save!
-          format.html { redirect_to root_path, notice: "草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！" }
-          format.json { render :show, status: :ok, location: @proposal }
-        else
-          format.html { render :edit }
-          format.json { render json: @proposal.errors, status: :unprocessable_entity }
-        end
-      end
-    end
-  end
+  # def update
+  #   # hash_tags_process(@proposal)
+  #   @proposal.hashtags.delete_all
+  #   @proposal.assign_attributes(proposal_params)
+  #   @proposal.publish = false
+  #   @proposal.is_submit = false
+  #   if params[:submit_proposal]
+  #     @proposal.save!
+  #     if proposal_check
+  #       @proposal.update_attributes(is_submit: true, publish: false)
+  #       redirect_to root_path, notice: "恭喜你踏出了行動的第一步！提交已經送交審核程序，您將會於 2-3 天內收到審核結果通知信喔！"
+  #     else
+  #       render :edit
+  #     end
+  #   else
+  #     respond_to do |format|
+  #       if @proposal.save!
+  #         format.html { redirect_to root_path, notice: "草稿儲存成功！迴響提醒您，讓大家快快採取行動是我們鼓勵行動的方式，儘早填寫完並送出提案，就能更快取得充滿驚喜的下一步指示喔！" }
+  #         format.json { render :show, status: :ok, location: @proposal }
+  #       else
+  #         format.html { render :edit }
+  #         format.json { render json: @proposal.errors, status: :unprocessable_entity }
+  #       end
+  #     end
+  #   end
+  # end
 
   # DELETE /proposals/1
   # DELETE /proposals/1.json
