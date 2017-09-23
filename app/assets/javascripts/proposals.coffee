@@ -129,7 +129,7 @@ Released under the MIT License
 ) window.jQuery, window
 
 $ ->
-  $('.wall').infinitePages
+  $('.infinite-page').infinitePages
     debug: true
     loading: ->
       $(this).text('Loading next page...')

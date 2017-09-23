@@ -7,7 +7,7 @@ class ProposalsController < ApplicationController
   # GET /proposals
   # GET /proposals.json
   def index
-    @proposals = Proposal.published.order("created_at DESC").limit(30)
+    @proposals = Proposal.published.order("RANDOM()")
     if current_user&.proposal
       if @proposals.include? current_user.proposal
         without_selfs = @proposals.reject { |pp| pp == current_user.proposal }
