@@ -20,7 +20,7 @@ Released under the MIT License
     defaults:
       debug: false  # set to true to log messages to the console
       navSelector: 'a[rel=next]'
-      buffer: 200  # 1000px buffer by default
+      buffer: 300  # 1000px buffer by default
       loading: null # optional callback when next-page request begins
       success: null # optional callback when next-page request finishes
       error:   null # optional callback when next-page request fails
@@ -129,7 +129,7 @@ Released under the MIT License
 ) window.jQuery, window
 
 $ ->
-  $('.infinite-page').infinitePages
+  $('.wall').infinitePages
     debug: true
     loading: ->
       $(this).text('Loading next page...')
