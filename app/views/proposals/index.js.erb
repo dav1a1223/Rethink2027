@@ -1,4 +1,4 @@
-$("<%=j render(partial: 'proposals/proposals', object: @proposals) %>").appendTo($(".wall"));
+$("<%=j render(partial: 'proposals/proposals', object: @proposals) %>").appendTo($(".infinite-page"));
 
 // Update pagination link
 <% if @proposals.last_page? %>

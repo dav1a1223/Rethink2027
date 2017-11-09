@@ -1,18 +1,20 @@
 <div class="wall">
-  <%= image_tag('proposal/action wall_bg.svg', class: "wallpaper") %>
-  <div class="title">
-    這裡是<br>
-    <b>行動提案牆</b>
+  <div class="infinite-page">
+    <%= image_tag('proposal/action wall_bg.svg', class: "wallpaper") %>
+    <div class="title">
+      這裡是<br>
+      <b>行動提案牆</b>
+    </div>
+    <div class="subTitle">
+      這裡是行動提案牆<br>
+   		所有通過審核的提案都會出現在這裡<br>
+   		動動滑鼠探索這些來自臺灣各地的超酷構想吧！<br>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <%# cache [@proposals] do %>
+    <%= render partial: "proposals/proposals", object: @proposals %>
+    <%# end %>
   </div>
-  <div class="subTitle">
-    這裡是行動提案牆<br>
- 		所有通過審核的提案都會出現在這裡<br>
- 		動動滑鼠探索這些來自臺灣各地的超酷構想吧！<br>
-  </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <%# cache [@proposals] do %>
-  <%= render partial: "proposals/proposals", object: @proposals %>
-  <%# end %>
   <p class="pagination">
     <%= link_to_next_page @proposals, 'Next Page', remote: true %>
   </p>
