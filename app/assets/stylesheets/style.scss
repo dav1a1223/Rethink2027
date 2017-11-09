@@ -4906,6 +4906,20 @@ body {
 	}
 }
 
+// ver3
+.closeSoundBtn {
+	position: fixed;
+	z-index: 10;
+	width: 3vw;
+	left: 2.5vw;
+	bottom: 2vw;
+	cursor: pointer;
+}
+
+#blue {
+	background: #05364a;
+}
+
 // .proposalPage {
 // 	position: relative;
 // 	padding: 0 10%;

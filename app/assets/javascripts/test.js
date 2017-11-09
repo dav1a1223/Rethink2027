@@ -176,6 +176,10 @@ $(document).ready(function(){
 		$("#partnerWnine").css("display", "none");
 	})
 
-
+	// ver3
+	$(".closeSoundBtn").click(function(){
+		var boolie = $(".bgsound").prop("muted");
+    	$(".bgsound").prop("muted",!boolie);
+	})
 
 });
