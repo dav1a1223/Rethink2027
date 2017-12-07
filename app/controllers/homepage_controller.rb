@@ -14,11 +14,19 @@ class HomepageController < ApplicationController
     render template: "homepage/partner"
   end
 
+  def youth
+    render template: "homepage/youth"
+  end
+
   def about_depath
     render template: "homepage/#{request.path}"
   end
 
   def partner_depath
-    render template: "homepage/#{request.path}"
+    render template: "partner/#{request.path}"
+  end
+
+  def youth_depath
+    render template: "youth/#{request.path}"
   end
 end

@@ -34,6 +34,23 @@ Rails.application.routes.draw do
   get "partner_seven", to: "homepage#partner_depath"
   get "partner_eight", to: "homepage#partner_depath"
   get "partner_nine", to: "homepage#partner_depath"
+  get "partner_ten", to: "homepage#partner_depath"
+  get "partner_eleven", to: "homepage#partner_depath"
+  get "partner_twelve", to: "homepage#partner_depath"
+  get "partner_thirteen", to: "homepage#partner_depath"
+  get "partner_fourteen", to: "homepage#partner_depath"
+  get "partner_fifteen", to: "homepage#partner_depath"
+  get "youth", to: "homepage#youth"
+  get "youth_one", to: "homepage#youth_depath"
+  get "youth_two", to: "homepage#youth_depath"
+  get "youth_three", to: "homepage#youth_depath"
+  get "youth_four", to: "homepage#youth_depath"
+  get "youth_five", to: "homepage#youth_depath"
+  get "youth_six", to: "homepage#youth_depath"
+  get "youth_seven", to: "homepage#youth_depath"
+  get "youth_eight", to: "homepage#youth_depath"
+  get "youth_nine", to: "homepage#youth_depath"
+  get "youth_ten", to: "homepage#youth_depath"
 
   devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks", sessions: 'users/sessions'}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -46,7 +46,7 @@
 
       <% if !user_signed_in? %>
         <%= link_to new_user_session_path(proposal: "go"), class: "proposal" do %>
-          <%= image_tag('goProposalWord.svg', class: "pulse") %>
+          <%#= image_tag('goProposalWord.svg', class: "pulse") %>
           <%= image_tag('goProposal.svg') %>
         <% end %>
       <% elsif current_user.proposal.nil? %>
@@ -87,9 +87,7 @@
      		Ｘ
      	</div>
     	<div class="circle zoomIn animated">
-    		<a class="text not-allowed" id="btnDaily">
-    			青<br>年<br>行<br>動<br>日<br>誌
-    		</a>
+        <%= link_to "青<br>年<br>行<br>動<br>日<br>誌".html_safe, youth_path, class: "text", id: "btnDaily" %>
         <%= image_tag('circleSix.svg', id: "picDaily") %>
     		<div class="zoomIn animated">
           <%= link_to "行<br>動<br>夥<br>伴<br>故<br>事".html_safe, partner_path, class: "text", id: "btnPartner" %>
