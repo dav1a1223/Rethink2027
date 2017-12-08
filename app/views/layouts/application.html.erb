@@ -43,7 +43,6 @@
     	</div>
 
       <%= link_to image_tag("logo.png"), root_path, class: "logo" %>
-
       <% if !user_signed_in? %>
         <%= link_to new_user_session_path(proposal: "go"), class: "proposal" do %>
           <%#= image_tag('goProposalWord.svg', class: "pulse") %>
@@ -102,9 +101,7 @@
                 <%= link_to "關<br>於<br>迴<br>響".html_safe, about_path, class: "text", id: "btnAbout" %>
                 <%= image_tag('circleTwo.svg', id: "picAbout") %>
     						<div class="zoomIn animated">
-    							<a class="text not-allowed" id="btnNews">
-    								最<br>新<br>消<br>息
-    							</a>
+                  <%= link_to "最<br>新<br>消<br>息".html_safe, "https://www.facebook.com/RethinkTaiwan2027/", class: "text", id: "btnNews" %>
                   <%= image_tag('circleOne.svg', id: "picNews") %>
     							<%= link_to root_path, class: "home zoomIn animated" do %>
                     <%= image_tag('home.png') %>
