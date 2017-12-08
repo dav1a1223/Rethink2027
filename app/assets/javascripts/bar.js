@@ -477,8 +477,8 @@ $(document).ready(function(){
 	})
 
 	var youthAdjust = ($(window).width() / 1280);
-	var youthScrollStart = 1200;
-	var youthScrollInterval = 60;
+	var youthScrollStart = 1200 * youthAdjust;
+	var youthScrollInterval = 60 * youthAdjust;
 
 	$(".youth").click(function(){
 		// alert($(".bar").css("top"));
