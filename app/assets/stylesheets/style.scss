@@ -495,14 +495,14 @@ body {
 	width: 100vw;
 	height: 721vw;
 	overflow: hidden;
-	// z-index: 0;
-	// margin-top: -8vw;
+	z-index: 0;
+	margin-top: -8vw;
 
-	// div, a {
-	// 	margin-top: 480vw;
+	div, a {
+		margin-top: 480vw;
 
-	// 	// attention: this is for new version adjusting
-	// }
+		// attention: this is for new version adjusting
+	}
 
 	.topPos {
 		margin-top: 0;
@@ -2626,6 +2626,7 @@ body {
 	padding: 80px 15%;
 	line-height: 28px;
 	font-weight: lighter;
+	font-size: 1.25vw;
 	// display: none;
 
 	h2 {
@@ -2682,6 +2683,7 @@ body {
 	line-height: 28px;
 	font-weight: lighter;
 	display: none;
+	font-size: 1.25vw;
 
 	h2 {
 		color: $yellow;
@@ -4524,7 +4526,7 @@ body {
 	// proposal wall
 	position: relative;
 	// padding: 5%;
-	padding-top: 240px;
+	padding-top: 170px;
 	padding-bottom: 100px;
 	text-align: center;
 	background: #05364a;
@@ -4538,13 +4540,13 @@ body {
 	}
 
 	.title {
-		position: absolute;
+		position: relative;
 		width: 100%;
 		font-size: 24px;
 		line-height: 38px;
 		letter-spacing: 4px;
 		color: $lightGreen;
-		top: 150px;
+		top: 0px;
 		// margin-bottom: 35px;
 
 		b {
@@ -4553,13 +4555,15 @@ body {
 	}
 
 	.subTitle {
-		position: absolute;
+		position: relative;
 		width: 100%;
 		font-size: 21px;
 		line-height: 32px;
 		letter-spacing: 4px;
 		// margin-bottom: 60px;
-		top: 270px;
+		// top: 270px;
+		margin-top: 30px;
+		margin-bottom: 70px;
 		font-weight: lighter;
 	}
 
@@ -5459,6 +5463,8 @@ body {
 			position: absolute;
 			display: none;
 			width: 44vw;
+			height: 38vw;
+			overflow: scroll;
 			top: 18vw;
 			left: 14vw;
 			font-size: 1.3vw;
@@ -5611,6 +5617,8 @@ body {
 		.storyText {
 			position: absolute;
 			width: 44vw;
+			height: 23vw;
+			overflow: scroll;
 			top: 27vw;
 			left: 14vw;
 			font-size: 1.3vw;
@@ -6109,9 +6117,11 @@ body {
 .opening {
 	position: fixed;
 	width: 100vw;
+	height: 100vh;
 	left: 0;
 	top: 0;
 	z-index: 3;
+	background: #014864;
 
 	.fullScreen {
 		width: 100%;

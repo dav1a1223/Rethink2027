@@ -517,62 +517,62 @@ $(document).ready(function(){
 	})
 
 	// moment
-	$("#riverrockOne").click(function(){
+	$("#riverrockOne").hover(function(){
 		$(".riverrock").removeClass("default");
 		$(this).addClass("default");
 		$(".momentText").removeClass("default");
 		$("#momentTextOne").addClass("default");
 	})
-	$("#riverrockTwo").click(function(){
+	$("#riverrockTwo").hover(function(){
 		$(".riverrock").removeClass("default");
 		$(this).addClass("default");
 		$(".momentText").removeClass("default");
 		$("#momentTextTwo").addClass("default");
 	})
-	$("#riverrockThree").click(function(){
+	$("#riverrockThree").hover(function(){
 		$(".riverrock").removeClass("default");
 		$(this).addClass("default");
 		$(".momentText").removeClass("default");
 		$("#momentTextThree").addClass("default");
 	})
-	$("#riverrockFour").click(function(){
+	$("#riverrockFour").hover(function(){
 		$(".riverrock").removeClass("default");
 		$(this).addClass("default");
 		$(".momentText").removeClass("default");
 		$("#momentTextFour").addClass("default");
 	})
-	$("#riverrockFive").click(function(){
+	$("#riverrockFive").hover(function(){
 		$(".riverrock").removeClass("default");
 		$(this).addClass("default");
 		$(".momentText").removeClass("default");
 		$("#momentTextFive").addClass("default");
 	})
 
-	$("#boatOne").click(function(){
+	$("#boatOne").hover(function(){
 		$(".boat").removeClass("default");
 		$(this).addClass("default");
 		$(".storyText").removeClass("default");
 		$("#storyTextOne").addClass("default");
 	})
-	$("#boatTwo").click(function(){
+	$("#boatTwo").hover(function(){
 		$(".boat").removeClass("default");
 		$(this).addClass("default");
 		$(".storyText").removeClass("default");
 		$("#storyTextTwo").addClass("default");
 	})
-	$("#boatThree").click(function(){
+	$("#boatThree").hover(function(){
 		$(".boat").removeClass("default");
 		$(this).addClass("default");
 		$(".storyText").removeClass("default");
 		$("#storyTextThree").addClass("default");
 	})
-	$("#boatFour").click(function(){
+	$("#boatFour").hover(function(){
 		$(".boat").removeClass("default");
 		$(this).addClass("default");
 		$(".storyText").removeClass("default");
 		$("#storyTextFour").addClass("default");
 	})
-	$("#boatFive").click(function(){
+	$("#boatFive").hover(function(){
 		$(".boat").removeClass("default");
 		$(this).addClass("default");
 		$(".storyText").removeClass("default");
