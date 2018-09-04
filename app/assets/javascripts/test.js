@@ -89,6 +89,17 @@ $(document).ready(function(){
 	setTimeout("animation(23)", 600);
 	animationSlow(24);
 	animation(25);
+	animation(26);
+	animation(27);
+	animation(28);
+	animation(29);
+	animation(30);
+	animation(31);
+	animation(32);
+	animation(33);
+	animation(34);
+	animation(35);
+	animation(36);
 	animation(101);
 	setTimeout("animation(102)", 200);
 	animation(103);
@@ -106,12 +117,28 @@ $(document).ready(function(){
 		};
 		open = false;
 	})
+
 	$(".hover .close").click(function(){
 		$(".hover .subHover").css("display", "none");
 		$(".hover .close").css("display", "none");
 		// alert(open);
 		open = true;
 	})
+
+	$(".UI_link2018").hover(function(){
+		$(this).css("animation-name", "UI_slide")
+
+	}, function() {
+		$(this).css("animation-name", "UI_slide_out")
+	})
+
+
+	$(window).scroll(function () {
+		// var scroll_btm = $(document).height() - $(window).height() - $(window).scrollTop() - 140 * adjust;
+
+
+	})
+
 
 	$(".ani2").click(function(){
 		$("#partnerWone").css("display", "block");
@@ -175,6 +202,49 @@ $(document).ready(function(){
 	$(".partnerWindow .close").click(function(){
 		$("#partnerWnine").css("display", "none");
 	})
+
+	$(".ani27").click(function(){
+		$("#partnerWten").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWten").css("display", "none");
+	})
+
+	$(".ani29").click(function(){
+		$("#partnerWeleven").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWeleven").css("display", "none");
+	})
+
+	$(".ani30").click(function(){
+		$("#partnerWtwelve").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWtwelve").css("display", "none");
+	})
+
+	$(".ani32").click(function(){
+		$("#partnerWthirteen").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWthirteen").css("display", "none");
+	})
+
+	$(".ani34").click(function(){
+		$("#partnerWfourteen").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWfourteen").css("display", "none");
+	})
+
+	$(".ani36").click(function(){
+		$("#partnerWfifteen").css("display", "block");
+	})
+	$(".partnerWindow .close").click(function(){
+		$("#partnerWfifteen").css("display", "none");
+	})
+
 
 	// ver3
 	$(".closeSoundBtn").click(function(){

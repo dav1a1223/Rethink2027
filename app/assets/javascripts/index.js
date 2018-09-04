@@ -54,8 +54,8 @@ if (script_name == "") {
 	$(document).ready(function(){
 		var adjust = ($(window).width() / 1280);
 		var height = 9226 * adjust; // total height (px)
-		var scroll_ms = 3000; // 3000 scroll pass (ms)
-		var stop_ms = 2400; // 2400
+		var scroll_ms = 0; // 3000 scroll pass (ms)
+		var stop_ms = 0; // 2400
 		var after = false;
 		var goldCount = 0;
 
@@ -280,6 +280,15 @@ if (script_name == "") {
 			var end_left = ten_left;
 
 			if (after) {
+
+				if (scrollBtm > 500) {
+					// alert("fuck");
+					$(".UI_link2018").css("animation-name", "UI_slide_out")
+				}
+
+
+
+
 				if (scrollBtm > ( one + two + three + four + five + six + seven + eight + nine ) * adjust) {
 					// $(".walk").css("top", ten_top * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight + nine ) * adjust ) * ( (ten_top - end_top) / ten ) + "px");
 					// $(".walk").css("left", ten_left * adjust - ( scrollBtm - ( one + two + three + four + five + six + seven + eight + nine ) * adjust ) * ( (ten_left - end_left) / ten ) + "px");
